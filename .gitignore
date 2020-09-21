@@ -1,0 +1,13 @@
+prepros.config
+.DS_Store
+node_modules
+.sass-cache
+assets/cowaymega.css
+assets/cowaymega.css.map
+assets/cowaymega.js
+assets/cowaymega.js.map
+
+.env
+.env*
+!.env.example
+variables

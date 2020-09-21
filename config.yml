@@ -1,0 +1,14 @@
+my_all:
+  password: ${MY_THEMEPASS_ALL}
+  theme_id: ${MY_THEMEID_ALL}
+  store: ${MY_STORE_ALL}
+  timeout: 1m
+
+production:
+  password: ${PROD_THEMEPASS}
+  theme_id: ${PROD_THEMEID}
+  store: ${PROD_STORE}
+  ignore_files:
+    - config/settings_data.json
+  timeout: 1m
+
