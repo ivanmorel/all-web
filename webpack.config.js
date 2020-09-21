@@ -4,7 +4,7 @@ module.exports = {
   entry: './scripts/index.js',
   output: {
     path: path.resolve(__dirname, 'assets'),
-    filename: 'cowaymega.js'
+    filename: 'all.js'
   },
   module: {
     rules: [
