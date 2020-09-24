@@ -2,10 +2,10 @@ prepros.config
 .DS_Store
 node_modules
 .sass-cache
-assets/cowaymega.css
-assets/cowaymega.css.map
-assets/cowaymega.js
-assets/cowaymega.js.map
+assets/all.css
+assets/all.css.map
+assets/all.js
+assets/all.js.map
 
 .env
 .env*

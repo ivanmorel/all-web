@@ -1,7 +1,7 @@
 {
   "name": "coway-web",
   "version": "1.0.0",
-  "description": "Coway Mega Theme",
+  "description": "ALL Theme",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -14,8 +14,8 @@
     "deploy:staging": "APP_ENV=staging npm run deploy-env",
     "deploy:production": "APP_ENV=production npm run deploy-env",
     "deploy": "npm run deploy:$(git rev-parse --abbrev-ref HEAD) || echo 'Branch error'",
-    "start": "APP_ENV=my_all npm run start-env", // when a staging shop is available, this should start local at that shop
-    "start:all": "APP_ENV=my_all npm run start-env", // when a production shop is available, this should start local at that shop
+    "start": "APP_ENV=my_all npm run start-env",
+    "start:all": "APP_ENV=my_all npm run start-env",
     "start-env": "cp .env.local variables && npm run start-post",
     "start-post": "npm run theme-watch --timeout 2m & npm run webpack-sass"
   },

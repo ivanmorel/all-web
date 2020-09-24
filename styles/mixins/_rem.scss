@@ -1,0 +1,31 @@
+$baseline-px: 16;
+
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+@mixin rem($property, $values...) {
+  $max: length($values);
+  $px-values: "";
+  $rem-values: "";
+
+  @for $i from 1 through $max {
+    $value: strip-unit(nth($values, $i));
+    $px-values: #{$px-values + $value}px;
+
+    @if $i < $max {
+      $px-values: #{$px-values + " "};
+    }
+  }
+
+  @for $i from 1 through $max {
+    $value: strip-unit(nth($values, $i));
+    $rem-values: #{$rem-values + $value / $baseline-px}rem;
+
+    @if $i < $max {
+      $rem-values: #{$rem-values + " "};
+    }
+  }
+
+  #{$property}: $rem-values;
+}
