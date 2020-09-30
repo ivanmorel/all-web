@@ -17,7 +17,6 @@ class ProductMobileNav {
     if(window.location.pathname.includes('collections')) {
       this.$el.html(this.dom.$navContent.html());
       $('.js-collapse').each((index, element) => {
-        console.log()
         new Collapsible(element);
       });
     }
