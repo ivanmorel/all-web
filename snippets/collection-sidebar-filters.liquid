@@ -15,11 +15,18 @@
     {%- endfor -%}
   {%- endif -%}
 </ul>
+<div>
+  {%- for block in section.blocks -%}
+    <div>{{block.type}}</div>
+  {%- endfor -%}
+</div>
+
 
 {%- for block in section.blocks -%}
   {%- assign collapsed_state = block.settings.collapsed -%}
 
   <div class="collection-sidebar__group--{{ block.id }}" {{ block.shopify_attributes }}>
+    <div>{{block.type}}</div>
     {%- if block.type == 'tags_group' or 'tags_all' -%}
       {%- assign tags_to_display = false -%}
       {% case block.type %}
@@ -49,6 +56,7 @@
       {% comment %}
         Output groups of collapsible tag groups
       {% endcomment %}
+
       {%- if underscore_groups -%}
         {%- for cat_item in cat_array -%}
           {%- assign cat_handle = cat_item | handleize -%}

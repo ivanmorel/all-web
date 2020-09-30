@@ -27,7 +27,6 @@
           {% if link.links != blank %}
             {%- assign has_dropdown = true -%}
           {% endif %}
-
           <li class="mobile-nav__item appear-animation appear-delay-{{ animation_row }}">
             {% if has_dropdown %}
               <div class="mobile-nav__has-sublist">
@@ -72,7 +71,7 @@
                 aria-labelledby="Label-{{ child_list_handle }}"
                 {% if link.active or link.child_active %}style="height: auto;"{% endif %}>
                 <div class="collapsible-content__inner">
-                  <ul class="mobile-nav__sublist">
+                  <ul class="mobile-nav__sublist {% if link.title == 'Products' %}js-product-mobile-nav product-mobile-nav{% endif %}">
                     {% for childlink in link.links %}
                       {%- assign has_sub_dropdown = false -%}
                       {%- assign grand_child_list_handle = childlink.url | handleize | append: forloop.index -%}
@@ -253,5 +252,34 @@
         {% endif %}
       </ul>
     </div>
+  </div>
+
+  <div class="js-product-mobile-nav-content product-mobile-nav-hidden">
+    {%- for link in linklists.products.links -%}
+      {%- if link.levels == 0 -%}
+        <a class="collapse__link appear-animation appear-delay-2" href="{{sub_link.url}}">{{ link.title }}</a>
+      {% else %}
+        <li class="mobile-nav__item appear-animation appear-delay-2 js-collapse collapse__wrapper">
+          <div aria-expanded="false" class="collapse__button">
+            <div class="collapse__title">{{ link.title }}</div>
+            <div class="mobile-nav__toggle">
+              <button type="button"
+                aria-controls="Linklist-{{ child_list_handle }}"
+                {% if link.active or link.child_active %}aria-open="true"{% endif %}
+                class="collapsible-trigger collapsible--auto-height {% if link.active or link.child_active %}is-open{% endif %} js-collapse__trigger collapse__trigger">
+                {% render 'collapsible-icons' %}
+              </button>
+            </div>
+          </div>
+          {%- if link.levels > 0 -%}
+            <div class="collapse__content js-collapse__content">
+              {% for sub_link in link.links %}
+                <a class="collapse__sub-link" href="{{sub_link.url}}">{{ sub_link.title }}</a>
+              {% endfor %}
+            </div>
+          {%- endif -%}
+        </li>
+      {%- endif -%}
+    {%- endfor -%}
   </div>
 </div>
