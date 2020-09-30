@@ -12,18 +12,12 @@ class SubmenuList {
   }
 
   addListeners() {
-    this.$el.on('click', this.handleClick);
-    $(window).click(function() {
-      $(document).find('.js-submenu-list-content').css('display', 'none');
-    });
+    this.$el.on('mouseenter', this.handleMouseEnter);
+    this.$el.on('mouseleave', this.handleMouseLeave);
   }
 
-  handleClick = (e) => {
-    e.stopPropagation();
-    $(document).find('.js-submenu-list-content').css('display', 'none');
-    if (this.dom.$submenuContent.css('display') === 'block') this.dom.$submenuContent.css('display', 'none');
-    else this.dom.$submenuContent.css('display', 'block');
-  }
+  handleMouseEnter = (e) => this.dom.$submenuContent.css('display', 'block');
+  handleMouseLeave = (e) => this.dom.$submenuContent.css('display', 'none');
 }
 
 export default SubmenuList;
