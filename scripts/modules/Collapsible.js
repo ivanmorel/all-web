@@ -26,9 +26,9 @@ class Collapsible {
     this.dom.$trigger.on('click', this.expandCollapse.bind(this));
   }
 
-  expandCollapse = () => {
-    const expanded = this.dom.$trigger.attr('aria-expanded') === 'true';
-    this.dom.$trigger.attr('aria-expanded', !expanded);
+  expandCollapse = (e) => {
+    const expanded = $(e.currentTarget).attr('aria-expanded') === 'true';
+    $(e.currentTarget).attr('aria-expanded', !expanded);
     
     if (!expanded) {
       if (this.isAccordion) {

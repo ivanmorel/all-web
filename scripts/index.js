@@ -5,9 +5,6 @@ import Collapsible from './modules/Collapsible';
 import ProductMobileNav from './modules/ProductMobileNav';
 
 $(document).ready(function() {
-  $('.js-test-module').each((index, element) => {
-    new ModuleTest(element);
-  });
   $('.js-submenu-list').each((index, element) => {
     new SubmenuList(element);
   });

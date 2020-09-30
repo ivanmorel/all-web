@@ -3,11 +3,11 @@ import Collapsible from './Collapsible';
 class ProductMobileNav {
   constructor(el){
     this.$el = $(el);
-    this.setDefaults();
+    this.setupDefaults();
     this.setProductMobileNav();
   }
 
-  setDefaults() {
+  setupDefaults() {
     this.dom = { 
       $navContent: $(document).find('.js-product-mobile-nav-content'),
     }

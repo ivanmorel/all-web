@@ -19,7 +19,7 @@
   overflow: hidden;
   transition: height 0.2s ease-out;
   padding-left: 20px;
-  border-bottom: 1px solid #e8e8e1;
+  border-bottom: 1px solid $lightgray0;
 }
 
 .collapse__sub-link {
@@ -32,7 +32,7 @@
 .collapse__link {
   display: block;
   padding: 15px;
-  border-bottom: 1px solid #e8e8e1;
+  border-bottom: 1px solid $lightgray0;
   font-size: 12px;
   letter-spacing: 0.2em;
 }
