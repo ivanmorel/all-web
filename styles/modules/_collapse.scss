@@ -1,0 +1,50 @@
+.collapse__wrapper {
+  margin-bottom: 0;
+  padding-bottom: 0 !important;
+}
+
+.collapse__button {
+  padding: 0;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 0;
+  width: 100%;
+  text-align: left;
+  display: flex;
+}
+
+.collapse__content {
+  height: 0px;
+  overflow: hidden;
+  transition: height 0.2s ease-out;
+  padding-left: 20px;
+  border-bottom: 1px solid $lightgray0;
+}
+
+.collapse__sub-link {
+  display: block;
+  padding: 15px;
+  font-size: 12px;
+  letter-spacing: 3px;
+}
+
+.collapse__link {
+  display: block;
+  padding: 15px;
+  border-bottom: 1px solid $lightgray0;
+  font-size: 12px;
+  letter-spacing: 3px;
+}
+
+.collapse__title {
+  flex: 1 1 auto;
+  font-size: 12px;
+  padding: 15px;
+}
+
+.collapse__trigger {
+  .collapsible-trigger__icon {
+    right: 25px;
+  }
+}

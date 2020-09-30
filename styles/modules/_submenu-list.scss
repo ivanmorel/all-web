@@ -1,0 +1,36 @@
+.submenu-list-trigger {
+  position: relative;
+}
+
+.submenu-list-content {
+  display: none;
+  position: absolute;
+  top: calc(100% + 5px);
+  padding: 30px 30px 0px 30px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  background-color: $white;
+  z-index: 100;
+}
+
+.submenu-list-item {
+  font-size: 13px;
+  color: gray;
+  margin-bottom: 20px;
+  white-space: nowrap;
+  display: block;
+  &:hover {
+    text-decoration: underline;
+    color: $black;
+  }
+}
+
+.product-submenu-item-text {
+  color: gray;
+  font-size: 16px;
+  margin-bottom: 0;
+  white-space: nowrap;
+  &:hover {
+    text-decoration: underline;
+    color: $black;
+  }
+}

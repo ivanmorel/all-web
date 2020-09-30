@@ -1,0 +1,41 @@
+.product-submenu-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid $gray0;
+  border-bottom: 1px solid $gray0;
+  padding: 0 40px;
+
+  @include mq($until: tablet){
+    display: none;
+  }
+}
+
+.product-submenu-item {
+  padding: 20px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  color: $gray0;
+  cursor: pointer;
+  margin: 0 10px;
+  &:hover {
+    & > h2:first-child {
+      text-decoration: underline;
+      color: $black;
+    }
+  }
+}
+
+.product-mobile-nav-hidden {
+  display: none;
+}
+
+.product-mobile-nav {
+  margin-left: 20px;
+
+  &:first-child {
+    margin-top: 1px solid $lightgray0;
+  }
+}
