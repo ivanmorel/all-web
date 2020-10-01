@@ -16,8 +16,8 @@ class SubmenuList {
     this.$el.on('mouseleave', this.handleMouseLeave);
   }
 
-  handleMouseEnter = (e) => this.dom.$submenuContent.css('display', 'block');
-  handleMouseLeave = (e) => this.dom.$submenuContent.css('display', 'none');
+  handleMouseEnter = (e) => this.dom.$submenuContent.addClass('submenu-list-content-open');
+  handleMouseLeave = (e) => this.dom.$submenuContent.removeClass('submenu-list-content-open');
 }
 
 export default SubmenuList;
