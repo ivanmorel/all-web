@@ -42,3 +42,10 @@
     color: $black;
   }
 }
+
+.pages-nav {
+  display: none;
+  @include mq($until: tablet){
+    display: none !important;
+  }
+}
