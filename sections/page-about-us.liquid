@@ -1,0 +1,76 @@
+<div class="centered-page-wrapper">
+  <h2 class="about-us-mobile-title">About Us</h2>
+  <div class="about-us-section">
+    <div class="about-us-top-left-image" style="background-image: url({{ section.blocks[0].settings.top-left-image | img_url: 'Medium' }});"></div>
+    <div class="about-us-description--width about-us-description--top-right-separation">
+      <h2 class="about-us-title">About Us</h2>
+      <p class="about-us-description">{{ section.blocks[0].settings.top-right-description }}</p>
+    </div>
+  </div>
+  <div class="about-us-section">
+    <p class="about-us-description about-us-description--width about-us-description--middle-left">{{ section.blocks[0].settings.middle-left-description }}</p>
+    <div class="about-us-middle-right-image" style="background-image: url({{ section.blocks[0].settings.middle-right-image | img_url: 'Medium' }});"></div>
+  </div>
+  <div class="about-us-section about-us-desktop-separation">
+    <div class="about-us-bottom-left-image" style="background-image: url({{ section.blocks[0].settings.bottom-left-image | img_url: 'Medium' }});"></div>
+    <div class="about-us-bottom-right-image" style="background-image: url({{ section.blocks[0].settings.bottom-right-image | img_url: 'Medium' }});"></div>
+  </div>
+  <div class="about-us-mobile-button-section">
+    {%- for link in linklists.our-story-1.links -%}
+      {%- if link.title != 'ABOUT US' -%}
+        <a class="about-us-mobile-button" href="{{link.url}}">{{ link.title }}</a>
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "About Us Section",
+    "blocks": [
+      {
+        "type": "about-us-section",
+        "name": "About Us Section",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "top-left-image",
+            "label": "Top Left Image",
+            "info": "Recommended size 352x405"
+          },
+          {
+            "id": "top-right-description",
+            "type": "textarea",
+            "label": "Top Right Description",
+            "info": "Top Right Description"
+          },
+          {
+            "id": "middle-left-description",
+            "type": "textarea",
+            "label": "Middle Left Description",
+            "info": "Middle Left Description"
+          },
+          {
+            "type": "image_picker",
+            "id": "middle-right-image",
+            "label": "Middle Right Image",
+            "info": "Recommended size 317x384"
+          },
+          {
+            "type": "image_picker",
+            "id": "bottom-left-image",
+            "label": "Bottom Left Image",
+            "info": "Recommended size 317x384"
+          },
+          {
+            "type": "image_picker",
+            "id": "bottom-right-image",
+            "label": "Bottom Right Image",
+            "info": "Recommended size 683x384"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

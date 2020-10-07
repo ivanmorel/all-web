@@ -1,0 +1,141 @@
+.about-us-top-left-image {
+  min-width: 352px;
+  height: 405px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.about-us-section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 73px;
+  @include mq($until: tablet){
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 15px;
+  }
+}
+
+.about-us-title {
+  font-size: 30px;
+  margin-bottom: 50px;
+  @include mq($until: tablet){
+    display: none;
+  }
+}
+
+.about-us-description {
+  font-size: 16px;
+  @include mq($until: tablet){
+    margin: 27px 0 0 0;
+    order: 2;
+  }
+}
+
+.about-us-middle-right-image {
+  min-width: 317px;
+  height: 384px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  @include mq($until: tablet){
+    order: 1;
+  }
+}
+
+.about-us-bottom-right-image {
+  min-width: 683px;
+  height: 384px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 20px;
+
+  @include mq($until: tablet){
+    min-width: initial;
+    height: 410px;
+    margin: 0 0 41px 0;
+  }
+}
+
+.about-us-description--width {
+  max-width: 575px;
+  @include mq($until: tablet){
+    max-width: initial;
+  }
+}
+
+.about-us-description--middle-left {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  @include mq($until: tablet){
+    margin-right: 0;
+  }
+}
+
+.about-us-description--top-right-separation {
+  margin-left: 20px;
+  @include mq($until: tablet){
+    margin-left: 0;
+  }
+}
+
+.about-us-mobile-title {
+  font-size: 26px;
+  display: none;
+  margin-top: 52px;
+  letter-spacing: 1px;
+  @include mq($until: tablet){
+    display: block;
+  }
+}
+
+.about-us-bottom-left-image {
+  min-width: 317px;
+  height: 384px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  @include mq($until: tablet){
+    min-width: initial;
+    height: 194px;
+    margin-bottom: 19px;
+  }
+}
+
+.about-us-mobile-button-section {
+  display: none;
+  padding-bottom: 60px;
+  @include mq($until: tablet){
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.about-us-mobile-button {
+  height: 42px;
+  width: 47%;
+  color: $white;
+  background-color: $black;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  letter-spacing: 2px;
+  white-space: nowrap;
+  text-decoration: none;
+
+  &:hover {
+    color: $white;
+  }
+}
+
+.about-us-desktop-separation {
+  padding-bottom: 165px;
+  @include mq($until: tablet){
+    padding-bottom: 0;
+  }
+}
