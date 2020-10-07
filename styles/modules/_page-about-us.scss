@@ -1,12 +1,4 @@
-.about-us-top-left-image {
-  min-width: 352px;
-  height: 405px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.about-us-section {
+.about-us {
   display: flex;
   justify-content: space-between;
   margin-top: 73px;
@@ -17,7 +9,15 @@
   }
 }
 
-.about-us-title {
+.about-us__top-left-image {
+  min-width: 352px;
+  height: 405px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.about-us__title {
   font-size: 30px;
   margin-bottom: 50px;
   @include mq($until: tablet){
@@ -25,7 +25,7 @@
   }
 }
 
-.about-us-description {
+.about-us__description {
   font-size: 16px;
   @include mq($until: tablet){
     margin: 27px 0 0 0;
@@ -33,7 +33,7 @@
   }
 }
 
-.about-us-middle-right-image {
+.about-us__middle-right-image {
   min-width: 317px;
   height: 384px;
   background-size: cover;
@@ -44,7 +44,7 @@
   }
 }
 
-.about-us-bottom-right-image {
+.about-us__bottom-right-image {
   min-width: 683px;
   height: 384px;
   background-size: cover;
@@ -59,14 +59,14 @@
   }
 }
 
-.about-us-description--width {
+.about-us__description--width {
   max-width: 575px;
   @include mq($until: tablet){
     max-width: initial;
   }
 }
 
-.about-us-description--middle-left {
+.about-us__description--middle-left {
   display: flex;
   align-items: center;
   margin-right: 20px;
@@ -75,14 +75,14 @@
   }
 }
 
-.about-us-description--top-right-separation {
+.about-us__description--top-right-separation {
   margin-left: 20px;
   @include mq($until: tablet){
     margin-left: 0;
   }
 }
 
-.about-us-mobile-title {
+.about-us__mobile-title {
   font-size: 26px;
   display: none;
   margin-top: 52px;
@@ -92,7 +92,7 @@
   }
 }
 
-.about-us-bottom-left-image {
+.about-us__bottom-left-image {
   min-width: 317px;
   height: 384px;
   background-size: cover;
@@ -105,7 +105,7 @@
   }
 }
 
-.about-us-mobile-button-section {
+.about-us__mobile-button-section {
   display: none;
   padding-bottom: 60px;
   @include mq($until: tablet){
@@ -114,7 +114,7 @@
   }
 }
 
-.about-us-mobile-button {
+.about-us__mobile-button {
   height: 42px;
   width: 47%;
   color: $white;
@@ -133,7 +133,7 @@
   }
 }
 
-.about-us-desktop-separation {
+.about-us--desktop-separation {
   padding-bottom: 165px;
   @include mq($until: tablet){
     padding-bottom: 0;
