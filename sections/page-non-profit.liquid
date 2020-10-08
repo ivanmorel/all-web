@@ -1,0 +1,111 @@
+<div class="centered-page-wrapper">
+  {% for block in section.blocks %}
+    {% case block.type %}
+      {% when 'title-section' %}
+        {% include 'non-profit-title' block %}
+      {% when 'description' %}
+        {% include 'non-profit-description' block %}
+      {% when 'dual-image-banner' %}
+        {% include 'dual-image-banner' block %}
+      {% when 'contacts' %}
+        {% include 'non-profit-contacts' block %}
+    {% endcase %}
+  {% endfor %}
+</div>
+
+{% schema %}
+  {
+    "name": "Non Profit Page",
+    "blocks": [
+      {
+        "name": "Title Section",
+        "type": "title-section",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "title_image",
+            "label": "Title Image",
+            "info": "Recommended size 127x127"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          },
+          {
+            "type": "text",
+            "id": "subtitle",
+            "label": "Subtitle"
+          }
+        ]
+      },
+      {
+        "name": "Description",
+        "type": "description",
+        "settings": [
+          {
+            "type": "textarea",
+            "id": "description",
+            "label": "Description"
+          }
+        ]
+      },
+      {
+        "name": "Dual Image Banner",
+        "type": "dual-image-banner",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "left_image",
+            "label": "Left Image",
+            "info": "Recommended size 127x127"
+          },
+          {
+            "type": "image_picker",
+            "id": "right_image",
+            "label": "Right Image",
+            "info": "Recommended size 127x127"
+          }
+        ]
+      },
+      {
+        "name": "Contacts",
+        "type": "contacts",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "contact_image",
+            "label": "Contact Image",
+            "info": "Recommended size 95x95"
+          },
+          {
+            "type": "url",
+            "id": "website",
+            "label": "Website"
+          },
+          {
+            "type": "text",
+            "id": "email",
+            "label": "Email"
+          },
+          {
+            "type": "url",
+            "id": "instagram",
+            "label": "Instagram link"
+          },
+          {
+            "type": "url",
+            "id": "facebook",
+            "label": "Facebook link"
+          },
+          {
+            "type": "url",
+            "id": "pinterest",
+            "label": "Pinterest link"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

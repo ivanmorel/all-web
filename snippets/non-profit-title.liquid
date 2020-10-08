@@ -1,0 +1,18 @@
+<div class="non-profit__title-wrapper">
+  <div class="non-profit__title-top-wrapper">
+    <div class="non-profit__title-image" style="background-image: url({{ block.settings.title_image | img_url: 'Medium' }});">
+      <img class="visually-hidden" src="" alt="{{ block.settings.title_image.alt }}"/>
+    </div>
+    <h1 class="non-profit__title">{{ block.settings.title }}</h1>
+  </div>
+  <h2 class="non-profit__subtitle">{{ block.settings.subtitle }}</h2>
+</div>
+<div class="non-profit__title-wrapper-mobile">
+  <h1 class="non-profit__title-mobile">{{ block.settings.title }}</h1>
+  <div class="non-profit__title-bottom-wrapper">
+    <div class="non-profit__title-image" style="background-image: url({{ block.settings.title_image | img_url: 'Medium' }});">
+      <img class="visually-hidden" src="" alt="{{ block.settings.title_image.alt }}"/>
+    </div>
+    <h2 class="non-profit__subtitle">{{ block.settings.subtitle }}</h2>
+  </div>
+</div>

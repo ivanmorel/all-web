@@ -1,0 +1,40 @@
+{% assign website = block.settings.website | split: 'http://' %}
+
+<div class="non-profit__contacts">
+  <div class="non-profit__contacts-image" style="background-image: url({{ block.settings.contact_image | img_url: 'Medium' }});">
+    <img class="visually-hidden" src="" alt="{{ block.settings.contact_image.alt }}"/>
+  </div>
+  <div class="non-profit__contacts-info">
+    <a class="non-profit__contacts-info-link" href="{{ block.settings.website }}">{{ website[1] }}</a>
+    <a class="non-profit__contacts-info-link" href="mailto:{{ block.settings.email }}" >{{ block.settings.email }}</a>
+    <div class="non-profit__contacts-socials">
+      {% if block.settings.instagram != blank %}
+        <a href="{{ block.settings.instagram }}" class="non-profit__contacts-social-link">
+          <img src="{{'instagram.svg' | asset_url }}" alt="instagram" class="non-profit__contacts-social-icon"/>
+        </a>
+      {% endif %}
+      {% if block.settings.facebook != blank %}
+        <a href="{{ block.settings.facebook }}" class="non-profit__contacts-social-link">
+          <img src="{{'facebook.svg' | asset_url }}" alt="facebook" class="non-profit__contacts-social-icon"/>
+        </a>
+      {% endif %}
+      {% if block.settings.pinterest != blank %}
+        <a href="{{ block.settings.pinterest }}" class="non-profit__contacts-social-link">
+          <img src="{{'pinterest.svg' | asset_url }}" alt="pinterest" class="non-profit__contacts-social-icon"/>
+        </a>
+      {% endif %}
+    </div>
+  </div>
+</div>
+<div class="non-profit__button-section">
+  {%- for link in linklists.non-profit-page-links.links -%}
+    <a class="non-profit__shop-now-button" href="{{link.url}}">{{ link.title }}</a>
+  {%- endfor -%}
+</div>
+<div class="non-profit__pages-link-section">
+  {%- for link in linklists.our-story-1.links -%}
+    {%- if link.title != 'NON-PROFIT ORG' -%}
+      <a class="about-us__mobile-button" href="{{link.url}}">{{ link.title }}</a>
+    {%- endif -%}
+  {%- endfor -%}
+</div>
