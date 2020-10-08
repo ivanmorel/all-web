@@ -1,0 +1,158 @@
+.non-profit__title-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 74px 0 50px;
+  @include mq($until: tablet){
+    display: none;
+  }
+}
+
+.non-profit__title-top-wrapper {
+  display: flex;
+}
+
+.non-profit__title {
+  font-size: 49px;
+  text-transform: uppercase;
+  margin-left: 32px;
+  letter-spacing: 2px;
+  line-height: 60px;
+  max-width: 240px;
+}
+
+.non-profit__subtitle {
+  font-size: 23px;
+  margin: 23px 0 0;
+  letter-spacing: 2px;
+
+  @include mq($until: tablet){
+    font-size: 30px;
+    margin: 0 0 0 15px;
+  }
+}
+
+.non-profit__title-image {
+  height: 127px;
+  width: 127px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  @include mq($until: tablet){
+    height: 84px;
+    width: initial;
+    min-width: 84px;
+  }
+}
+
+.non-profit__description {
+  text-align: center;
+  font-size: 14px;
+  margin: 46px 0 0;
+  @include mq($until: tablet){
+    text-align: left;
+    margin: 30px 0 0;
+  }
+}
+
+.non-profit__contacts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 58px;
+  @include mq($until: tablet){
+    margin-top: 40px;
+    justify-content: flex-start;
+  }
+}
+
+.non-profit__contacts-image {
+  width: 95px;
+  height: 95px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.non-profit__contacts-info {
+  margin-left: 37px;
+}
+
+.non-profit__contacts-info-link {
+  font-size: 20px;
+  text-transform: none !important;
+  display: block;
+}
+
+.non-profit__contacts-socials {
+  display: flex;
+}
+
+.non-profit__contacts-social-link {
+  margin-right: 10px;
+}
+
+.non-profit__contacts-social-icon {
+  height: 18px;
+  width: 18px;
+}
+
+.non-profit__button-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 100px 0;
+  @include mq($until: tablet){
+    margin: 70px 0 36px;
+  }
+}
+
+.non-profit__shop-now-button {
+  height: 47px;
+  width: 226px;
+  color: $white;
+  background-color: $black;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+  letter-spacing: 2px;
+  white-space: nowrap;
+  text-decoration: none;
+
+  &:hover {
+    color: $white;
+  }
+}
+
+.non-profit__title-wrapper-mobile {
+  display: none;
+  @include mq($until: tablet){
+    display: block;
+  }
+}
+
+.non-profit__title-mobile {
+  font-size: 26px;
+  letter-spacing: 2px;
+  margin-top: 52px;
+}
+
+.non-profit__title-bottom-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.non-profit__pages-link-section {
+  display: none;
+  padding: 36px 0;
+  justify-content: space-between;
+  border-top: 1px solid $gray0;
+  @include mq($until: tablet){
+    display: flex;
+  }
+}

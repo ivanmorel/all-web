@@ -1,0 +1,35 @@
+.dual-image-banner {
+  display: flex;
+  margin-top: 70px;
+  justify-content: space-between;
+  @include mq($until: tablet){
+    flex-direction: column;
+    margin-top: 40px;
+    justify-content: flex-start;
+  }
+}
+
+.dual-image-banner__left-image {
+  height: 384px;
+  width: 35%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  @include mq($until: tablet){
+    height: 418px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+.dual-image-banner__right-image {
+  height: 384px;
+  width: 62%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  @include mq($until: tablet){
+    height: 194px;
+    width: 100%;
+  }
+}
