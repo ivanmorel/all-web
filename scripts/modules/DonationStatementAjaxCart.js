@@ -21,10 +21,10 @@ class DonationStatementAjaxCart {
 
   initializeStatements() {
     this.$el.find('.js-donation-statement-ajaxcart__product').each((index, product) => {
-      new DonationStatementAjaxCartProduct(product);
+      new DonationStatementAjaxCartProduct(product, {isAjaxCart: true});
     });
     this.$el.find('.js-donation-statement-ajaxcart__total').each((index, product) => {
-      new DonationStatementAjaxCartTotal(product);
+      new DonationStatementAjaxCartTotal(product, {isAjaxCart: true});
     });
   }
 }

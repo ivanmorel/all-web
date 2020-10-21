@@ -33,7 +33,7 @@
           </div>
 
           {% for item in cart.items %}
-            <div class="cart__row">
+            <div class="cart__row js-donation-statement-ajaxcart__product">
               <div class="grid grid--full cart__row--table-large">
 
                 <div class="grid__item medium-up--three-fifths">
@@ -87,6 +87,7 @@
                           <small>{{ 'cart.general.remove' | t }}</small>
                         </a>
                       </p>
+                      <p class="donation-statement--ajax-cart__product-text js-donation-statement--ajax-cart__product-text"></p>
                     </div>
 
                   </div>
@@ -105,7 +106,7 @@
                         <span class="visually-hidden">{{ 'products.general.sale_price' | t }}</span>
                         <span class="cart__price cart__discount">{{ item.final_price | money }}</span>
                       {% else %}
-                        <span class="cart__price">{{ item.original_price | money }}</span>
+                        <span class="cart__price cart__price--per-item">{{ item.original_price | money }}</span>
                       {% endif %}
 
                       {%- if item.line_level_discount_allocations != blank -%}
@@ -146,7 +147,7 @@
                         <span class="visually-hidden">{{ 'products.general.sale_price' | t }}</span>
                         <span class="cart__price cart__discount">{{ item.final_line_price | money }}</span>
                       {% else %}
-                        <span class="cart__price">{{ item.original_line_price | money }}</span>
+                        <span class="cart__price cart__price--total">{{ item.original_line_price | money }}</span>
                       {% endif %}
                     </div>
                   </div>
@@ -164,7 +165,7 @@
                   <textarea name="note" class="input-full cart-notes" id="CartSpecialInstructions">{{ cart.note }}</textarea>
                 </div>
               {% endif %}
-              <div class="grid__item medium-up--one-half text-center medium-up--text-right{% unless settings.cart_notes_enable %} medium-up--push-one-half{% endunless %}">
+              <div class="grid__item medium-up--one-half text-center medium-up--text-right{% unless settings.cart_notes_enable %} medium-up--push-one-half{% endunless %} js-donation-statement-ajaxcart__total">
                 {% if cart.cart_level_discount_applications != blank %}
                   <div class="grid grid--full cart__row--table">
                     <div class="grid__item one-half">
@@ -184,7 +185,7 @@
                     <p class="h4">{{ 'cart.general.subtotal' | t }}</p>
                   </div>
                   <div class="grid__item one-half">
-                    <p class="h4">{{ cart.total_price | money }}</p>
+                    <p class="h4 cart__subtotal">{{ cart.total_price | money }}</p>
                   </div>
                 </div>
                 <small>
@@ -202,7 +203,7 @@
                     </label>
                   </p>
                 {% endif %}
-
+                <p class="donation-statement--ajax-cart__total-text js-donation-statement--ajax-cart__total-text"></p>
                 <div class="cart__checkout-wrapper">
                   <button type="submit" name="update" class="btn btn--secondary cart__update">
                     {{ 'cart.general.update' | t }}

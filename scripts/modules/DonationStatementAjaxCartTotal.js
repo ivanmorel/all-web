@@ -2,15 +2,19 @@ import {moneyConversion} from '../utils/conversionMethods';
 import {getPriceWithoutCurrency} from '../utils/priceParser';
 
 class DonationStatementAjaxCartCart {
-  constructor(el){
+  constructor(el, config = {}){
     this.$el = $(el);
-    this.setDefaults();
+    this.setDefaults(config);
     this.init();
   }
 
-  setDefaults() {
+  setDefaults(config) {
+    const defaultConfig = {
+      isAjaxCart: false
+    }
+    this.config = {...defaultConfig, ...config}
     this.dom = { 
-      $priceContainer: this.$el.find('.ajaxcart__price'),
+      $priceContainer: this.config.isAjaxCart ? this.$el.find('.ajaxcart__price') : this.$el.find('.cart__subtotal'),
       $donationContainer: this.$el.find('.js-donation-statement--ajax-cart__total-text')
     }
     this.conversionMethod = moneyConversion;
@@ -24,7 +28,7 @@ class DonationStatementAjaxCartCart {
   
   processDonationMessage(price = 0, conversionMethod = () => 0){
     const convertedAmmount = conversionMethod(price);
-    return `From this product, you are giving $${conversionMethod(price)} to The Thirst Project`;
+    return `From this purchase, you are giving <em>$${conversionMethod(price)}</em> to The Thirst Project`;
   }
 
 }

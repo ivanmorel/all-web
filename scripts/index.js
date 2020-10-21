@@ -6,6 +6,8 @@ import ProductMobileNav from './modules/ProductMobileNav';
 import PagesNav from './modules/PagesNav';
 import PagesMobileNav from './modules/PagesMobileNav';
 import DonationStatementAjaxCart from './modules/DonationStatementAjaxCart';
+import DonationStatementAjaxCartProduct from './modules/DonationStatementAjaxCartProduct';
+import DonationStatementAjaxCartTotal from './modules/DonationStatementAjaxCartTotal';
 
 $(document).ready(function() {
   $('.js-submenu-list').each((index, element) => {
@@ -25,5 +27,11 @@ $(document).ready(function() {
   });
   $('.js-donation-statement-ajaxcart').each((index, element) => {
     new DonationStatementAjaxCart(element);
+  });
+  $('.js-donation-statement-ajaxcart__product').each((index, element) => {
+    new DonationStatementAjaxCartProduct(element);
+  });
+  $('.js-donation-statement-ajaxcart__total').each((index, element) => {
+    new DonationStatementAjaxCartTotal(element);
   });
 })

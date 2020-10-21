@@ -2,16 +2,20 @@ import {moneyConversion} from '../utils/conversionMethods';
 import {getPriceWithoutCurrency} from '../utils/priceParser';
 
 class DonationStatementAjaxCartProduct {
-  constructor(el){
+  constructor(el, config){
     this.$el = $(el);
-    this.setDefaults();
+    this.setDefaults(config);
     this.init();
   }
 
-  setDefaults() {
+  setDefaults(config) {
+    const defaultConfig = {
+      isAjaxCart: false
+    }
+    this.config = {...defaultConfig, ...config};
     this.dom = { 
-      $priceContainer: this.$el.find('.ajaxcart__price'),
-      $qtyIndicator: this.$el.find('.js-qty__num'),
+      $priceContainer: this.config.isAjaxCart? this.$el.find('.ajaxcart__price') : this.$el.find('.cart__price--per-item'),
+      $qtyIndicator: this.config.isAjaxCart? this.$el.find('.js-qty__num') : this.$el.find('.cart__product-qty'),
       $donationContainer: this.$el.find('.js-donation-statement--ajax-cart__product-text')
     }
     this.conversionMethod = moneyConversion;
