@@ -5,6 +5,7 @@ import Collapsible from './modules/Collapsible';
 import ProductMobileNav from './modules/ProductMobileNav';
 import PagesNav from './modules/PagesNav';
 import PagesMobileNav from './modules/PagesMobileNav';
+import DonationStatementAjaxCart from './modules/DonationStatementAjaxCart';
 
 $(document).ready(function() {
   $('.js-submenu-list').each((index, element) => {
@@ -21,5 +22,8 @@ $(document).ready(function() {
   });
   $('.js-pages-mobile-nav').each((index, element) => {
     new PagesMobileNav(element);
+  });
+  $('.js-donation-statement-ajaxcart').each((index, element) => {
+    new DonationStatementAjaxCart(element);
   });
 })

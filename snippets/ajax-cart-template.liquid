@@ -2,7 +2,7 @@
 {% raw %}
   <div class="drawer__scrollable">
     {{#items}}
-    <div class="ajaxcart__product appear-animation appear-delay-{{animationRow}}">
+    <div class="ajaxcart__product js-donation-statement-ajaxcart__product appear-animation appear-delay-{{animationRow}}" data-donation-ui-type="ajaxcart-product">
       <div class="ajaxcart__row">
         <div class="grid">
           <div class="grid__item one-third">
@@ -81,6 +81,11 @@
                 </div>
               {{/if}}
             </div>
+            <div class="grid grid--full display-table">
+              <div class="grid__item text-right">
+                <p class="donation-statement--ajax-cart__product-text js-donation-statement--ajax-cart__product-text">From this product, you are giving $1.75 to Non-profit Org.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -94,7 +99,7 @@
       </div>
     {% endraw %}{% endif %}{% raw %}
   </div>
-  <div class="drawer__footer appear-animation appear-delay-{{lastAnimationRow}}">
+  <div class="drawer__footer appear-animation appear-delay-{{lastAnimationRow}} js-donation-statement-ajaxcart__total">
     {{#if cartDiscounts }}
       <div class="grid grid--full">
         <div class="grid__item one-half">
@@ -109,16 +114,20 @@
         </div>
       </div>
     {{/if}}
-    <div class="grid grid--full">
+    <div class="grid grid--full ">
       <div class="grid__item one-half">
         <p class="ajaxcart__subtotal">{% endraw %}{{ 'cart.general.subtotal' | t }}{% raw %}</p>
       </div>
       <div class="grid__item one-half text-right">
         <p class="ajaxcart__price">{{{totalPrice}}}</p>
       </div>
+      
     </div>
     <p class="ajaxcart__note">
       {% endraw %}{{ 'cart.general.shipping_at_checkout' | t }}{% raw %}
+    </p>
+    <p class="donation-statement--ajax-cart__total-text js-donation-statement--ajax-cart__total-text">
+      From this purchase, $7.62 goes to Non-profit Org.
     </p>
     {% endraw %}{% if settings.cart_terms_conditions_enable %}
       <p class="ajaxcart__note ajaxcart__note--terms">
