@@ -27,7 +27,7 @@ class DonationStatementAjaxCartCart {
   }
   
   processDonationMessage(price = 0, conversionMethod = () => 0){
-    const convertedAmmount = conversionMethod(price);
+    const convertedAmount = conversionMethod(price);
     return `From this purchase, you are giving <em>$${conversionMethod(price)}</em> to The Thirst Project`;
   }
 

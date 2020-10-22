@@ -8,7 +8,7 @@ class DonationsBar {
   }
 
   mockResponse = {
-    ammount: (Math.random() * 100000) + 1
+    Amount: (Math.random() * 100000) + 1
   };
 
   setDefaults() {
@@ -19,12 +19,12 @@ class DonationsBar {
   }
 
   async init() {
-    const donationsAmmount = await this.getDonationsAmmount();
-    const donationAmmountConverted = this.conversionMethod(donationsAmmount);
-    this.dom.$title.html(`With your purchases, we have provided clean water for ${donationAmmountConverted} people for a year, with <em>The Thirst Project</em>`);
+    const donationsAmount = await this.getDonationsAmount();
+    const donationAmountConverted = this.conversionMethod(donationsAmount);
+    this.dom.$title.html(`With your purchases, we have provided clean water for ${donationAmountConverted} people for a year, with <em>The Thirst Project</em>`);
   }
 
-  async getDonationsAmmount() {
+  async getDonationsAmount() {
     return this.parseResponse(await this.fetchDonationsData());
   }
 
@@ -34,7 +34,7 @@ class DonationsBar {
   }
   parseResponse(response) {
     // TODO: Implement needed parsing
-    return response.ammount;
+    return response.Amount;
   }
 }
 
