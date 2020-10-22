@@ -1,0 +1,111 @@
+.partner {
+  display: flex;
+  margin-bottom: 50px;
+  @include mq($until: tablet){
+    flex-direction: column;
+  }
+}
+
+.partner__image {
+  min-width: 230px;
+  height: 230px;
+  @include mq($until: tablet){
+    display: none;
+  }
+}
+
+
+.partner__info {
+  margin-left: 30px;
+  width: 365px;
+  padding-right: 20px;
+  @include mq($until: tablet){
+    display: none;
+  }
+}
+
+.partner__title {
+  font-size: 32px;
+  margin-bottom: 22px;
+  text-transform: uppercase;
+  @include mq($until: tablet){
+    font-size: 23px;
+    margin: 0 0 0 15px;
+  }
+}
+
+.partner__contact {
+  font-size: 20px;
+  margin-bottom: 10px;
+  text-transform: none !important;
+  @include mq($until: tablet){
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+}
+
+.partner__contacts-socials {
+  display: flex;
+  @include mq($until: tablet){
+    margin-bottom: 28px;
+  }
+}
+
+.partner__contacts-social-link {
+  margin-right: 20px;
+}
+
+.partner__contacts-social-icon {
+  height: 18px;
+  width: 18px;
+}
+
+.partner__description {
+  max-width: 45%;
+  @include mq($until: tablet){
+    max-width: initial;
+  }
+}
+
+.partner__description-title {
+  font-size: 29px;
+  text-transform: uppercase;
+  @include mq($until: tablet){
+    font-size: 24px;
+  }
+}
+
+.partner__description-section {
+  padding: 15px 0;
+  border-bottom: 2px solid $gray0;
+  margin-bottom: 0;
+  font-size: 15px;
+  text-transform: none !important;
+  @include mq($until: tablet){
+    font-size: 12px;
+  }
+}
+
+.partner__description-info {
+  font-size: 15px;
+  margin-top: 12px;
+}
+
+.partner__mobile-wrapper {
+  display: none;
+  @include mq($until: tablet){
+    display: block;
+  }
+}
+
+.partner__mobile-top-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.partner__mobile-image {
+  height: 84px;
+  width: 84px;
+}
+

@@ -9,8 +9,17 @@
         {% include 'dual-image-banner' block %}
       {% when 'contacts' %}
         {% include 'non-profit-contacts' block %}
+      {% when 'partner-section' %}
+        {% include 'partner-section' block %}
     {% endcase %}
   {% endfor %}
+  <div class="non-profit__pages-link-section">
+    {%- for link in linklists.our-story-1.links -%}
+      {%- if link.title != 'NON-PROFIT ORG' -%}
+        <a class="about-us__mobile-button" href="{{link.url}}">{{ link.title }}</a>
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
 </div>
 
 {% schema %}
@@ -103,6 +112,73 @@
             "type": "url",
             "id": "pinterest",
             "label": "Pinterest link"
+          }
+        ]
+      },
+      {
+        "name": "Partner Section",
+        "type": "partner-section",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "partner_image",
+            "label": "Partner Image",
+            "info": "Recommended size 230x230"
+          },
+          {
+            "type": "text",
+            "id": "partner_title",
+            "label": "Partner Title"
+          },
+          {
+            "type": "url",
+            "id": "website",
+            "label": "Website"
+          },
+          {
+            "type": "text",
+            "id": "email",
+            "label": "Email"
+          },
+          {
+            "type": "url",
+            "id": "instagram",
+            "label": "Instagram link"
+          },
+          {
+            "type": "url",
+            "id": "facebook",
+            "label": "Facebook link"
+          },
+          {
+            "type": "url",
+            "id": "pinterest",
+            "label": "Pinterest link"
+          },
+          {
+            "type": "text",
+            "id": "info_title",
+            "label": "Title Info"
+          },
+          {
+            "type": "text",
+            "id": "info_collection",
+            "label": "Collection Info "
+          },
+          {
+            "type": "text",
+            "id": "info_hours",
+            "label": "Hours Info "
+          },
+          {
+            "type": "text",
+            "id": "info_units",
+            "label": "Units Info "
+          },
+          {
+            "type": "textarea",
+            "id": "info_description",
+            "label": "Description"
           }
         ]
       }
