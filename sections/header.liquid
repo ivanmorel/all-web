@@ -80,6 +80,7 @@
 </style>
 
 <div data-section-id="{{ section.id }}" data-section-type="header-section">
+  {% render 'donations-bar', section: section %}
   {% if overlay_header or section.settings.announcement_above_header %}
     {% render 'announcement-bar', section: section %}
   {% endif %}
@@ -300,6 +301,24 @@
         "label": "Overlay header over collection",
         "info": "(if collection image is enabled)",
         "default": false
+      },
+      {
+        "type": "header",
+        "content": "Donations bar"
+      },
+      {
+        "type": "checkbox",
+        "id": "donations_show",
+        "label": "Show donations bar",
+        "default": true,
+        "info": "Show/hide donations bar"
+      },
+      {
+        "type": "color",
+        "id": "donations_bg",
+        "label": "Donations bar BG",
+        "default": "#FFFFFF",
+        "info": "The background color for the donations bar"
       },
       {
         "type": "header",

@@ -1,0 +1,10 @@
+.donation-statement--ajax-cart__product-text {
+  @include rem(font-size, 15px);
+  letter-spacing: normal;
+  line-height: normal;
+  margin-top: 15px;
+}
+
+.donation-statement--ajax-cart__total-text {
+  @include rem(font-size, 20px);
+}
