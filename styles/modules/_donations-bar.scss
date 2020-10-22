@@ -1,0 +1,11 @@
+.donations-bar__inner {
+  margin: 0 auto;
+  text-align: center;
+  padding: 10px;
+}
+
+.donations-bar__title {
+  @include rem(font-size, 15px);
+  margin: 0;
+  text-transform: none !important; // needed to override theme's css
+}

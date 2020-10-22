@@ -8,6 +8,7 @@ import PagesMobileNav from './modules/PagesMobileNav';
 import DonationStatementAjaxCart from './modules/DonationStatementAjaxCart';
 import DonationStatementAjaxCartProduct from './modules/DonationStatementAjaxCartProduct';
 import DonationStatementAjaxCartTotal from './modules/DonationStatementAjaxCartTotal';
+import DonationsBar from './modules/DonationsBar';
 
 $(document).ready(function() {
   $('.js-submenu-list').each((index, element) => {
@@ -33,5 +34,8 @@ $(document).ready(function() {
   });
   $('.js-donation-statement-ajaxcart__total').each((index, element) => {
     new DonationStatementAjaxCartTotal(element);
+  });
+  $('.js-donations-bar').each((index, element) => {
+    new DonationsBar(element);
   });
 })
