@@ -1,6 +1,6 @@
 .partner {
   display: flex;
-  margin-bottom: 50px;
+  margin-top: 50px;
   @include mq($until: tablet){
     flex-direction: column;
   }
