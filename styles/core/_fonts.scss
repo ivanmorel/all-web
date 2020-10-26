@@ -1,7 +1,25 @@
-// @font-face {
-//   font-family: 'AvenirLTStd-Roman';
-//   font-style: normal;
-//   font-weight: normal;
-//   src: local('Avenir LT Std 55 Roman'), url('AvenirLTStd-Roman.woff') format('woff');
-//   }
+@import 'https://use.typekit.net/kan2xmy.css'; //LTC Goudy Old Style Pro Typekit kit
 
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("HelveticaNeueRoman.woff") format("woff");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("HelveticaNeueMedium.woff") format("woff");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Antro Vectra";
+  src: url("Antro_Vectra.woff") format("woff");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Antro Vectra";
+  src: url("Antro_Vectra_Bolder.woff") format("woff");
+  font-weight: 700;
+}
