@@ -1,5 +1,5 @@
 {% paginate blog.articles by 21 %}
-
+{%- render 'submenu', links: linklists.blogs.links -%}
 <div data-section-id="{{ section.id }}" data-section-type="blog">
   <div class="page-width page-content">
 

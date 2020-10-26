@@ -1,36 +1,11 @@
-<div class="centered-page-wrapper">
-  <h1 class="about-us__mobile-title">About Us</h1>
-  <div class="about-us">
-    <div class="about-us__top-left-image" style="background-image: url({{ section.blocks[0].settings.top-left-image | img_url: 'Medium' }});">
-      <img class="visually-hidden" src="" alt="{{ section.blocks[0].settings.top-left-image.alt }}"/>
-    </div>
-    <div class="about-us__description--width about-us__description--top-right-separation">
-      <h1 class="about-us__title">About Us</h1>
-      <p class="about-us__description">{{ section.blocks[0].settings.top-right-description }}</p>
-    </div>
-  </div>
-  <div class="about-us">
-    <p class="about-us__description about-us__description--width about-us__description--middle-left">{{ section.blocks[0].settings.middle-left-description }}</p>
-    <div class="about-us__middle-right-image" style="background-image: url({{ section.blocks[0].settings.middle-right-image | img_url: 'Medium' }});">
-      <img class="visually-hidden" src="" alt="{{ section.blocks[0].settings.middle-right-image.alt }}"/>
-    </div>
-  </div>
-  <div class="about-us about-us--desktop-separation">
-    <div class="about-us__bottom-left-image" style="background-image: url({{ section.blocks[0].settings.bottom-left-image | img_url: 'Medium' }});">
-      <img class="visually-hidden" src="" alt="{{ section.blocks[0].settings.bottom-left-image.alt }}"/>
-    </div>
-    <div class="about-us__bottom-right-image" style="background-image: url({{ section.blocks[0].settings.bottom-right-image | img_url: 'Medium' }});">
-      <img class="visually-hidden" src="" alt="{{ section.blocks[0].settings.bottom-right-image.alt }}"/>
-    </div>
-  </div>
-  <div class="about-us__mobile-button-section">
-    {%- for link in linklists.our-story-1.links -%}
-      {%- if link.title != 'ABOUT US' -%}
-        <a class="about-us__mobile-button" href="{{link.url}}">{{ link.title }}</a>
-      {%- endif -%}
-    {%- endfor -%}
-  </div>
-</div>
+
+{%- render 'submenu', links: linklists.our-story-1.links -%}
+{% for block in section.blocks %}
+  {% case block.type %}
+    {% when 'about-us-section' %}
+      {% include 'page-about-us-body' block %}
+  {% endcase %}
+{% endfor %}
 
 {% schema %}
   {
