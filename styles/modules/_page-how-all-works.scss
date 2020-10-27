@@ -30,15 +30,18 @@
 }
 
 .how-all__description-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
   margin-top: 137px;
   padding-bottom: 140px;
+  columns: 2;
+
+  & > li::marker {
+    content: counter(list-item) " - ";
+    color: $brown0;
+  }
+
   @include mq($until: tablet){
-    flex-direction: column;
-    justify-content: flex-start;
     margin-top: 33px;
+    columns: 1;
     padding-bottom: 47px;
   }
 }
@@ -47,15 +50,11 @@
   font-size: 23px;
   line-height: 35px;
   font-family: $font-ltc-goudy-oldstyle-pro;
-  width: 45%;
+  width: 90%;
   color: $blue0;
   @include mq($until: tablet){
     width: 100%;
     font-size: 14px;
     line-height: 21px;
   }
-}
-
-.how-all__description strong {
-  color: $brown0;
 }

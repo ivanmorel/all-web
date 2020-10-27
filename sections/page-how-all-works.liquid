@@ -1,5 +1,5 @@
 {%- render 'submenu', links: linklists.our-story-1.links -%}
-{% assign descriptionBlocks = section.blocks | where: "type", "description" %}
+{% assign descriptionItems = section.blocks | where: "type", "description-item" %}
 <div class="centered-page-wrapper">
   {% for block in section.blocks %}
     {% case block.type %}
@@ -9,11 +9,11 @@
         {% include 'how-all-works-image-banner' block %}
     {% endcase %}
   {% endfor %}
-  <div class="how-all__description-wrapper">
-    {% for block in descriptionBlocks %}
+  <ol class="how-all__description-wrapper">
+    {% for block in descriptionItems %}
       {% include 'how-all-works-description' block %}
     {% endfor %}
-  </div>
+  </ol>
 </div>
 
 {% schema %}
@@ -45,13 +45,13 @@
         ]
       },
       {
-        "name": "Description",
-        "type": "description",
+        "name": "Description Item",
+        "type": "description-item",
         "settings": [
           {
             "type": "richtext",
-            "id": "description",
-            "label": "Description"
+            "id": "description-item",
+            "label": "Description Item Text"
           }
         ]
       }
