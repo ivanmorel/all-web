@@ -1,3 +1,5 @@
+{%- render 'submenu', links: linklists.our-story-1.links -%}
+{% assign descriptionBlocks = section.blocks | where: "type", "description" %}
 <div class="centered-page-wrapper">
   {% for block in section.blocks %}
     {% case block.type %}
@@ -7,12 +9,10 @@
         {% include 'how-all-works-image-banner' block %}
     {% endcase %}
   {% endfor %}
-  <div class="non-profit__pages-link-section">
-    {%- for link in linklists.our-story-1.links -%}
-      {%- if link.title != 'NON-PROFIT ORG' -%}
-        <a class="about-us__mobile-button" href="{{link.url}}">{{ link.title }}</a>
-      {%- endif -%}
-    {%- endfor -%}
+  <div class="how-all__description-wrapper">
+    {% for block in descriptionBlocks %}
+      {% include 'how-all-works-description' block %}
+    {% endfor %}
   </div>
 </div>
 
@@ -35,6 +35,7 @@
       {
         "name": "Image Banner",
         "type": "image-banner",
+        "limit": 1,
         "settings": [
           {
             "type": "image_picker",
@@ -44,123 +45,12 @@
         ]
       },
       {
-        "name": "Dual Image Banner",
-        "type": "dual-image-banner",
+        "name": "Description",
+        "type": "description",
         "settings": [
           {
-            "type": "image_picker",
-            "id": "left_image",
-            "label": "Left Image",
-            "info": "Recommended size 127x127"
-          },
-          {
-            "type": "image_picker",
-            "id": "right_image",
-            "label": "Right Image",
-            "info": "Recommended size 127x127"
-          }
-        ]
-      },
-      {
-        "name": "Contacts",
-        "type": "contacts",
-        "settings": [
-          {
-            "type": "image_picker",
-            "id": "contact_image",
-            "label": "Contact Image",
-            "info": "Recommended size 95x95"
-          },
-          {
-            "type": "url",
-            "id": "website",
-            "label": "Website"
-          },
-          {
-            "type": "text",
-            "id": "email",
-            "label": "Email"
-          },
-          {
-            "type": "url",
-            "id": "instagram",
-            "label": "Instagram link"
-          },
-          {
-            "type": "url",
-            "id": "facebook",
-            "label": "Facebook link"
-          },
-          {
-            "type": "url",
-            "id": "pinterest",
-            "label": "Pinterest link"
-          }
-        ]
-      },
-      {
-        "name": "Partner Section",
-        "type": "partner-section",
-        "settings": [
-          {
-            "type": "image_picker",
-            "id": "partner_image",
-            "label": "Partner Image",
-            "info": "Recommended size 230x230"
-          },
-          {
-            "type": "text",
-            "id": "partner_title",
-            "label": "Partner Title"
-          },
-          {
-            "type": "url",
-            "id": "website",
-            "label": "Website"
-          },
-          {
-            "type": "text",
-            "id": "email",
-            "label": "Email"
-          },
-          {
-            "type": "url",
-            "id": "instagram",
-            "label": "Instagram link"
-          },
-          {
-            "type": "url",
-            "id": "facebook",
-            "label": "Facebook link"
-          },
-          {
-            "type": "url",
-            "id": "pinterest",
-            "label": "Pinterest link"
-          },
-          {
-            "type": "text",
-            "id": "info_title",
-            "label": "Title Info"
-          },
-          {
-            "type": "text",
-            "id": "info_collection",
-            "label": "Collection Info "
-          },
-          {
-            "type": "text",
-            "id": "info_hours",
-            "label": "Hours Info "
-          },
-          {
-            "type": "text",
-            "id": "info_units",
-            "label": "Units Info "
-          },
-          {
-            "type": "textarea",
-            "id": "info_description",
+            "type": "richtext",
+            "id": "description",
             "label": "Description"
           }
         ]

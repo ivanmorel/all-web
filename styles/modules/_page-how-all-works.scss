@@ -1,9 +1,61 @@
-.how-all {
-
+.how-all__title {
+  font-size: 70px;
+  line-height: 115px;
+  text-align: center;
+  margin: 85px 0 10px;
+  font-family: $font-antro-vectra;
+  font-weight: 700;
+  text-transform: initial !important;
+  color: $brown0;
+  @include mq($until: tablet){
+    font-size: 30px;
+    text-align: left;
+    line-height: 75px;
+    margin: 23px 0 12px 0;
+  }
 }
 
-.how-all__title {
-  font-size: 32px;
-  text-align: center;
-  margin: 73px 0 50px;
+.how-all__image {
+  width: 732px;
+  height: 732px;
+  margin: 0 auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  @include mq($until: tablet){
+    height: 342px;
+    width: 100%;
+    background-size: contain;
+  }
+}
+
+.how-all__description-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 137px;
+  padding-bottom: 140px;
+  @include mq($until: tablet){
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 33px;
+    padding-bottom: 47px;
+  }
+}
+
+.how-all__description {
+  font-size: 23px;
+  line-height: 35px;
+  font-family: $font-ltc-goudy-oldstyle-pro;
+  width: 45%;
+  color: $blue0;
+  @include mq($until: tablet){
+    width: 100%;
+    font-size: 14px;
+    line-height: 21px;
+  }
+}
+
+.how-all__description strong {
+  color: $brown0;
 }
