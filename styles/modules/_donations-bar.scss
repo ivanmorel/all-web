@@ -1,11 +1,31 @@
 .donations-bar__inner {
   margin: 0 auto;
   text-align: center;
-  padding: 10px;
+  padding: 12px 34px;
+  @include mq(tablet) {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
 }
 
 .donations-bar__title {
-  @include rem(font-size, 15px);
   margin: 0;
   text-transform: none !important; // needed to override theme's css
+  color: $blue0;
+  font-family: $font-ltc-goudy-oldstyle-pro;
+  @include rem("font-size", 11px);
+  font-weight: $font-weight-bold;
+  letter-spacing: 1.1px;
+  line-height: 1.45;
+  text-align: center;
+  @include mq(tablet) {
+    @include rem("font-size", 22px);
+  }
+  em {
+    font-style: normal;
+    color: $blue2;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: normal;
+  }
 }
