@@ -1,0 +1,60 @@
+{%- render 'submenu', links: linklists.our-story-1.links -%}
+{% assign descriptionItems = section.blocks | where: "type", "description-item" %}
+<div class="centered-page-wrapper">
+  {% for block in section.blocks %}
+    {% case block.type %}
+      {% when 'title-section' %}
+        {% include 'how-all-works-title' block %}
+      {% when 'image-banner' %}
+        {% include 'how-all-works-image-banner' block %}
+    {% endcase %}
+  {% endfor %}
+  <ol class="how-all__description-wrapper">
+    {% for block in descriptionItems %}
+      {% include 'how-all-works-description' block %}
+    {% endfor %}
+  </ol>
+</div>
+
+{% schema %}
+  {
+    "name": "How All Works Page",
+    "blocks": [
+      {
+        "name": "Title Section",
+        "type": "title-section",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          }
+        ]
+      },
+      {
+        "name": "Image Banner",
+        "type": "image-banner",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          }
+        ]
+      },
+      {
+        "name": "Description Item",
+        "type": "description-item",
+        "settings": [
+          {
+            "type": "richtext",
+            "id": "description-item",
+            "label": "Description Item Text"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
