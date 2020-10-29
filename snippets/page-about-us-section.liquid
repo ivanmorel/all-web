@@ -21,7 +21,7 @@
   {% endif %}
   {% if block.settings.image != blank %}
     <div class="about-us__section-image" style="background-image: url({{ block.settings.image | img_url: 'Medium' }});">
-      <img class="visually-hidden" src="" alt="{{ block.settings.image.alt }}"/>
+      <img class="visually-hidden" src="{{ block.settings.image }}" alt="{{ block.settings.image.alt }}"/>
     </div>
   {% endif %}
   {% if block.settings.description != blank %}

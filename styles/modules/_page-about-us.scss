@@ -36,7 +36,7 @@
 }
 
 .about-us__section-title {
-  font-size: 70px;
+  @include rem(font-size, 70px);
   line-height: 115px;
   text-transform: initial !important;
   font-family: $font-antro-vectra;
@@ -44,17 +44,17 @@
   margin-bottom: 12px;
   font-weight: $font-weight-bold;
   @include mq($until: tablet){
-    font-size: 30px;
+    @include rem(font-size, 30px);
     line-height: 50px;
   }
 }
 
 .about-us__section-description {
-  font-size: 22px;
+  @include rem(font-size, 22px);
   font-family: $font-ltc-goudy-oldstyle-pro;
   color: $blue0;
   @include mq($until: tablet){
-    font-size: 14px;
+    @include rem(font-size, 14px);
     line-height: 21px;
   }
 
@@ -70,7 +70,7 @@
 }
 
 .about-us__team-title {
-  font-size: 70px;
+  @include rem(font-size, 70px);
   line-height: 115px;
   margin: 100px 0;
   font-family: $font-antro-vectra;
@@ -78,7 +78,7 @@
   text-transform: initial !important;
   font-weight: $font-weight-bold;
   @include mq($until: tablet){
-    font-size: 30px;
+    @include rem(font-size, 30px);
     line-height: 50px;
     margin: 49px 0;
   }
@@ -112,7 +112,7 @@
 }
 
 .about-us__team-member-title {
-  font-size: 35px;
+  @include rem(font-size, 35px);
   line-height: 43px;
   margin-bottom: 67px;
   font-family: $font-ltc-goudy-oldstyle-pro;
@@ -120,41 +120,46 @@
   font-weight: $font-weight-bold;
   text-transform: initial !important;
   @include mq($until: tablet){
-    font-size: 17px;
+    @include rem(font-size, 17px);
     line-height: 22px;
     margin-bottom: 22px;
   }
 }
 
 .about-us__team-member-description {
-  font-size: 22px;
+  @include rem(font-size, 22px);
   line-height: 35px;
   font-family: $font-ltc-goudy-oldstyle-pro;
   color: $blue0;
   @include mq($until: tablet){
-    font-size: 14px;
+    @include rem(font-size, 14px);
     line-height: 21px;
   }
 }
 
 .about-us__contact-button {
   background-color: $blue2;
-  width: 336px;
-  height: 67px;
+  padding: 21px 90px;
+  max-width: 336px;
+  text-align: center;
   border-radius: 10px;
   display: block;
   margin: 0 auto;
   font-family: $font-helvetica;
-  font-size: 21px;
+  @include rem(font-size, 21px);
   letter-spacing: 2.1px;
   color: $white;
   text-transform: uppercase;
   margin-bottom: 118px;
+  &:hover {
+    color: $white;
+  }
   @include mq($until: tablet){
     margin-bottom: 58px;
+    max-width: initial;
     width: 100%;
-    height: 50px;
-    font-size: 14px;
+    padding: 17px 0;
+    @include rem(font-size, 14px);
     border-radius: 4px;
     margin-top: -32px;
   }
