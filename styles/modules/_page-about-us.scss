@@ -2,16 +2,7 @@
   display: flex;
   margin-top: 102px;
   @include mq($until: tablet){
-    display: none;
-  }
-}
-
-.about-us__section-mobile {
-  display: none;
-  @include mq($until: tablet){
-    display: block;
-    margin-bottom: 30px;
-    padding-top: 23px;
+    margin-top: 23px;
   }
 }
 
@@ -28,6 +19,20 @@
     min-width: initial;
     width: 100%;
     margin: 0 0 30px 0;
+  }
+}
+
+.about-us__section-image--desktop {
+  display: block;
+  @include mq($until: tablet){
+    display: none;
+  }
+}
+
+.about-us__section-image--mobile {
+  display: none;
+  @include mq($until: tablet){
+    display: block;
   }
 }
 
@@ -86,11 +91,15 @@
 
 .about-us__team-member {
   display: flex;
-  margin-bottom: 169px;
 
   @include mq($until: tablet){
     flex-direction: column;
-    margin-bottom: 76px;
+  }
+  & + & {
+    margin-top: 169px;
+    @include mq($until: tablet){
+      margin-top: 76px;
+    }
   }
 }
 
@@ -151,6 +160,7 @@
   color: $white;
   text-transform: uppercase;
   margin-bottom: 118px;
+  margin-top: 165px;
   &:hover {
     color: $white;
   }
@@ -161,6 +171,6 @@
     padding: 17px 0;
     @include rem(font-size, 14px);
     border-radius: 4px;
-    margin-top: -32px;
+    margin-top: 44px;
   }
 }
