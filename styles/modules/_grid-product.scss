@@ -1,0 +1,28 @@
+.grid-product__title {
+  color: $brown0;
+  font-family: $font-ltc-goudy-oldstyle-pro;
+  @include rem("font-size", 10px);
+  font-weight: $font-weight-bold;
+  font-style: normal;
+  letter-spacing: 1px;
+  line-height: 1.2;
+}
+
+.grid-product__vendor {
+  color: $blue1;
+  font-family: $font-ltc-goudy-oldstyle-pro;
+  @include rem("font-size", 8px);
+  font-weight: $font-weight-normal;
+  font-style: normal;
+  letter-spacing: 0.8px;
+  text-transform: none;
+}
+
+.grid-product__price {
+  color: $blue0;
+  font-family: $font-ltc-goudy-oldstyle-pro;
+  @include rem("font-size", 10px);
+  font-weight: $font-weight-bold;
+  letter-spacing: 1px;
+  margin-top: 0;
+}

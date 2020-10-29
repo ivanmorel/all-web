@@ -34,7 +34,10 @@
         collection: collection,
         block: block,
         grid_item_width: grid_item_width,
-        per_row: section.settings.per_row %}
+        per_row: section.settings.per_row, 
+        tag_color: section.settings.tag_color,
+        tag_bg_color: section.settings.tag_bg_color
+      %}
     {% endfor %}
 
     {% if isEmpty %}
@@ -87,6 +90,20 @@
         "id": "enable_gutter",
         "label": "Add spacing",
         "default": true
+      },
+      {
+        "type": "color",
+        "id": "tag_color",
+        "label": "Collection Tag Color",
+        "default": "#bb634a",
+        "info": "Collection item tag color"
+      },
+      {
+        "type": "color",
+        "id": "tag_bg_color",
+        "label": "Collection Tag Bg Color",
+        "default": "#fbf1e9",
+        "info": "Collection item tag bg color"
       }
     ],
     "presets": [{

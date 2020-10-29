@@ -1,0 +1,77 @@
+.site-footer {
+  .grid {
+    @include mq(desktop) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  .grid__item[data-type="menu"] {
+    @include mq(tablet) {
+      margin-top: 65px;
+    }
+  }
+  .footer__title {
+    color: $brown0;
+    font-family: $font-antro-vectra;
+    @include rem("font-size", 25px);
+    font-weight: $font-weight-bold;
+    text-transform: lowercase;
+    letter-spacing: normal;
+    @include mq(tablet) {
+      @include rem("font-size", 50px);
+    }
+  }
+
+  .footer__collapsible {
+    & > p {
+      color: $blue0;
+      font-family: $font-ltc-goudy-oldstyle-pro;
+      @include rem("font-size", 15px);
+      font-weight: $font-weight-bold;
+      font-style: normal;
+      letter-spacing: 1.5px;
+      line-height: 1.53;
+      text-align: center;
+      @include mq(tablet) {
+        @include rem("font-size", 20px);
+        text-align: left;
+        line-height: normal;
+      }
+    }
+  }
+  .footer__social {
+    .icon {
+      color: $brown0;
+      @include mq(desktop) {
+        width: 34px;
+        height: 34px;
+      }
+    }
+  }
+  .grid__item {
+    &::after {
+      opacity: 1;
+      border-bottom-color: $brown0;
+    }
+  }
+  .site-footer__linklist {
+    a {
+      color: $blue0;
+      font-family: $font-ltc-goudy-oldstyle-pro;
+      @include rem("font-size", 15px);
+      font-weight: $font-weight-bold;
+      font-style: normal;
+      letter-spacing: normal;
+      text-align: center;
+      @include mq(tablet) {
+        @include rem("font-size", 20px);
+      }
+    }
+  }
+
+  input,
+  select,
+  textarea {
+    @include rem("font-size", 20px);
+  }
+}

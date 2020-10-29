@@ -1,0 +1,22 @@
+.background-media-text__text {
+  text-align: left;
+  .h5 {
+    color: $blue0;
+    font-family: $font-ltc-goudy-oldstyle-pro;
+    @include rem("font-size", 20px);
+    font-weight: $font-weight-normal;
+    margin-bottom: 10px;
+  }
+  .h3 {
+    color: $linen2;
+    font-family: $font-ltc-goudy-oldstyle-pro;
+    @include rem("font-size", 27px);
+    font-weight: $font-weight-normal;
+    letter-spacing: normal;
+    margin-bottom: 20px;
+  }
+  .background-media-text__subtext {
+    color: $blue0;
+    line-height: 1.67;
+  }
+}

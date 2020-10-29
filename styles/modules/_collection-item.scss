@@ -1,0 +1,21 @@
+.collection-item__title--overlaid-box {
+  & > span {
+    background-color: $linen0;
+  }
+}
+
+.collection-item__title {
+  font-family: $font-ltc-goudy-oldstyle-pro;
+  font-weight: $font-weight-bold;
+  font-style: normal;
+  letter-spacing: 0.7px;
+  @include rem("font-size", 7px);
+  span {
+    color: $brown0;
+  }
+  [data-type_product_capitalize="true"] & {
+    span {
+      @include rem("font-size", 7px);
+    }
+  }
+}

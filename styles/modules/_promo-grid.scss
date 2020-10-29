@@ -1,0 +1,33 @@
+.promo-grid {
+  background-color: rgba(199, 214, 216, 0.2);
+  .type-advanced {
+    .rte--block {
+      color: $blue0;
+      font-family: $font-ltc-goudy-oldstyle-pro;
+      @include rem("font-size", 15px);
+      font-weight: $font-weight-normal;
+      font-style: normal;
+      letter-spacing: normal;
+      line-height: 1.67;
+      &.rte--em {
+        color: $blue1;
+        font-family: $font-ltc-goudy-oldstyle-pro;
+        @include rem("font-size", 20px);
+        font-weight: $font-weight-normal;
+        font-style: normal;
+        letter-spacing: normal;
+        line-height: 1.25;
+      }
+      &.rte--strong {
+        color: $linen2;
+        font-family: $font-ltc-goudy-oldstyle-pro;
+        @include rem("font-size", 27px);
+        font-weight: $font-weight-normal;
+        font-style: normal;
+        letter-spacing: normal;
+        line-height: normal;
+        margin-bottom: 17px;
+      }
+    }
+  }
+}
