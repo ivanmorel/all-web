@@ -1,58 +1,93 @@
 
 {%- render 'submenu', links: linklists.our-story-1.links -%}
-{% for block in section.blocks %}
-  {% case block.type %}
-    {% when 'about-us-section' %}
-      {% include 'page-about-us-body' block %}
-  {% endcase %}
-{% endfor %}
+<div class="centered-page-wrapper">
+  {% for block in section.blocks %}
+    {% case block.type %}
+      {% when 'about-us-section' %}
+        {% include 'page-about-us-section' block %}
+      {% when 'about-us-team-title' %}
+        {% include 'page-about-us-team-title' block %}
+      {% when 'about-us-team-member' %}
+        {% include 'page-about-us-team-member' block %}
+      {% when 'about-us-contact-section' %}
+        {% include 'page-about-us-contact-section' block %}
+    {% endcase %}
+  {% endfor %}
+</div>
 
 {% schema %}
   {
-    "name": "About Us Section",
+    "name": "About Us Page",
     "blocks": [
       {
         "type": "about-us-section",
         "name": "About Us Section",
-        "limit": 1,
         "settings": [
           {
             "type": "image_picker",
-            "id": "top-left-image",
-            "label": "Top Left Image",
-            "info": "Recommended size 352x405"
+            "id": "image",
+            "label": "Image",
+            "info": "Recommended size 482x555"
           },
           {
-            "id": "top-right-description",
-            "type": "textarea",
-            "label": "Top Right Description",
-            "info": "Top Right Description"
+            "id": "title",
+            "type": "text",
+            "label": "Title",
+            "info": "Description Title"
           },
           {
-            "id": "middle-left-description",
-            "type": "textarea",
-            "label": "Middle Left Description",
-            "info": "Middle Left Description"
+            "id": "description",
+            "type": "richtext",
+            "label": "Description"
           },
           {
-            "type": "image_picker",
-            "id": "middle-right-image",
-            "label": "Middle Right Image",
-            "info": "Recommended size 317x384"
-          },
-          {
-            "type": "image_picker",
-            "id": "bottom-left-image",
-            "label": "Bottom Left Image",
-            "info": "Recommended size 317x384"
-          },
-          {
-            "type": "image_picker",
-            "id": "bottom-right-image",
-            "label": "Bottom Right Image",
-            "info": "Recommended size 683x384"
+            "id": "image-right",
+            "type": "checkbox",
+            "label": "Image on the right",
+            "info": "Change order of image and description"
           }
         ]
+      },
+      {
+        "type": "about-us-team-title",
+        "name": "About Us Team Title",
+        "settings": [
+          {
+            "id": "title",
+            "type": "text",
+            "label": "Title",
+            "info": "Leadership Team Title"
+          }
+        ]
+      },
+      {
+        "type": "about-us-team-member",
+        "name": "About Us Team Member",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image",
+            "info": "Recommended size 434x434"
+          },
+          {
+            "id": "title",
+            "type": "text",
+            "label": "Title",
+            "info": "Leadership Team Title"
+          },
+          {
+            "id": "description",
+            "type": "richtext",
+            "label": "Description",
+            "info": "Team Member Description"
+          }
+        ]
+      },
+      {
+        "type": "about-us-contact-section",
+        "name": "About Us Contact Section",
+        "limit": 1
       }
     ]
   }

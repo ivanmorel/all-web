@@ -1,0 +1,21 @@
+<div class="about-us__section">
+  {% if block.settings.image != blank %}
+    <div class="about-us__section-image about-us__section-image--desktop" style="background-image: url({{ block.settings.image | img_url: 'Medium' }}); {% if block.settings.image-right %}order: 3; margin: 0 0 0 124px;{% endif %}">
+      <img class="visually-hidden" src="" alt="{{ block.settings.image.alt }}"/>
+    </div>
+  {% endif %}
+
+  <div class="about-us__section-info">
+    {% if block.settings.title != blank %}
+      <h2 class="about-us__section-title">{{block.settings.title}}</h2>
+    {% endif %}
+    {% if block.settings.image != blank %}
+      <div class="about-us__section-image about-us__section-image--mobile" style="background-image: url({{ block.settings.image | img_url: 'Medium' }});">
+        <img class="visually-hidden" src="{{ block.settings.image }}" alt="{{ block.settings.image.alt }}"/>
+      </div>
+    {% endif %}
+    {% if block.settings.description != blank %}
+      <div class="about-us__section-description">{{block.settings.description}}</div>
+    {% endif %}
+  </div>
+</div>
