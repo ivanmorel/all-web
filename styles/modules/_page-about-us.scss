@@ -1,141 +1,161 @@
-.about-us {
+.about-us__section {
   display: flex;
-  justify-content: space-between;
-  margin-top: 73px;
-  @include mq($until: tablet){
-    flex-direction: column;
-    justify-content: flex-start;
-    margin-top: 15px;
-  }
-}
-
-.about-us__top-left-image {
-  min-width: 352px;
-  height: 405px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.about-us__title {
-  font-size: 30px;
-  margin-bottom: 50px;
+  margin-top: 102px;
   @include mq($until: tablet){
     display: none;
   }
 }
 
-.about-us__description {
-  font-size: 16px;
-  @include mq($until: tablet){
-    margin: 27px 0 0 0;
-    order: 2;
-  }
-}
-
-.about-us__middle-right-image {
-  min-width: 317px;
-  height: 384px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  @include mq($until: tablet){
-    order: 1;
-  }
-}
-
-.about-us__bottom-right-image {
-  min-width: 683px;
-  height: 384px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-left: 20px;
-
-  @include mq($until: tablet){
-    min-width: initial;
-    height: 410px;
-    margin: 0 0 41px 0;
-  }
-}
-
-.about-us__description--width {
-  max-width: 575px;
-  @include mq($until: tablet){
-    max-width: initial;
-  }
-}
-
-.about-us__description--middle-left {
-  display: flex;
-  align-items: center;
-  margin-right: 20px;
-  @include mq($until: tablet){
-    margin-right: 0;
-  }
-}
-
-.about-us__description--top-right-separation {
-  margin-left: 20px;
-  @include mq($until: tablet){
-    margin-left: 0;
-  }
-}
-
-.about-us__mobile-title {
-  font-size: 26px;
+.about-us__section-mobile {
   display: none;
-  margin-top: 52px;
-  letter-spacing: 1px;
   @include mq($until: tablet){
     display: block;
+    margin-bottom: 30px;
+    padding-top: 23px;
   }
 }
 
-.about-us__bottom-left-image {
-  min-width: 317px;
-  height: 384px;
+.about-us__section-image {
+  min-width: 482px;
+  height: 555px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  margin-right: 124px;
+  order: 1;
+  @include mq($until: tablet){
+    height: 398px;
+    min-width: initial;
+    width: 100%;
+    margin: 0 0 30px 0;
+  }
+}
+
+.about-us__section-info {
+  order: 2;
+}
+
+.about-us__section-title {
+  font-size: 70px;
+  line-height: 115px;
+  text-transform: initial !important;
+  font-family: $font-antro-vectra;
+  color: $brown0;
+  margin-bottom: 12px;
+  font-weight: $font-weight-bold;
+  @include mq($until: tablet){
+    font-size: 30px;
+    line-height: 50px;
+  }
+}
+
+.about-us__section-description {
+  font-size: 22px;
+  font-family: $font-ltc-goudy-oldstyle-pro;
+  color: $blue0;
+  @include mq($until: tablet){
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  & > p > em {
+    color: $blue2;
+    font-style: initial;
+  }
+
+  & > p > strong > em {
+    color: $blue2;
+    font-style: initial;
+  }
+}
+
+.about-us__team-title {
+  font-size: 70px;
+  line-height: 115px;
+  margin: 100px 0;
+  font-family: $font-antro-vectra;
+  color: $brown0;
+  text-transform: initial !important;
+  font-weight: $font-weight-bold;
+  @include mq($until: tablet){
+    font-size: 30px;
+    line-height: 50px;
+    margin: 49px 0;
+  }
+}
+
+.about-us__team-member {
+  display: flex;
+  margin-bottom: 169px;
+
+  @include mq($until: tablet){
+    flex-direction: column;
+    margin-bottom: 76px;
+  }
+}
+
+.about-us__team-member-image {
+  min-width: 434px;
+  height: 434px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 180px;
+  border-radius: 217px;
   @include mq($until: tablet){
     min-width: initial;
-    height: 194px;
-    margin-bottom: 19px;
+    width: 100%;
+    height: 345px;
+    border-radius: 100%;
+    margin: 0 0 66px 0;
   }
 }
 
-.about-us__mobile-button-section {
-  display: none;
-  padding-bottom: 60px;
+.about-us__team-member-title {
+  font-size: 35px;
+  line-height: 43px;
+  margin-bottom: 67px;
+  font-family: $font-ltc-goudy-oldstyle-pro;
+  color: $blue0;
+  font-weight: $font-weight-bold;
+  text-transform: initial !important;
   @include mq($until: tablet){
-    display: flex;
-    justify-content: space-between;
+    font-size: 17px;
+    line-height: 22px;
+    margin-bottom: 22px;
   }
 }
 
-.about-us__mobile-button {
-  height: 42px;
-  width: 47%;
+.about-us__team-member-description {
+  font-size: 22px;
+  line-height: 35px;
+  font-family: $font-ltc-goudy-oldstyle-pro;
+  color: $blue0;
+  @include mq($until: tablet){
+    font-size: 14px;
+    line-height: 21px;
+  }
+}
+
+.about-us__contact-button {
+  background-color: $blue2;
+  width: 336px;
+  height: 67px;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+  font-family: $font-helvetica;
+  font-size: 21px;
+  letter-spacing: 2.1px;
   color: $white;
-  background-color: $black;
   text-transform: uppercase;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 10px;
-  letter-spacing: 2px;
-  white-space: nowrap;
-  text-decoration: none;
-
-  &:hover {
-    color: $white;
-  }
-}
-
-.about-us--desktop-separation {
-  padding-bottom: 165px;
+  margin-bottom: 118px;
   @include mq($until: tablet){
-    padding-bottom: 0;
+    margin-bottom: 58px;
+    width: 100%;
+    height: 50px;
+    font-size: 14px;
+    border-radius: 4px;
+    margin-top: -32px;
   }
 }
