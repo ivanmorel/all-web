@@ -6,6 +6,15 @@
   font-style: normal;
   letter-spacing: 1px;
   line-height: 1.2;
+  @include mq(desktop) {
+    @include rem("font-size", 20px);
+    margin-bottom: 16px;
+  }
+  [data-type_product_capitalize="true"] & {
+    @include mq(desktop) {
+      @include rem("font-size", 20px);
+    }
+  }
 }
 
 .grid-product__vendor {
@@ -16,6 +25,9 @@
   font-style: normal;
   letter-spacing: 0.8px;
   text-transform: none;
+  @include mq(desktop) {
+    @include rem("font-size", 20px);
+  }
 }
 
 .grid-product__price {
@@ -25,4 +37,19 @@
   font-weight: $font-weight-bold;
   letter-spacing: 1px;
   margin-top: 0;
+  @include mq(desktop) {
+    @include rem("font-size", 20px);
+  }
+}
+
+.quick-product__btn {
+  color: $white;
+  font-family: $font-helvetica;
+  @include rem("font-size", 20px);
+  font-weight: $font-weight-medium;
+  font-style: normal;
+  letter-spacing: 2px;
+  border-radius: 5px;
+  background-color: $blue0;
+  text-transform: uppercase;
 }

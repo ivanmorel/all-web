@@ -5,17 +5,28 @@
 }
 
 .collection-item__title {
-  font-family: $font-ltc-goudy-oldstyle-pro;
-  font-weight: $font-weight-bold;
-  font-style: normal;
-  letter-spacing: 0.7px;
-  @include rem("font-size", 7px);
   span {
+    font-family: $font-ltc-goudy-oldstyle-pro;
+    font-weight: $font-weight-bold;
+    font-style: normal;
+    letter-spacing: 0.7px;
+    @include rem("font-size", 7px);
+    line-height: normal;
     color: $brown0;
+    @include mq(tablet) {
+      @include rem("font-size", 20px);
+      padding: 12px 15px;
+    }
+    @include mq(desktop) {
+      min-width: 220px;
+    }
   }
   [data-type_product_capitalize="true"] & {
     span {
       @include rem("font-size", 7px);
+      @include mq(tablet) {
+        @include rem("font-size", 20px);
+      }
     }
   }
 }

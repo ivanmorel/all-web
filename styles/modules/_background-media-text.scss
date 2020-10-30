@@ -1,11 +1,22 @@
 .background-media-text__text {
   text-align: left;
+  @include mq(tablet) {
+    width: 630px;
+  }
+  @include mq(desktop) {
+    padding: 46px 46px 54px;
+  }
   .h5 {
     color: $blue0;
     font-family: $font-ltc-goudy-oldstyle-pro;
     @include rem("font-size", 20px);
     font-weight: $font-weight-normal;
     margin-bottom: 10px;
+    text-transform: none;
+    @include mq(desktop) {
+      @include rem("font-size", 30px);
+      margin-bottom: 14px;
+    }
   }
   .h3 {
     color: $linen2;
@@ -14,9 +25,21 @@
     font-weight: $font-weight-normal;
     letter-spacing: normal;
     margin-bottom: 20px;
+    @include mq(desktop) {
+      @include rem("font-size", 47px);
+    }
   }
   .background-media-text__subtext {
     color: $blue0;
     line-height: 1.67;
+    @include mq(desktop) {
+      @include rem("font-size", 20px);
+      line-height: 1.75;
+    }
+    p {
+      @include mq(desktop) {
+        line-height: 1.75;
+      }
+    }
   }
 }

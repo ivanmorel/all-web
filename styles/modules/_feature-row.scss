@@ -15,4 +15,12 @@
 
 .featured-row__subtext {
   color: $blue0;
+  @include mq(tablet) {
+    @include rem("font-size", 20px);
+  }
+  &.rte {
+    @include mq(tablet) {
+      margin-bottom: 46px;
+    }
+  }
 }

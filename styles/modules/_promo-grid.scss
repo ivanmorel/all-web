@@ -1,6 +1,13 @@
 .promo-grid {
   background-color: rgba(199, 214, 216, 0.2);
   .type-advanced {
+    .promo-grid__content {
+      @include mq(desktop) {
+        padding: 77px 52px;
+        margin-left: 60px;
+        margin-right: 60px;
+      }
+    }
     .rte--block {
       color: $blue0;
       font-family: $font-ltc-goudy-oldstyle-pro;
@@ -9,6 +16,10 @@
       font-style: normal;
       letter-spacing: normal;
       line-height: 1.67;
+      @include mq(desktop) {
+        @include rem("font-size", 20px);
+        line-height: 1.75;
+      }
       &.rte--em {
         color: $blue1;
         font-family: $font-ltc-goudy-oldstyle-pro;
@@ -17,6 +28,12 @@
         font-style: normal;
         letter-spacing: normal;
         line-height: 1.25;
+        text-transform: none;
+        @include mq(desktop) {
+          @include rem("font-size", 30px);
+          line-height: 1.33;
+          margin-bottom: 20px;
+        }
       }
       &.rte--strong {
         color: $linen2;
@@ -27,6 +44,21 @@
         letter-spacing: normal;
         line-height: normal;
         margin-bottom: 17px;
+        text-transform: none;
+        @include mq(desktop) {
+          @include rem("font-size", 47px);
+          margin-bottom: 0;
+        }
+      }
+      &.rte--strong + .rte--block {
+        @include mq(desktop) {
+          margin-top: 20px;
+        }
+      }
+      &.rte--strong + .btn {
+        @include mq(desktop) {
+          margin-top: 40px;
+        }
       }
     }
   }
