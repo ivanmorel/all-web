@@ -20,7 +20,8 @@
     --iconLinecaps: {{ settings.icon_linecaps | default: 'miter' }};
 
     {% if settings.button_style == 'round-slight' %}
-      --buttonRadius: 3px;
+      --buttonRadius: 10px;
+      --buttonRadiusMobile: 4px;
     {% elsif settings.button_style == 'round' %}
       --buttonRadius: 50px;
     {% else %}

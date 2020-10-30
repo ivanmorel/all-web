@@ -77,7 +77,7 @@
 
               {% style %}
                 .slideshow__slide--{{ block.id }} .hero__title {
-                  font-size: {{ block.settings.title_size | times: 0.5 }}px;
+                  font-size: {{ block.settings.title_size | times: 0.36 }}px;
                 }
                 @media only screen and (min-width: 769px) {
                   .slideshow__slide--{{ block.id }} .hero__title {
@@ -89,12 +89,7 @@
                   .slideshow__slide--{{ block.id }} .btn {
                     background: {{ block.settings.color_accent }} !important;
                     border: none;
-
-                    {%- assign accent_brightness = block.settings.color_accent | color_extract: 'lightness' -%}
-
-                    {% if accent_brightness > 40 %}
-                      color: #000 !important;
-                    {% endif %}
+                    color: {{ block.settings.color_accent_text}} !important;
                   }
 
                   {% if settings.button_style == 'angled' %}
@@ -376,7 +371,7 @@
             "label": "Heading text size",
             "default": 80,
             "min": 40,
-            "max": 100,
+            "max": 130,
             "unit": "px"
           },
           {
@@ -410,7 +405,13 @@
             "type": "color",
             "id": "color_accent",
             "label": "Buttons",
-            "default": "rgba(0,0,0,0)"
+            "default": "rgba(241, 222, 184, 1)"
+          },
+          {
+            "type": "color",
+            "id": "color_accent_text",
+            "label": "Buttons text color",
+            "default": "#22475d"
           },
           {
             "type": "select",

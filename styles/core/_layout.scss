@@ -1,0 +1,10 @@
+.btn,
+.product-reviews .spr-button,
+.product-reviews .spr-summary-actions a,
+.rte .btn,
+.shopify-payment-button .shopify-payment-button__button--unbranded {
+  border-radius: var(--buttonRadiusMobile);
+  @include mq(tablet) {
+    border-radius: var(--buttonRadius);
+  }
+}
