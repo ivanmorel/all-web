@@ -1,7 +1,10 @@
+.background-media-text {
+  background: transparent;
+}
 .background-media-text__text {
   text-align: left;
-  @include mq(tablet) {
-    width: 630px;
+  @include mq(desktop) {
+    width: 650px;
   }
   @include mq(desktop) {
     padding: 46px 46px 54px;
