@@ -8,7 +8,10 @@
   thumbnail_position: section.settings.thumbnail_position,
   thumbnail_arrows: section.settings.thumbnail_arrows,
   video_looping: section.settings.enable_video_looping,
-  video_style: section.settings.product_video_style
+  video_style: section.settings.product_video_style,
+  donations_show: section.settings.donations_show,
+  donations_img: section.settings.donations_img,
+  donations_partner: section.settings.donations_partner
 %}
 
 {% if settings.enable_product_reviews and settings.reviews_layout == 'full' %}
@@ -45,6 +48,27 @@
         "id": "social_enable",
         "label": "Enable social sharing",
         "default": true
+      },
+      {
+        "type": "header",
+        "content": "Donations",
+        "info": "Donations info"
+      },
+      {
+        "type": "checkbox",
+        "id": "donations_show",
+        "label": "Show donations info",
+        "default": true
+      },
+      {
+        "type": "image_picker",
+        "id": "donations_img",
+        "label": "Donations info image"
+      },
+      {
+        "type": "text",
+        "id": "donations_partner",
+        "label": "Donations partner name"
       },
       {
         "type": "header",

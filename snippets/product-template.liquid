@@ -233,7 +233,26 @@
                 </div>
               {%- endif -%}
             {%- endif -%}
-
+            {% if donations_show == true %}
+              <div class="product-donation js-product-donation" data-product-price="{{ current_variant.price | money }}">
+                <div class="product-donation__inner">
+                {% if donations_img != blank %}
+                  <div class="product-donation__img">
+                    <img src="{{donations_img | img_url: 'medium'}}" alt="{{donation_img.alt}}"/>
+                  </div>
+                {% endif %}
+                  <div class="product-donation__content">
+                    <p class="product-donation__text">From this purchase, you are giving <span class="product-donation__qty js-product-donation__qty"></span>{% if donations_partner != blank %}
+                      to
+                    {% endif %}</p>
+                    {% if donations_partner != blank %}
+                      <p class="product-donation__partner">{{donations_partner}}</p>
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+            {% endif %}
+            
             <hr class="hr--medium">
 
             {%- unless isModal -%}
