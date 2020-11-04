@@ -3,7 +3,7 @@
 <div class="partner">
   {% if block.settings.partner_image != blank %}
     <div class="partner__image" style="background-image: url({{ block.settings.partner_image | img_url: 'Medium' }});">
-      <img class="visually-hidden" src="" alt="{{ block.settings.partner_image.alt }}"/>
+      <img class="visually-hidden" src="{{ block.settings.partner_image | img_url: 'Medium' }}" alt="{{ block.settings.partner_image.alt }}"/>
     </div>
   {% endif %}
   <div class="partner__info">
@@ -35,8 +35,8 @@
       </div>
       <h2 class="partner__title">{{ block.settings.partner_title }}</h2>
     </div>
-    <h3 class="partner__contact">{{ website }}</h3>
-    <h3 class="partner__contact">{{ block.settings.email }}</h3>
+    <a class="partner__contact" href="{{ block.settings.website }}">{{ website }}</a>
+    <a class="partner__contact" href="mailto:{{ block.settings.email }}">{{ block.settings.email }}</a>
     <div class="partner__contacts-socials">
       {% if block.settings.instagram != blank %}
         <a href="{{ block.settings.instagram }}" class="non-profit__contacts-social-link">
