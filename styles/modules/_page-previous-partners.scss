@@ -36,7 +36,7 @@
   font-family: $font-ltc-goudy-oldstyle-pro;
   font-weight: $font-weight-bold;
   margin-bottom: 29px;
-  text-transform: uppercase;
+  text-transform: uppercase !important;
   @include mq($until: tablet){
     @include rem(font-size, 23px);
     line-height: 32px;
@@ -76,8 +76,9 @@
   @include rem(font-size, 40px);
   line-height: 52px;
   font-family: $font-ltc-goudy-oldstyle-pro;
+  font-weight: $font-weight-normal;
   color: $blue0;
-  text-transform: uppercase;
+  text-transform: uppercase !important;
   @include mq($until: tablet){
     @include rem(font-size, 22px);
     line-height: 30px;
@@ -90,6 +91,7 @@
   line-height: 28px;
   color: $blue2;
   font-family: $font-ltc-goudy-oldstyle-pro;
+  font-weight: $font-weight-normal;
   border-bottom: 2px solid $blue2;
   margin-bottom: 0;
   text-transform: none !important;

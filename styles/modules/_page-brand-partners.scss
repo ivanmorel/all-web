@@ -1,0 +1,149 @@
+.brand-partners__title {
+  @include rem(font-size, 70px);
+  line-height: 115px;
+  font-family: $font-antro-vectra;
+  font-weight: $font-weight-bold;
+  text-align: center;
+  margin: 65px 0 41px;
+  text-transform: initial !important;
+  color: $brown0;
+  @include mq($until: tablet){
+    @include rem(font-size, 30px);
+    line-height: 50px;
+    margin: 23px 0 22px;
+    text-align: left;
+  }
+}
+
+.brand-partners__wrapper {
+  display: flex;
+  margin-bottom: 136px;
+  @include mq($until: tablet){
+    flex-direction: column;
+    margin-bottom: 47px;
+  }
+}
+
+.brand-partners__partner-info {
+  margin-left: 147px;
+  @include mq($until: tablet){
+    margin: 0;
+  }
+}
+
+.brand-partners__image {
+  min-width: 695px;
+  height: 392px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  @include mq($until: tablet){
+    width: 100%;
+    height: 194px;
+    margin-bottom: 35px;
+    min-width: initial;
+  }
+}
+
+.brand-partners__partner-title {
+  @include rem("font-size", 45px);
+  line-height: 56px;
+  font-family: $font-ltc-goudy-oldstyle-pro;
+  font-weight: $font-weight-bold;
+  color: $brown0;
+  text-transform: uppercase !important;
+  @include mq($until: tablet){
+    @include rem("font-size", 25px);
+    line-height: 32px;
+    margin-bottom: 22px;
+  }
+}
+
+.brand-partners__partner-description {
+  @include rem("font-size", 21px);
+  line-height: 25px;
+  font-family: $font-ltc-goudy-oldstyle-pro;
+  margin-bottom: 38px;
+  color: $blue0;
+
+  p {
+    letter-spacing: initial;
+  }
+
+  em {
+    color: $blue2;
+    font-style: normal;
+  }
+
+  @include mq($until: tablet){
+    @include rem("font-size", 14px);
+    line-height: 19px;
+    margin-bottom: 43px;
+  }
+}
+
+.brand-partners__partner-button {
+  padding: 13px 41px;
+  @include rem("font-size", 21px);
+  color: $white;
+  font-family: $font-helvetica;
+  font-weight: $font-weight-medium;
+  letter-spacing: 2.1px;
+  text-transform: uppercase;
+  border-radius: 10px;
+  background-color: $blue2;
+  margin-bottom: 36px;
+  display: block;
+  max-width: 244px;
+  text-align: center;
+  @include mq($until: tablet){
+    max-width: initial;
+    width: 100%;
+    margin-bottom: 42px;
+    @include rem("font-size", 14px);
+    letter-spacing: 1.4px;
+    border-radius: 4px;
+  }
+}
+
+.brand-partners__separator {
+  border: 2px solid $gray1;
+}
+
+.brand-partners__contact-links {
+  display: flex;
+  margin: 17px 0 21px;
+  @include mq($until: tablet){
+    flex-direction: column;
+    margin: 24px 0 18px;
+
+    & > a:first-child {
+      margin: 0 0 9px 0;
+    }
+  }
+}
+
+.brand-partners__contact {
+  @include rem("font-size", 24px);
+  line-height: 30px;
+  font-family: $font-ltc-goudy-oldstyle-pro;
+  color: $blue0;
+  margin-right: 62px;
+  @include mq($until: tablet){
+    @include rem("font-size", 16px);
+    line-height: 21px;
+    text-align: center;
+    margin-right: 0;
+  }
+}
+
+.brand-partners__contact-icons {
+  display: flex;
+  @include mq($until: tablet){
+    justify-content: center;
+  }
+
+  & > a:last-child {
+    margin-right: 0;
+  }
+}

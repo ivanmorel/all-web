@@ -1,0 +1,80 @@
+
+{%- render 'submenu', links: linklists.our-story-1.links -%}
+<div class="centered-page-wrapper">
+  {% for block in section.blocks %}
+    {% case block.type %}
+      {% when 'brand-partners-title' %}
+        {% include 'brand-partners-title' block %}
+      {% when 'brand-partners-section' %}
+        {% include 'brand-partners-section' block %}
+    {% endcase %}
+  {% endfor %}
+</div>
+
+{% schema %}
+  {
+    "name": "Brand Partners Page",
+    "blocks": [
+      {
+        "type": "brand-partners-title",
+        "name": "Brand Partners Title",
+        "settings": [
+          {
+            "id": "title",
+            "type": "text",
+            "label": "Title",
+            "info": "Description Title"
+          }
+        ]
+      },
+      {
+        "type": "brand-partners-section",
+        "name": "Brand Partner Section",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image",
+            "info": "Recommended size 695x392"
+          },
+          {
+            "id": "title",
+            "type": "text",
+            "label": "Title",
+            "info": "Description Title"
+          },
+          {
+            "id": "description",
+            "type": "richtext",
+            "label": "Description"
+          },
+          {
+            "type": "url",
+            "id": "website",
+            "label": "Website"
+          },
+          {
+            "type": "text",
+            "id": "email",
+            "label": "Email"
+          },
+          {
+            "type": "url",
+            "id": "instagram",
+            "label": "Instagram link"
+          },
+          {
+            "type": "url",
+            "id": "facebook",
+            "label": "Facebook link"
+          },
+          {
+            "type": "url",
+            "id": "pinterest",
+            "label": "Pinterest link"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
