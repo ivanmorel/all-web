@@ -33,7 +33,7 @@
 
           <li class="mobile-nav__item appear-animation appear-delay-{{ animation_row }}">
             {% if has_dropdown %}
-              <div class="mobile-nav__has-sublist">
+              <div class="mobile-nav__has-sublist {% if link.active or link.child_active %}is-open{% endif %}">
                 {% if link.url == '#' %}
                   <button type="button"
                     aria-controls="Linklist-{{ child_list_handle }}"
