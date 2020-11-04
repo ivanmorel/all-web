@@ -1,0 +1,15 @@
+.site-nav__link {
+  color: $blue0;
+  font-family: $font-helvetica;
+  @include rem("font-size", 18px);
+  font-weight: $font-weight-medium;
+  font-style: normal;
+  letter-spacing: 1.8px;
+  @include rem("line-height", 4.89);
+}
+
+.site-nav__link--icon {
+  .icon {
+    color: $blue0;
+  }
+}
