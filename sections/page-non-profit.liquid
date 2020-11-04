@@ -8,19 +8,16 @@
         {% include 'non-profit-description' block %}
       {% when 'dual-image-banner' %}
         {% include 'dual-image-banner' block %}
+      {% when 'non-profit-video' %}
+        {% include 'non-profit-video' block %}
       {% when 'contacts' %}
         {% include 'non-profit-contacts' block %}
+      {% when 'previous-org-title' %}
+        {% include 'non-profit-previous-org-title' block %}
       {% when 'partner-section' %}
         {% include 'partner-section' block %}
     {% endcase %}
   {% endfor %}
-  <div class="non-profit__pages-link-section">
-    {%- for link in linklists.our-story-1.links -%}
-      {%- if link.title != 'NON-PROFIT ORG' -%}
-        <a class="about-us__mobile-button" href="{{link.url}}">{{ link.title }}</a>
-      {%- endif -%}
-    {%- endfor -%}
-  </div>
 </div>
 
 {% schema %}
@@ -34,19 +31,8 @@
         "settings": [
           {
             "type": "image_picker",
-            "id": "title_image",
-            "label": "Title Image",
-            "info": "Recommended size 127x127"
-          },
-          {
-            "type": "text",
-            "id": "title",
-            "label": "Title"
-          },
-          {
-            "type": "text",
-            "id": "subtitle",
-            "label": "Subtitle"
+            "id": "image",
+            "label": "Image"
           }
         ]
       },
@@ -55,7 +41,7 @@
         "type": "description",
         "settings": [
           {
-            "type": "textarea",
+            "type": "richtext",
             "id": "description",
             "label": "Description"
           }
@@ -80,6 +66,17 @@
         ]
       },
       {
+        "name": "Video",
+        "type": "non-profit-video",
+        "settings": [
+          {
+            "type": "url",
+            "id": "video_url",
+            "label": "Video Url"
+          }
+        ]
+      },
+      {
         "name": "Contacts",
         "type": "contacts",
         "settings": [
@@ -87,7 +84,7 @@
             "type": "image_picker",
             "id": "contact_image",
             "label": "Contact Image",
-            "info": "Recommended size 95x95"
+            "info": "Recommended size 130x130"
           },
           {
             "type": "url",
@@ -113,6 +110,17 @@
             "type": "url",
             "id": "pinterest",
             "label": "Pinterest link"
+          }
+        ]
+      },
+      {
+        "name": "Previous Org Title",
+        "type": "previous-org-title",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
           }
         ]
       },

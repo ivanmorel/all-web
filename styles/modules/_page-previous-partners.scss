@@ -1,14 +1,18 @@
 .partner {
   display: flex;
-  margin-top: 50px;
+  margin-bottom: 140px;
   @include mq($until: tablet){
     flex-direction: column;
+    margin-bottom: 70px;
   }
 }
 
 .partner__image {
-  min-width: 230px;
-  height: 230px;
+  min-width: 316px;
+  height: 316px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   @include mq($until: tablet){
     display: none;
   }
@@ -19,45 +23,46 @@
   margin-left: 30px;
   width: 365px;
   padding-right: 20px;
+  flex: 1;
   @include mq($until: tablet){
     display: none;
   }
 }
 
 .partner__title {
-  font-size: 32px;
-  margin-bottom: 22px;
+  color: $blue2;
+  @include rem(font-size, 45px);
+  line-height: 57px;
+  font-family: $font-ltc-goudy-oldstyle-pro;
+  font-weight: $font-weight-bold;
+  margin-bottom: 29px;
   text-transform: uppercase;
   @include mq($until: tablet){
-    font-size: 23px;
+    @include rem(font-size, 23px);
+    line-height: 32px;
     margin: 0 0 0 15px;
   }
 }
 
 .partner__contact {
-  font-size: 20px;
+  @include rem(font-size, 28px);
+  line-height: 37px;
+  font-family: $font-ltc-goudy-oldstyle-pro;
+  color: $blue0;
   margin-bottom: 10px;
-  text-transform: none !important;
+  display: block;
   @include mq($until: tablet){
-    font-size: 14px;
-    margin-bottom: 15px;
+    @include rem(font-size, 14px);
+    line-height: 19px;
+    margin-bottom: 9px;
   }
 }
 
 .partner__contacts-socials {
   display: flex;
   @include mq($until: tablet){
-    margin-bottom: 28px;
+    margin: 13px 0 43px;
   }
-}
-
-.partner__contacts-social-link {
-  margin-right: 20px;
-}
-
-.partner__contacts-social-icon {
-  height: 18px;
-  width: 18px;
 }
 
 .partner__description {
@@ -68,27 +73,42 @@
 }
 
 .partner__description-title {
-  font-size: 29px;
+  @include rem(font-size, 40px);
+  line-height: 52px;
+  font-family: $font-ltc-goudy-oldstyle-pro;
+  color: $blue0;
   text-transform: uppercase;
   @include mq($until: tablet){
-    font-size: 24px;
+    @include rem(font-size, 22px);
+    line-height: 30px;
   }
 }
 
 .partner__description-section {
   padding: 15px 0;
-  border-bottom: 2px solid $gray0;
+  @include rem(font-size, 21px);
+  line-height: 28px;
+  color: $blue2;
+  font-family: $font-ltc-goudy-oldstyle-pro;
+  border-bottom: 2px solid $blue2;
   margin-bottom: 0;
-  font-size: 15px;
   text-transform: none !important;
   @include mq($until: tablet){
-    font-size: 12px;
+    @include rem(font-size, 12px);
+    line-height: 16px;
+    padding: 8px 0;
+    border-bottom: 1px solid $blue2;
   }
 }
 
 .partner__description-info {
-  font-size: 15px;
-  margin-top: 12px;
+  @include rem(font-size, 21px);
+  color: $blue0;
+  font-family: $font-ltc-goudy-oldstyle-pro;
+  margin-top: 41px;
+  @include mq($until: tablet){
+    @include rem(font-size, 14px);
+  }
 }
 
 .partner__mobile-wrapper {
@@ -107,5 +127,8 @@
 .partner__mobile-image {
   height: 84px;
   width: 84px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
