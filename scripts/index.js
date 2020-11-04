@@ -9,6 +9,8 @@ import DonationStatementAjaxCart from "./modules/DonationStatementAjaxCart";
 import DonationStatementAjaxCartProduct from "./modules/DonationStatementAjaxCartProduct";
 import DonationStatementAjaxCartTotal from "./modules/DonationStatementAjaxCartTotal";
 import DonationsBar from "./modules/DonationsBar";
+import AccountDonationsTotal from "./modules/AccountDonationsTotal";
+import DonationStatementProduct from "./modules/DonationStatementProduct";
 import MobileNavToggle from "./modules/MobileNavToggle";
 
 $(document).ready(function () {
@@ -38,6 +40,12 @@ $(document).ready(function () {
   });
   $(".js-donations-bar").each((index, element) => {
     new DonationsBar(element);
+  });
+  $(".js-account-donations-total").each((index, element) => {
+    new AccountDonationsTotal(element);
+  });
+  $(".js-product-donation").each((index, element) => {
+    new DonationStatementProduct(element);
   });
   $(".mobile-nav__toggle").each((index, element) => {
     new MobileNavToggle(element);
