@@ -53,3 +53,17 @@
   background-color: $blue0;
   text-transform: uppercase;
 }
+.grid-product__tag {
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-family: $font-helvetica;
+  letter-spacing: 1.8px;
+  font-weight: $font-weight-medium;
+  @include rem("font-size", 18px);
+  color: $linen0;
+  background-color: $brown1;
+  &.grid-product__tag--sold-out {
+    background-color: $linen0;
+    color: $brown0;
+  }
+}
