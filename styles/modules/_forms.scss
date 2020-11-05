@@ -1,0 +1,20 @@
+.input-group-field {
+  border: 1px solid $gray1;
+  border-radius: 4px;
+  font-size: 0.75rem !important;
+  color: $blue0;
+  letter-spacing: 1.2px;
+  line-height: normal;
+  font-family: $font-helvetica;
+  font-weight: $font-weight-medium;
+  padding: 16px 12px;
+  @include mq(desktop) {
+    border-radius: 10px;
+  }
+  .input-group input[type="hidden"]:first-child + & {
+    border-radius: 4px;
+    @include mq(desktop) {
+      border-radius: 10px;
+    }
+  }
+}
