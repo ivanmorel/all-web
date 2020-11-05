@@ -8,7 +8,7 @@ class DonationsBar {
   }
 
   mockResponse = {
-    Amount: (Math.random() * 100000) + 1
+    amount: Math.random() * 100000 + 1,
   };
 
   setDefaults() {
@@ -21,7 +21,9 @@ class DonationsBar {
   async init() {
     const donationsAmount = await this.getDonationsAmount();
     const donationAmountConverted = this.conversionMethod(donationsAmount);
-    this.dom.$title.html(`With your purchases, we have provided clean water for ${donationAmountConverted} people for a year, with <em>The Thirst Project</em>`);
+    this.dom.$title.html(
+      `With your purchases, we have provided clean water for ${donationAmountConverted} people for a year, with <em>The Thirst Project</em>`
+    );
   }
 
   async getDonationsAmount() {
@@ -30,11 +32,22 @@ class DonationsBar {
 
   async fetchDonationsData() {
     // TODO: Implement connection with BE
-    return this.mockResponse;
+    let result = false;
+    try {
+      result = await $.ajax({
+        type: "GET",
+        url: "https://all-api.dev.geno.me/api/v1/orders_amount",
+      });
+      console.log(result);
+      return result;
+    } catch (error) {
+      console.error("Error getting total donations", error);
+      return this.mockResponse;
+    }
   }
+
   parseResponse(response) {
-    // TODO: Implement needed parsing
-    return response.Amount;
+    return response.amount;
   }
 }
 

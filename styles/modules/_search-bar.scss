@@ -1,0 +1,13 @@
+.search-bar {
+  .input-group-field {
+    border-right: 0;
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+  }
+  .btn {
+    background-color: $gray1;
+    .icon {
+      color: $blue0;
+    }
+  }
+}
