@@ -7,7 +7,6 @@
 }
 .predictive__label {
   color: $blue0;
-  text-transform: capitalize !important;
   font-weight: $font-weight-bold;
   @include rem("font-size", 24px);
 }

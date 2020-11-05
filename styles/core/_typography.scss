@@ -52,7 +52,7 @@ textarea {
   font-style: normal;
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: normal;
+  letter-spacing: 1px;
   line-height: normal;
   border-radius: 4px !important;
   @include mq(desktop) {

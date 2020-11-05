@@ -3,9 +3,20 @@
     border-right: 0;
     border-top-right-radius: 0 !important;
     border-bottom-right-radius: 0 !important;
+    @include mq(tablet) {
+      min-width: 22.6vw;
+    }
   }
   .btn {
     background-color: $gray1;
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    @include mq(tablet) {
+      min-width: 130px;
+    }
+    &:hover {
+      background-color: $gray2 !important;
+    }
     .icon {
       color: $blue0;
     }
