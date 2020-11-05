@@ -6,7 +6,7 @@
   display: block;
   position: absolute;
   visibility: hidden;
-  top: calc(100% + 1px);
+  top: 100%;
   padding: 30px 30px 0px 30px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   background-color: $white;
@@ -22,24 +22,28 @@
 
 .submenu-list-item {
   font-size: 13px;
-  color: gray;
+  color: $blue0;
   margin-bottom: 20px;
   white-space: nowrap;
   display: block;
   &:hover {
     text-decoration: underline;
-    color: $black;
+    color: $pink0;
   }
 }
 
 .product-submenu-item-text {
-  color: gray;
-  font-size: 16px;
+  color: $linen0;
+  @include rem("font-size", 16px);
+  @include rem("line-height", 20px);
+  font-family: $font-helvetica;
+  font-weight: $font-weight-medium;
+  letter-spacing: normal;
   margin-bottom: 0;
   white-space: nowrap;
   &:hover {
     text-decoration: underline;
-    color: $black;
+    color: $pink0;
   }
 }
 
@@ -47,4 +51,15 @@
   @include mq($until: tablet){
     display: none !important;
   }
+}
+
+.submenu__item-current {
+  color: $pink0;
+  text-decoration: underline;
+}
+
+.submenu__links-wrapper {
+  display: flex;
+  width: 100%;
+  max-width: 1420px;
 }
