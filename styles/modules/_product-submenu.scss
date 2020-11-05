@@ -1,9 +1,8 @@
 .product-submenu-wrapper {
   display: flex;
   justify-content: center;
-  border-top: 1px solid $gray0;
-  border-bottom: 1px solid $gray0;
-  padding: 0 40px;
+  padding: 0 20px;
+  background-color: $blue0;
 
   @include mq($until: tablet){
     display: none;
@@ -11,18 +10,18 @@
 }
 
 .product-submenu-item {
-  padding: 20px 20px;
+  padding: 36px 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-transform: uppercase;
   color: $gray0;
   cursor: pointer;
-  margin: 0 10px;
+  margin: 0 auto;
   &:hover {
     & > h2:first-child {
       text-decoration: underline;
-      color: $black;
+      color: $pink0;
     }
   }
 }

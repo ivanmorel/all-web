@@ -260,7 +260,7 @@
   <div class="js-product-mobile-nav-content product-mobile-nav-hidden">
     {%- for link in linklists.products.links -%}
       {%- if link.levels == 0 -%}
-        <a class="collapse__link appear-animation appear-delay-2" href="{{sub_link.url}}">{{ link.title }}</a>
+        <a class="collapse__link appear-animation appear-delay-2" href="{{link.url}}">{{ link.title }}</a>
       {% else %}
         <li class="mobile-nav__item appear-animation appear-delay-2 js-collapse collapse__wrapper">
           <div aria-expanded="false" class="collapse__button">
@@ -289,7 +289,7 @@
   <div class="js-pages-mobile-nav-content product-mobile-nav-hidden">
   {%- for link in linklists.our-story-1.links -%}
     {%- if link.levels == 0 -%}
-      <a class="collapse__link appear-animation appear-delay-2" href="{{sub_link.url}}">{{ link.title }}</a>
+      <a class="collapse__link appear-animation appear-delay-2" href="{{link.url}}">{{ link.title }}</a>
     {% else %}
       <li class="mobile-nav__item appear-animation appear-delay-2 js-collapse collapse__wrapper">
         <div aria-expanded="false" class="collapse__button">

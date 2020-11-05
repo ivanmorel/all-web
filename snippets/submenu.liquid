@@ -1,18 +1,20 @@
 <nav class="product-submenu-wrapper pages-nav" role="navigation">
+  <div class="submenu__links-wrapper">
   {%- for link in links -%}
     <div class="product-submenu-item submenu-list-trigger js-submenu-list js-submenu-list-trigger">
       {%- if link.levels > 0 -%}
-        <h2 class="product-submenu-item-text">{{ link.title }}</h2>
+        <h2 class="product-submenu-item-text {% if link.current %}submenu__item-current{% endif %}">{{ link.title }}</h2>
       {% else %}
-        <a href="{{link.url}}" class="product-submenu-item-text">{{ link.title }}</a>
+        <a href="{{link.url}}" class="product-submenu-item-text {% if link.current %}submenu__item-current{% endif %}">{{ link.title }}</a>
       {%- endif -%}
       {%- if link.levels > 0 -%}
         <div class="submenu-list-content js-submenu-list-content">
           {% for sub_link in link.links %}
-            <a href="{{sub_link.url}}" class="submenu-list-item">{{ sub_link.title }}</a>
+            <a href="{{sub_link.url}}" class="submenu-list-item {% if sub_link.current %}submenu__item-current{% endif %}">{{ sub_link.title }}</a>
           {% endfor %}
         </div>
       {%- endif -%}
     </div>
   {%- endfor -%}
+  </div>
 </nav>
