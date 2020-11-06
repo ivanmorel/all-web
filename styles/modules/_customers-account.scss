@@ -24,6 +24,25 @@
       text-transform: capitalize;
     }
 
+    .customers-sizes {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .customers-sizes__item {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        white-space: nowrap;
+      }
+      .customers-sizes__size-indicator {
+        text-transform: uppercase;
+      }
+    }
+
+    .customers-sizes__item,
     .text-link,
     .h5,
     p {
