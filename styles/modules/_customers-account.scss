@@ -1,0 +1,78 @@
+.template-customers-account {
+  .page-content {
+    h2,
+    h3 {
+      color: $blue2;
+      font-family: $font-helvetica;
+      @include rem("font-size", 20px);
+      font-weight: $font-weight-medium;
+      font-style: normal;
+      letter-spacing: normal;
+      text-align: left;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      @include mq(desktop) {
+        margin-bottom: 30px;
+      }
+    }
+    table {
+      @include mq(tablet) {
+        margin-bottom: 150px;
+      }
+    }
+    .h5 {
+      text-transform: capitalize;
+    }
+
+    .customers-sizes {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .customers-sizes__item {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        white-space: nowrap;
+      }
+      .customers-sizes__size-indicator {
+        text-transform: uppercase;
+      }
+    }
+
+    .customers-sizes__item,
+    .text-link,
+    .h5,
+    p {
+      color: $blue0;
+      font-family: $font-helvetica;
+      @include rem("font-size", 14px);
+      font-weight: $font-weight-normal;
+      font-style: normal;
+      letter-spacing: normal;
+      line-height: 1.43;
+      text-align: left;
+    }
+    .account-donations-total {
+      color: $brown0;
+      font-family: $font-ltc-goudy-oldstyle-pro;
+      @include rem("font-size", 25px);
+      font-weight: $font-weight-bold;
+      text-align: left;
+      margin-bottom: 7px;
+    }
+
+    .account-donations-total__text {
+      color: $blue0;
+      font-family: $font-helvetica;
+      font-size: 14px;
+      font-weight: $font-weight-normal;
+      font-style: normal;
+      letter-spacing: normal;
+      line-height: 1.43;
+      text-align: left;
+    }
+  }
+}

@@ -52,7 +52,7 @@ textarea {
   font-style: normal;
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: normal;
+  letter-spacing: 1px;
   line-height: normal;
   border-radius: 4px !important;
   @include mq(desktop) {
@@ -74,7 +74,7 @@ textarea {
 .btn--small {
   padding: 8px 24px;
   @include mq(desktop) {
-    padding: 10px 48px;
+    padding: 12px 32px;
   }
 }
 

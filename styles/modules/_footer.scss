@@ -1,4 +1,8 @@
 .site-footer {
+  text-align: center;
+  @include mq(desktop) {
+    text-align: left;
+  }
   .grid {
     @include mq(desktop) {
       display: flex;
@@ -6,7 +10,7 @@
     }
   }
   .grid__item[data-type="menu"] {
-    @include mq(tablet) {
+    @include mq(desktop) {
       margin-top: 65px;
     }
   }
@@ -17,11 +21,15 @@
     font-weight: $font-weight-bold;
     text-transform: lowercase;
     letter-spacing: normal;
-    @include mq(tablet) {
+    text-align: center;
+    @include mq(desktop) {
+      text-align: left;
       @include rem("font-size", 50px);
     }
   }
-
+  .footer__newsletter-input {
+    border-radius: 0;
+  }
   .footer__collapsible {
     & > p {
       color: $blue0;
@@ -32,7 +40,7 @@
       letter-spacing: 1.5px;
       line-height: 1.53;
       text-align: center;
-      @include mq(tablet) {
+      @include mq(desktop) {
         @include rem("font-size", 20px);
         text-align: left;
         line-height: normal;
@@ -55,6 +63,7 @@
     }
   }
   .site-footer__linklist {
+    text-align: center;
     a {
       color: $blue0;
       font-family: $font-ltc-goudy-oldstyle-pro;
@@ -63,7 +72,7 @@
       font-style: normal;
       letter-spacing: normal;
       text-align: center;
-      @include mq(tablet) {
+      @include mq(desktop) {
         @include rem("font-size", 20px);
       }
     }

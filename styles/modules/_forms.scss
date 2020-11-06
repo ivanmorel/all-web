@@ -1,3 +1,7 @@
+input[type="text"],
+input[type="email"]:not(.footer__newsletter-input),
+input[type="password"],
+input[type="tel"],
 .input-group-field {
   border: 1px solid $gray1;
   border-radius: 4px;
@@ -8,13 +12,98 @@
   font-family: $font-helvetica;
   font-weight: $font-weight-medium;
   padding: 16px 12px;
-  @include mq(desktop) {
+  @include mq(tablet) {
     border-radius: 10px;
+    font-size: 1.125rem !important;
+  }
+  &:focus,
+  &:active {
+    border-color: $gray1;
   }
   .input-group input[type="hidden"]:first-child + & {
     border-radius: 4px;
-    @include mq(desktop) {
+    @include mq(tablet) {
       border-radius: 10px;
     }
+  }
+}
+
+input:active {
+  border-color: $brown0;
+}
+.label,
+label:not(.variant__button-label) {
+  color: $blue0;
+  font-family: $font-helvetica;
+  font-size: 14px;
+  font-weight: $font-weight-normal;
+  font-style: normal;
+  letter-spacing: 1.4px;
+  text-align: left;
+  text-transform: uppercase;
+  // line-height: normal;
+  @include mq(tablet) {
+    @include rem("font-size", 21px);
+    letter-spacing: 2px;
+  }
+}
+
+.label-info {
+  color: $blue0;
+  font-family: $font-helvetica;
+  font-weight: $font-weight-medium;
+  font-style: normal;
+  letter-spacing: normal;
+  a {
+    color: $blue0;
+    @include rem("font-size", 14px);
+    @include mq(tablet) {
+      @include rem("font-size", 21px);
+    }
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.admin-link,
+#customer_register_link {
+  color: $blue0;
+  font-family: $font-helvetica;
+  @include rem("font-size", 14px);
+  font-weight: $font-weight-normal;
+  font-style: normal;
+  letter-spacing: normal;
+  text-align: left;
+  text-transform: uppercase;
+  @include mq(tablet) {
+    @include rem("font-size", 21px);
+  }
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.errors {
+  li {
+    font-family: $font-ltc-goudy-oldstyle-pro;
+  }
+}
+
+.form-vertical {
+  margin-top: 20px;
+  h2 {
+    color: $blue2;
+    font-family: $font-helvetica;
+    @include rem("font-size", 20px);
+    font-weight: $font-weight-medium;
+    font-style: normal;
+    letter-spacing: normal;
+    text-align: left;
+    text-transform: uppercase;
+  }
+  p {
+    color: $blue2;
+    font-weight: $font-weight-bold;
   }
 }
