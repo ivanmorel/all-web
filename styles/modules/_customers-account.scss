@@ -74,5 +74,11 @@
       line-height: 1.43;
       text-align: left;
     }
+    .account__profile-section-title {
+      margin-top: 30px;
+      @include mq(desktop) {
+        margin-top: 54px;
+      }
+    }
   }
 }
