@@ -42,7 +42,13 @@
 
       {% endif %}
       <h2>Total donation</h2>
-       <h3 class="account-donations-total js-account-donations-total" data-total-spent="{{customer.total_spent}}"></h3>
+      {% assign total_spent = 0 %}
+       {% for order in customer.orders %}
+          {%- assign total_spent = total_spent | plus: order.subtotal_price -%}
+        {% endfor %}
+       <h3 class="account-donations-total js-account-donations-total"
+       data-total-spent="{{total_spent | money}}"></h3>
+        <p></p>
        <p class="account-donations-total__text">Total donation amount from purchases through A Labor of Love</p>
     </div>
 

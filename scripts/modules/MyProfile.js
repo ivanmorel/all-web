@@ -1,5 +1,3 @@
-import jQuery from "jquery";
-
 class MyProfile {
   constructor(el) {
     this.$el = $(el);
@@ -7,19 +5,9 @@ class MyProfile {
     this.init();
   }
 
-  setDefaults() {
-    this.Accentuate = window.Accentuate || false;
-  }
+  setDefaults() {}
 
-  init() {
-    console.log("from ES6");
-    if (this.Accentuate) {
-      console.log("accentuate", this.Accentuate);
-      this.Accentuate(this.$el, function (data) {
-        console.log(data, data.status, data.message);
-      });
-    }
-  }
+  init() {}
 }
 
 export default MyProfile;
