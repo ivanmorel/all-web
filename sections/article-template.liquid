@@ -69,7 +69,7 @@
 
         <header class="section-header">
           {% if section.settings.blog_show_date or article.tags.size > 0 or articles.comments_count > 0 %}
-            <div class="article__date">
+            <div class="article__date-detail">
               {% if section.settings.blog_show_tags and article.tags.size > 0 %}
                 {% for tag in article.tags %}
                   {% if tag contains "_" %}{%- assign tag_starts_with = tag | slice: 0 -%}{% if tag_starts_with == "_" %}{% if tag_count %}{%- assign tag_count = tag_count | minus: 1 | at_least: 0 -%}{% endif %}{% continue %}{% endif %}{% endif %}
@@ -86,7 +86,7 @@
               {% endif %}
             </div>
           {% endif %}
-          <h1 class="section-header__title">{{ article.title }}</h1>
+          <h1 class="section-header__title article__title-detail">{{ article.title }}</h1>
           {% if section.settings.blog_show_author %}
             <div class="article__author">by {{ article.author }}</div>
           {% endif %}
@@ -105,7 +105,7 @@
 
         {% if number_of_comments > 0 %}
           <hr class="hr--large">
-          <h3>{{ 'blogs.comments.with_count' | t: count: number_of_comments }}</h3>
+          <h3 class="article__comment-title">{{ 'blogs.comments.with_count' | t: count: number_of_comments }}</h3>
           <hr class="hr--small hr--clear">
         {% endif %}
 
@@ -157,7 +157,7 @@
             <hr class="hr--large">
 
             <header class="section-header{% unless settings.type_headers_align_text %} section-header--with-link{% endunless %}">
-              <h3 class="section-header__title">{{ 'blogs.comments.title' | t }}</h3>
+              <h3 class="article__comment-title">{{ 'blogs.comments.title' | t }}</h3>
             </header>
 
             <div class="form-vertical">
@@ -180,10 +180,10 @@
                 <textarea class="input-full{% if form.errors contains 'body' %} error{% endif %}" name="comment[body]" id="CommentBody">{{ form.body }}</textarea>
 
                 {% if blog.moderated? %}
-                  <p><small>{{ 'blogs.comments.moderated' | t }}</small></p>
+                  <p><small class="article__moderated">{{ 'blogs.comments.moderated' | t }}</small></p>
                 {% endif %}
 
-                <button type="submit" class="btn btn--secondary">
+                <button type="submit" class="btn btn--secondary article__post-comment-btn">
                   {{ 'blogs.comments.post' | t }}
                 </button>
 
@@ -201,7 +201,7 @@
   </div>
 
   <div class="text-center">
-    <a href="{{ blog.url }}" class="btn return-link"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon--wide icon-arrow-left" viewBox="0 0 50 15"><path d="M50 5.38v4.25H15V15L0 7.5 15 0v5.38z"/></svg> {{ 'blogs.article.back_to_blog' | t: title: blog.title }}</a>
+    <a href="{{ blog.url }}" class="btn return-link article__return-link"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon--wide icon-arrow-left" viewBox="0 0 50 15"><path d="M50 5.38v4.25H15V15L0 7.5 15 0v5.38z"/></svg> {{ 'blogs.article.back_to_blog' | t: title: blog.title }}</a>
   </div>
 </div>
 
