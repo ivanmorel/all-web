@@ -2,7 +2,7 @@ input[type="text"],
 input[type="email"]:not(.footer__newsletter-input),
 input[type="password"],
 input[type="tel"],
-.comment-form textarea,
+textarea,
 .input-group-field {
   border: 1px solid $gray1;
   border-radius: 4px;

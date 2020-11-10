@@ -12,6 +12,8 @@
   }
 }
 
-.social-sharing__icon {
-  fill: $blue0;
+.social-sharing__link {
+  svg {
+    color: $blue0;
+  }
 }

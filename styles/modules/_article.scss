@@ -47,20 +47,13 @@
   @include rem(line-height, 32px);
   font-family: $font-ltc-goudy-oldstyle-pro;
   font-weight: $font-weight-bold;
+  letter-spacing: 2.5px;
   color: $linen2;
   text-transform: uppercase !important;
   @include mq($until: tablet){
     @include rem(font-size, 20px);
     @include rem(line-height, 26px);
-  }
-}
-
-.article__return-link {
-  background-color: #e5bd75;
-  @include mq($until: tablet){
-    @include rem(font-size, 14px);
-    @include rem(line-height, 18px);
-    padding: 17px 10px;
+    letter-spacing: 2px;
   }
 }
 
