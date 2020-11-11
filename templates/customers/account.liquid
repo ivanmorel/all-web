@@ -42,7 +42,13 @@
 
       {% endif %}
       <h2>Total donation</h2>
-       <h3 class="account-donations-total js-account-donations-total" data-total-spent="{{customer.total_spent}}"></h3>
+      {% assign total_spent = 0 %}
+       {% for order in customer.orders %}
+          {%- assign total_spent = total_spent | plus: order.subtotal_price -%}
+        {% endfor %}
+       <h3 class="account-donations-total js-account-donations-total"
+       data-total-spent="{{total_spent | money}}"></h3>
+        <p></p>
        <p class="account-donations-total__text">Total donation amount from purchases through A Labor of Love</p>
     </div>
 
@@ -54,15 +60,15 @@
       {{ customer.default_address | format_address }}
 
       <p><a href="{{ routes.account_addresses_url }}" class="text-link">{{ 'customer.account.view_addresses' | t }} ({{ customer.addresses_count }})</a></p>
-      <h3>My Profile</h3>
+      <h3 class="account__profile-section-title">My Profile</h3>
       <ul class="customers-sizes">
         <li class="customers-sizes__item">Tops: <span class="customers-sizes__size-indicator">{{ customer.metafields.customer_sizes.tops }}</span></li>
         <li class="customers-sizes__item">Pants: <span class="customers-sizes__size-indicator">{{ customer.metafields.customer_sizes.pants }}</span></li>
         <li class="customers-sizes__item">Dresses: <span class="customers-sizes__size-indicator">{{ customer.metafields.customer_sizes.dresses }}</span></li>
         <li class="customers-sizes__item">Shoes: <span class="customers-sizes__size-indicator">{{ customer.metafields.customer_sizes.shoes }}</span></li>
       </ul>
-      <p>Birthday {{customer.metafields.customer-info.birthday}}</p>
-      <p><a href="{{ routes.account_addresses_url }}" class="text-link">Edit profile</a></p>
+      <p>Birthday: {{customer.metafields.customer-info.birthday | date: "%m/%d"}}</p>
+      <p><a href="/pages/my-profile" class="text-link">Edit profile</a></p>
     </div>
 
   </div>

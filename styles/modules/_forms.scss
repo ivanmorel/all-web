@@ -1,7 +1,13 @@
+select {
+  width: 100%;
+}
+
 input[type="text"],
 input[type="email"]:not(.footer__newsletter-input),
 input[type="password"],
 input[type="tel"],
+input[type="date"],
+select,
 textarea,
 .input-group-field {
   border: 1px solid $gray1;

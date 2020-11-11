@@ -14,7 +14,7 @@
   {%- render 'seo-title' -%}
 
   {%- if page_description -%}
-  <meta name="description" content="{{ page_description | escape }}">
+    <meta name="description" content="{{ page_description | escape }}">
   {%- endif -%}
 
   {%- render 'social-meta-tags' -%}
@@ -24,6 +24,8 @@
   {%- render 'css-variables' -%}
   {% comment %} Cowaymega stylesheet {% endcomment %}
   {{ 'all.css' | asset_url | stylesheet_tag }}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
   <script>
     document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
 
@@ -125,5 +127,19 @@
   {% if template contains 'product' %}
     {% render 'recently-viewed-product-template' %}
   {% endif %}
+  {% comment %} My Profile JS {% endcomment %}
+  {% if template contains 'page.my-profile' %}
+    <script src="https://app.accentuate.io/dist/proxy.js"></script> 
+    <script>
+      var $myProfileForm = jQuery("#metafields_form");
+      var redirectUrl = $myProfileForm.data('accountUrl') || '/';
+      Accentuate($myProfileForm, function(data) { 
+        console.log(data, data.status, data.message); 
+        if (data.status === "OK") {
+          window.location.href=redirectUrl;
+        } 
+      }); 
+    </script> 
+  {% endif %} 
 </body>
 </html>
