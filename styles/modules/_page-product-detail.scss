@@ -1,22 +1,147 @@
 .product-single__title {
-}
-// Style for "Leopard Pu"
-.product-single__title {
-  width: 311px;
-  height: 59px;
   color: $blue0;
   font-family: $font-ltc-goudy-oldstyle-pro;
-  font-size: 25px;
+  @include rem("font-size", 25px);
   font-weight: $font-weight-bold;
   font-style: normal;
   letter-spacing: 2.5px;
   line-height: 1.08;
   text-align: center;
+  margin-bottom: 8px;
 }
-// Text style for "Leopard Pu"
-.product-single__title {
+
+.product-single__vendor {
+  text-transform: capitalize;
+  margin-bottom: 8px;
+  a {
+    color: $blue0;
+    font-family: $font-ltc-goudy-oldstyle-pro;
+    @include rem("font-size", 11px);
+    font-weight: $font-weight-bold;
+    font-style: normal;
+    letter-spacing: 0.66px;
+    line-height: normal;
+    text-align: center;
+  }
+}
+.product-detail__price-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+}
+
+.product__price {
+  @include rem("font-size", 20px);
+  letter-spacing: 1.2px;
+  color: $blue0;
+  font-family: $font-ltc-goudy-oldstyle-pro;
+  letter-spacing: 0.72px;
+  font-weight: $font-weight-bold;
+  &.on-sale {
+    order: 1;
+    color: $brown0;
+  }
+  &.product__price--compare {
+    @include rem("font-size", 12px);
+  }
+}
+
+.product__price-savings {
+  order: 3;
+  font-family: $font-ltc-goudy-oldstyle-pro;
+  font-weight: $font-weight-bold;
+}
+
+[class^="product__price-wrap"] {
+  order: 2;
+}
+
+.product-donation__inner {
+  display: flex;
+  justify-content: center;
+}
+
+.product-donation__img {
+  width: 90px;
+  flex: 0 0 auto;
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.product-donation__content {
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 16px;
+  width: 205px;
+}
+
+.product-donation {
+  & + .hr--medium {
+    border: 0;
+    margin: 8px auto;
+  }
+}
+
+.product-donation__text {
+  color: $blue2;
+  font-family: $font-ltc-goudy-oldstyle-pro;
+  @include rem("font-size", 14px);
+  font-weight: $font-weight-normal;
+  margin: 0 0 5px;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.product-donation__qty {
+  font-weight: $font-weight-bold;
+}
+
+.product-donation__partner {
+  color: $blue2;
+  font-family: $font-ltc-goudy-oldstyle-pro;
+  @include rem("font-size", 21px);
+  font-weight: $font-weight-bold;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.variant__label[for] {
+  color: $blue0;
+  font-family: $font-ltc-goudy-oldstyle-pro;
+  @include rem("font-size", 14px);
+  font-weight: $font-weight-normal;
   font-style: normal;
   letter-spacing: normal;
   line-height: normal;
+  text-align: center;
   text-transform: uppercase;
+}
+
+.variant-input-wrap {
+  input[type="radio"]:checked + label {
+    box-shadow: 0 0 0 1px $blue2;
+    color: $blue2;
+  }
+  label {
+    color: $gray3;
+    font-family: Helvetica;
+    @include rem("font-size", 15px);
+    font-weight: $font-weight-normal;
+    box-shadow: 0 0 1px $gray3;
+  }
+}
+
+.product__inventory {
+  color: $linen2;
+  font-family: $font-ltc-goudy-oldstyle-pro;
+  @include rem("font-size", 17px);
+  font-weight: $font-weight-bold;
+  font-style: italic;
+  letter-spacing: 1.7px;
+  text-align: center;
 }
