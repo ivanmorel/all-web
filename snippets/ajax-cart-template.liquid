@@ -94,7 +94,7 @@
 
     {% endraw %}{% if settings.cart_notes_enable %}{% raw %}
       <div class="appear-animation appear-delay-{{lastAnimationRow}}">
-        <label for="CartSpecialInstructions" class="ajaxcart__note">{% endraw %}{{ 'cart.general.note' | t }}{% raw %}</label>
+        <label for="CartSpecialInstructions" class="ajaxcart__note ajaxcart__title">{% endraw %}{{ 'cart.general.note' | t }}{% raw %}</label>
         <textarea name="note" class="input-full cart-notes" id="CartSpecialInstructions">{{note}}</textarea>
       </div>
     {% endraw %}{% endif %}{% raw %}
@@ -103,7 +103,7 @@
     {{#if cartDiscounts }}
       <div class="grid grid--full">
         <div class="grid__item one-half">
-          <p class="ajaxcart__subtotal">{% endraw %}{{ 'cart.general.discounts' | t }}{% raw %}</p>
+          <p class="ajaxcart__subtotal ajaxcart__title">{% endraw %}{{ 'cart.general.discounts' | t }}{% raw %}</p>
         </div>
         <div class="grid__item one-half text-right">
           {{#each cartDiscounts}}
@@ -116,17 +116,17 @@
     {{/if}}
     <div class="grid grid--full ">
       <div class="grid__item one-half">
-        <p class="ajaxcart__subtotal">{% endraw %}{{ 'cart.general.subtotal' | t }}{% raw %}</p>
+        <p class="ajaxcart__subtotal ajaxcart__title">{% endraw %}{{ 'cart.general.subtotal' | t }}{% raw %}</p>
       </div>
       <div class="grid__item one-half text-right">
         <p class="ajaxcart__price">{{{totalPrice}}}</p>
       </div>
       
     </div>
-    <p class="ajaxcart__note">
+    <p class="ajaxcart__note ajaxcart__info-text">
       {% endraw %}{{ 'cart.general.shipping_at_checkout' | t }}{% raw %}
     </p>
-    <p class="donation-statement--ajax-cart__total-text js-donation-statement--ajax-cart__total-text">
+    <p class="donation-statement--ajax-cart__total-text js-donation-statement--ajax-cart__total-text ajaxcart__info-text">
     </p>
     {% endraw %}{% if settings.cart_terms_conditions_enable %}
       <p class="ajaxcart__note ajaxcart__note--terms">
@@ -145,7 +145,10 @@
         <div class="additional-checkout-buttons additional-checkout-buttons--vertical">{{ content_for_additional_checkout_buttons }}</div>
       {% endif %}
     {% raw %}
-    <button type="submit" class="btn btn--full cart__checkout{% endraw %}{% if settings.cart_terms_conditions_enable %}{% raw %} cart__checkout--ajax{% endraw %}{% endif %}{% raw %}" name="checkout">
+    <a href="/cart" class="btn btn--full cart__checkout{% endraw %}{% if settings.cart_terms_conditions_enable %}{% raw %} cart__checkout--ajax{% endraw %}{% endif %}{% raw %} ajaxcart__view-cart" name="checkout">
+      VIEW CART
+    </a>
+    <button type="submit" class="btn btn--full cart__checkout{% endraw %}{% if settings.cart_terms_conditions_enable %}{% raw %} cart__checkout--ajax{% endraw %}{% endif %}{% raw %} ajaxcart__checkout-btn" name="checkout">
       {% endraw %}{{ 'cart.general.checkout' | t }}{% raw %}
     </button>
   </div>
