@@ -1,4 +1,4 @@
-<div class="page-width page-content">
+<div class="page-width page-content page-my-profile">
 
   {%- render 'breadcrumbs' -%}
   <header class="section-header">
@@ -6,60 +6,68 @@
   </header>
   <div class="grid">
     <div class="grid__item 
-    medium-up--five-twelfths medium-up--push-three-tenths">
+    medium-up--eight-tenths medium-up--push-one-tenth">
       <div id="MyProfileForm" class="form-vertical text-left">
         <form id="metafields_form" data-account-url="{{ routes.account_url}}">
 
           <input type="hidden" name="customer[id]" value="{{ customer.id }}" />
-          <label for="CustomerBirthday">Date</label>
-          <input 
-            id="CustomerBirthday" 
-            type="date" 
-            class="input-full" 
-            name="metafield[customer-info.birthday]"
-            value='{{ customer.metafields.customer-info.birthday }}'>
-          <label for="CustomerSizesTops">Tops</label>
-          {% assign field = shop.metafields.acf_settings.customer.fields | where: "name", "tops" | first %}
-          {% assign values = field.value | split: '|' %}
-          <select id="CustomerSizesTops" name="metafield[customer_sizes.tops]">
-            {% for value in values %}
-              <option value="{{ value }}" {%- if value == customer.metafields.customer_sizes.tops -%}
-                selected
-              {%- endif -%}>{{ value | upcase }}</option>
-            {% endfor %}
-          </select>
-          <label for="CustomerSizesPants">Pants</label>
-          {% assign field = shop.metafields.acf_settings.customer.fields | where: "name", "pants" | first %}
-          {% assign values = field.value | split: '|' %}
-          <select id="CustomerSizesPants" name="metafield[customer_sizes.pants]">
-            {% for value in values %}
-              <option value="{{ value }}" {%- if value == customer.metafields.customer_sizes.pants -%}
-                selected
-              {%- endif -%}>{{ value | upcase }}</option>
-            {% endfor %}
-          </select>
-          <label for="CustomerSizesDresses">Dresses</label>
-          {% assign field = shop.metafields.acf_settings.customer.fields | where: "name", "dresses" | first %}
-          {% assign values = field.value | split: '|' %}
-          <select id="CustomerSizesDresses" name="metafield[customer_sizes.dresses]">
-            {% for value in values %}
-              <option value="{{ value }}" {%- if value == customer.metafields.customer_sizes.dresses -%}
-                selected
-              {%- endif -%}>{{ value | upcase }}</option>
-            {% endfor %}
-          </select>
-          <label for="CustomerSizesShoes">Shoes</label>
-          {% assign field = shop.metafields.acf_settings.customer.fields | where: "name", "shoes" | first %}
-          {% assign values = field.value | split: '|' %}
-          <select id="CustomerSizesDresses" name="metafield[customer_sizes.shoes]">
-            {% for value in values %}
-              <option value="{{ value }}" {%- if value == customer.metafields.customer_sizes.shoes -%}
-                selected
-              {%- endif -%}>{{ value | upcase }}</option>
-            {% endfor %}
-          </select>
+          <div class="my-profile__profile-section">
+            <h2>Add birthday</h2>
+            <label for="CustomerBirthday">Date</label>
+            <input id="CustomerBirthday" type="date" class="my-profile__input-birthday" name="metafield[customer-info.birthday]"
+              value='{{ customer.metafields.customer-info.birthday }}'>
+          </div>
+          <div class="my-profile__profile-section">
+            <h2>Add sizes</h2>
+            <div class="grid grid--small">
+              <div class="grid__item medium-up--one-half">
+                <label for="CustomerSizesTops">Tops</label>
+                {% assign field = shop.metafields.acf_settings.customer.fields | where: "name", "tops" | first %}
+                {% assign values = field.value | split: '|' %}
+                <select id="CustomerSizesTops" name="metafield[customer_sizes.tops]">
+                  {% for value in values %}
+                  <option value="{{ value }}" {%- if value == customer.metafields.customer_sizes.tops -%} selected
+                    {%- endif -%}>{{ value | upcase }}</option>
+                  {% endfor %}
+                </select>
+              </div>
+              <div class="grid__item medium-up--one-half">
+                <label for="CustomerSizesPants">Pants</label>
+                {% assign field = shop.metafields.acf_settings.customer.fields | where: "name", "pants" | first %}
+                {% assign values = field.value | split: '|' %}
+                <select id="CustomerSizesPants" name="metafield[customer_sizes.pants]">
+                  {% for value in values %}
+                  <option value="{{ value }}" {%- if value == customer.metafields.customer_sizes.pants -%} selected
+                    {%- endif -%}>{{ value | upcase }}</option>
+                  {% endfor %}
+                </select>
+              </div>
+              <div class="grid__item medium-up--one-half">
+                <label for="CustomerSizesDresses">Dresses</label>
+                {% assign field = shop.metafields.acf_settings.customer.fields | where: "name", "dresses" | first %}
+                {% assign values = field.value | split: '|' %}
+                <select id="CustomerSizesDresses" name="metafield[customer_sizes.dresses]">
+                  {% for value in values %}
+                  <option value="{{ value }}" {%- if value == customer.metafields.customer_sizes.dresses -%} selected
+                    {%- endif -%}>{{ value | upcase }}</option>
+                  {% endfor %}
+                </select>
+              </div>
+              <div class="grid__item medium-up--one-half">
+                <label for="CustomerSizesShoes">Shoes</label>
+                {% assign field = shop.metafields.acf_settings.customer.fields | where: "name", "shoes" | first %}
+                {% assign values = field.value | split: '|' %}
+                <select id="CustomerSizesDresses" name="metafield[customer_sizes.shoes]">
+                  {% for value in values %}
+                  <option value="{{ value }}" {%- if value == customer.metafields.customer_sizes.shoes -%} selected
+                    {%- endif -%}>{{ value | upcase }}</option>
+                  {% endfor %}
+                </select>
+              </div>
+            </div>
+          </div>
           <p>
-            <button type="submit" class="btn btn--full">
+            <button type="submit" class="btn">
               Save
             </button>
           </p>
