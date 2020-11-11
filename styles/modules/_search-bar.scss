@@ -4,6 +4,9 @@
     border-top-right-radius: 0 !important;
     border-bottom-right-radius: 0 !important;
     @include mq(tablet) {
+      min-width: 40vw;
+    }
+    @include mq(desktop) {
       min-width: 22.6vw;
     }
   }
