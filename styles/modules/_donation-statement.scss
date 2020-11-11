@@ -1,8 +1,12 @@
 .donation-statement--ajax-cart__product-text {
   @include rem(font-size, 15px);
+  @include rem(line-height, 17px);
+  font-family: $font-helvetica;
+  font-weight: $font-weight-medium;
+  color: $blue2;
   letter-spacing: normal;
-  line-height: normal;
   margin-top: 15px;
+  text-align: right;
 }
 
 .donation-statement--ajax-cart__total-text {
