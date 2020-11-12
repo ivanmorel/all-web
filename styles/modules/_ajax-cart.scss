@@ -1,0 +1,64 @@
+.drawer__title {
+  @include rem("font-size", 30px);
+  @include rem(line-height, 38px);
+  font-family: $font-ltc-goudy-oldstyle-pro;
+  font-weight: $font-weight-bold;
+  color: $blue0;
+  text-transform: uppercase !important;
+  letter-spacing: normal;
+}
+
+.ajaxcart__product-name, .ajaxcart__title {
+  font-size: 1.0625rem !important;
+  @include rem(line-height, 22px);
+  font-family: $font-ltc-goudy-oldstyle-pro !important;
+  font-weight: $font-weight-bold !important;
+  color: $brown0 !important;
+  letter-spacing: 1.7px !important;
+}
+
+.ajaxcart__product-meta {
+  @include rem("font-size", 15px);
+  @include rem(line-height, 19px);
+  font-family: $font-ltc-goudy-oldstyle-pro;
+  font-weight: $font-weight-bold;
+  color: $blue1;
+  letter-spacing: 1.5px;
+  padding-top: 24px !important;
+}
+
+.ajaxcart__price {
+  @include rem("font-size", 20px);
+  @include rem(line-height, 26px);
+  font-family: $font-ltc-goudy-oldstyle-pro;
+  font-weight: $font-weight-bold;
+  color: $blue0;
+}
+
+.ajaxcart__info-text {
+  @include rem("font-size", 18px);
+  @include rem(line-height, 25px);
+  font-family: $font-helvetica;
+  font-weight: $font-weight-medium;
+  color: $blue0;
+  opacity: 1;
+  margin-bottom: 20px;
+  letter-spacing: normal;
+}
+
+.ajaxcart__checkout-btn {
+  background-color: $brown1 !important;
+}
+
+.js-qty__wrapper {
+  input {
+    border-radius: 0;
+  }
+}
+
+.ajaxcart__view-cart {
+  background-color: $white !important;
+  color: $blue0 !important;
+  border: 2px solid $brown1;
+  margin-bottom: 12px;
+}
