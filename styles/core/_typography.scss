@@ -109,10 +109,17 @@ h3 {
 }
 
 p {
+  color: $blue0;
   font-family: $font-ltc-goudy-oldstyle-pro;
+  @include rem("font-size", 15px);
   font-weight: $font-weight-normal;
-  letter-spacing: 1.5px;
-  line-height: 1.53;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: 1.4;
+  @include mq(tablet) {
+    @include rem("font-size", 22px);
+    line-height: 1.59;
+  }
 }
 
 [data-type_header_capitalize="true"] .h1,
