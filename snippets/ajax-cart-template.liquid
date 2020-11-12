@@ -144,7 +144,7 @@
       {% if additional_checkout_buttons and settings.cart_additional_buttons %}
         <div class="additional-checkout-buttons additional-checkout-buttons--vertical">{{ content_for_additional_checkout_buttons }}</div>
       {% endif %}
-    <a href="{{ routes.cart_url }}" class="btn btn--full cart__checkout{% if settings.cart_terms_conditions_enable %}cart__checkout--ajax{% endif %} ajaxcart__view-cart">
+    <a href="{{ routes.cart_url }}" class="btn btn--full cart__checkout{% if settings.cart_terms_conditions_enable %}cart__checkout--ajax{% endif %}  ajaxcart__view-cart">
       VIEW CART
     </a>
     {% raw %}

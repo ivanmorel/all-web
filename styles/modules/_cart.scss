@@ -1,0 +1,140 @@
+.cart__product-name, .cart__title {
+  font-size: 1.0625rem !important;
+  @include rem(line-height, 22px);
+  font-family: $font-ltc-goudy-oldstyle-pro !important;
+  font-weight: $font-weight-bold !important;
+  color: $brown0 !important;
+  letter-spacing: 1.7px !important;
+  @include mq($until: tablet){
+    font-size: 0.75rem !important;
+    @include rem(line-height, 16px);
+    letter-spacing: 1.2px !important;
+  }
+}
+
+.cart__product-meta {
+  @include rem(font-size, 17px);
+  @include rem(line-height, 22px);
+  color: $blue1;
+  font-family: $font-ltc-goudy-oldstyle-pro;
+  font-weight: $font-weight-bold;
+  letter-spacing: 1.7px;
+  margin-top: 9px;
+  @include mq($until: tablet){
+    @include rem(font-size, 10px);
+    @include rem(line-height, 14px);
+    letter-spacing: 1px;
+    margin-top: 5px;
+  }
+}
+
+.cart__remove-btn {
+  padding: 17px 34px;
+  background-color: $white;
+  @include rem(font-size, 15px);
+  @include rem(line-height, 16px);
+  color: $blue0 !important;
+  background-color: $white !important;
+  letter-spacing: 1.5px;
+  border: 2px solid $brown1 !important;
+  border-radius: 10px;
+
+  @include mq($until: tablet){
+    padding: 9px 26px;
+    @include rem(font-size, 11px);
+    @include rem(line-height, 13px);
+  }
+}
+
+.cart__headers {
+  div {
+    @include rem(font-size, 18px);
+    @include rem(line-height, 22px);
+    font-family: $font-helvetica;
+    font-weight: $font-weight-medium;
+    color: $blue0;
+    @include mq($until: tablet){
+      @include rem(font-size, 12px);
+      @include rem(line-height, 15px);
+    }
+  }
+}
+
+.cart__price {
+  @include rem(font-size, 25px);
+  @include rem(line-height, 32px);
+  font-family: $font-ltc-goudy-oldstyle-pro;
+  font-weight: $font-weight-bold;
+  color: $blue0;
+  letter-spacing: 2.5px;
+  @include mq($until: tablet){
+    padding: 9px 26px;
+    @include rem(font-size, 14px);
+    @include rem(line-height, 18px);
+    letter-spacing: 1.4px;
+  }
+}
+
+.cart__product-qty {
+  @include rem(font-size, 20px);
+  @include rem(line-height, 25px);
+  font-family: $font-helvetica;
+  font-weight: $font-weight-bold;
+  color: $blue0;
+  letter-spacing: 2px;
+  @include mq($until: tablet){
+    @include rem(font-size, 13px);
+    @include rem(line-height, 17px);
+    letter-spacing: 1.3px;
+  }
+}
+
+.cart__subtotal {
+  @include rem(font-size, 20px);
+  @include rem(line-height, 25px);
+  font-family: $font-ltc-goudy-oldstyle-pro;
+  font-weight: $font-weight-bold;
+  letter-spacing: 2px;
+  color: $blue0;
+  @include mq($until: tablet){
+    @include rem(font-size, 14px);
+    @include rem(line-height, 18px);
+    letter-spacing: 1.4px;
+  }
+}
+
+.cart__shipping-info, .cart__donation-info {
+  @include rem(font-size, 18px);
+  @include rem(line-height, 25px);
+  font-family: $font-helvetica;
+  font-weight: $font-weight-medium;
+  color: $blue0;
+  @include mq($until: tablet){
+    @include rem(font-size, 11px);
+    @include rem(line-height, 14px);
+  }
+}
+
+.cart__donation-info--margin {
+  margin-top: 17px;
+  @include mq($until: tablet){
+    margin-top: 6px;
+  }
+}
+
+.cart__update-cart-btn {
+  color: $blue0;
+  border: 2px solid $brown1 !important;
+}
+
+.cart__checkout-btn {
+  background-color: $brown1 !important;
+}
+
+.cart__donation-statement {
+  text-align: left;
+  @include mq($until: tablet){
+    @include rem(font-size, 12px);
+    @include rem(line-height, 15px);
+  }
+}

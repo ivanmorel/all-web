@@ -7,7 +7,7 @@
       {% if cart.item_count > 0 %}
         <header class="section-header">
           <h1 class="section-header__title">{{ 'cart.general.title' | t }}</h1>
-          <div class="rte text-spacing">
+          <div class="rte text-spacing rte-cart-text">
             <p>{{ 'cart.general.continue_browsing_html' | t: url: routes.all_products_collection_url }}</p>
           </div>
         </header>
@@ -17,7 +17,7 @@
           <div class="cart__row small--hide">
             <div class="grid grid--full">
               <div class="grid__item medium-up--two-fifths medium-up--push-three-fifths">
-                <div class="grid grid--full">
+                <div class="grid grid--full cart__headers">
                   <div class="grid__item one-third small--half text-right">
                     {{ 'cart.label.price' | t }}
                   </div>
@@ -80,14 +80,14 @@
                       {% endif %}
 
                       <p class="cart__product-meta">
-                        <a href="{{ routes.cart_change_url }}?line={{ forloop.index }}&amp;quantity=0" class="btn btn--secondary btn--small small--hide">
+                        <a href="{{ routes.cart_change_url }}?line={{ forloop.index }}&amp;quantity=0" class="btn btn--secondary btn--small small--hide cart__remove-btn">
                           {{ 'cart.general.remove' | t }}
                         </a>
-                        <a href="{{ routes.cart_change_url }}?line={{ forloop.index }}&amp;quantity=0" class="btn btn--small medium-up--hide">
+                        <a href="{{ routes.cart_change_url }}?line={{ forloop.index }}&amp;quantity=0" class="btn btn--small medium-up--hide cart__remove-btn">
                           <small>{{ 'cart.general.remove' | t }}</small>
                         </a>
                       </p>
-                      <p class="donation-statement--ajax-cart__product-text js-donation-statement--ajax-cart__product-text"></p>
+                      <p class="donation-statement--ajax-cart__product-text js-donation-statement--ajax-cart__product-text cart__donation-statement"></p>
                     </div>
 
                   </div>
@@ -161,7 +161,7 @@
             <div class="grid">
               {% if settings.cart_notes_enable %}
                 <div class="grid__item medium-up--one-half">
-                  <label for="CartSpecialInstructions">{{ 'cart.general.note' | t }}</label>
+                  <label for="CartSpecialInstructions" class="cart__title">{{ 'cart.general.note' | t }}</label>
                   <textarea name="note" class="input-full cart-notes" id="CartSpecialInstructions">{{ cart.note }}</textarea>
                 </div>
               {% endif %}
@@ -182,13 +182,13 @@
                 {% endif %}
                 <div class="grid grid--full cart__row--table">
                   <div class="grid__item one-half">
-                    <p class="h4">{{ 'cart.general.subtotal' | t }}</p>
+                    <p class="h4 cart__title">{{ 'cart.general.subtotal' | t }}</p>
                   </div>
                   <div class="grid__item one-half">
                     <p class="h4 cart__subtotal">{{ cart.total_price | money }}</p>
                   </div>
                 </div>
-                <small>
+                <small class="cart__shipping-info">
                   {{ 'cart.general.shipping_at_checkout' | t }}<br />
                 </small>
                 {% if settings.cart_terms_conditions_enable %}
@@ -203,12 +203,12 @@
                     </label>
                   </p>
                 {% endif %}
-                <p class="donation-statement--ajax-cart__total-text js-donation-statement--ajax-cart__total-text"></p>
+                <p class="donation-statement--ajax-cart__total-text js-donation-statement--ajax-cart__total-text cart__donation-info cart__donation-info--margin"></p>
                 <div class="cart__checkout-wrapper">
-                  <button type="submit" name="update" class="btn btn--secondary cart__update">
+                  <button type="submit" name="update" class="btn btn--secondary cart__update cart__update-cart-btn">
                     {{ 'cart.general.update' | t }}
                   </button>
-                  <button type="submit" name="checkout" class="btn cart__checkout{% if settings.cart_terms_conditions_enable %} cart__checkout--page{% endif %}">
+                  <button type="submit" name="checkout" class="btn cart__checkout{% if settings.cart_terms_conditions_enable %} cart__checkout--page{% endif %} cart__checkout-btn">
                     {{ 'cart.general.checkout' | t }}
                   </button>
 
@@ -226,7 +226,7 @@
       {% else %}
         <header class="section-header section-header--404">
           <h1 class="section-header__title">{{ 'cart.general.title' | t }}</h1>
-          <div class="rte text-spacing">
+          <div class="rte text-spacing rte-cart-text">
             <p>{{ 'cart.general.empty' | t }}</p>
             <p>{{ 'cart.general.continue_browsing_html' | t: url: routes.all_products_collection_url }}</p>
           </div>
