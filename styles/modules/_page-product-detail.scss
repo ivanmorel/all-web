@@ -145,3 +145,21 @@
   letter-spacing: 1.7px;
   text-align: center;
 }
+
+.add-to-cart {
+  &.btn--secondary {
+    border: 2px solid $brown1;
+    color: $blue0;
+    font-family: $font-helvetica;
+    @include rem("font-size", 14px);
+  }
+}
+
+.template-product {
+  .shopify-payment-button__button {
+    font-family: $font-helvetica;
+    @include rem("font-size", 14px);
+    letter-spacing: 1.4px;
+    font-weight: $font-weight-normal;
+  }
+}
