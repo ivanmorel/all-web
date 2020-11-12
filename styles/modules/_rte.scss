@@ -4,21 +4,3 @@
     letter-spacing: normal;
   }
 }
-
-.rte-cart-text {
-  p {
-      font-family: $font-helvetica;
-      font-weight: $font-weight-medium;
-      @include rem("font-size", 18px);
-      @include rem("line-height", 22px);
-      color: $blue0;
-      @include mq($until: tablet){
-        @include rem(font-size, 12px);
-        @include rem(line-height, 15px);
-      }
-  }
-
-  a {
-    color: $blue0;
-  }
-}
