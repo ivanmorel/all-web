@@ -1,0 +1,8 @@
+<div class="faq__section-wrapper">
+  {% if block.settings.title != blank %}
+     <h1 class="faq__section-title">{{ block.settings.title }}</h1>
+  {% endif %}
+  {% if block.settings.description != blank %}
+     <div class="faq__section-description">{{ block.settings.description }}</div>
+  {% endif %}
+</div>
