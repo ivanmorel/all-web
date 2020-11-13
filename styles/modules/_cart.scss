@@ -5,10 +5,17 @@
   font-weight: $font-weight-bold !important;
   color: $brown0 !important;
   letter-spacing: 1.7px !important;
+  text-align: left;
   @include mq($until: tablet){
     font-size: 0.75rem !important;
     @include rem(line-height, 16px);
     letter-spacing: 1.2px !important;
+  }
+}
+
+.cart__title {
+  @include mq($until: tablet){
+    text-align: center;
   }
 }
 
@@ -108,10 +115,12 @@
   @include rem(line-height, 25px);
   font-family: $font-helvetica;
   font-weight: $font-weight-medium;
+  text-align: left;
   color: $blue0;
   @include mq($until: tablet){
     @include rem(font-size, 11px);
     @include rem(line-height, 14px);
+    text-align: center;
   }
 }
 
@@ -155,4 +164,30 @@
   a {
     color: $blue0;
   }
+}
+
+.cart__note-total-wrapper {
+  display: flex;
+  justify-content: space-between;
+  @include mq($until: tablet){
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
+
+.cart__textarea {
+  max-width: 639px;
+}
+
+.cart__total-wrapper {
+  width: 100%;
+  max-width: 564px;
+  @include mq($until: tablet){
+    max-width: initial;
+    margin-top: 33px;
+  }
+}
+
+.cart__grid-notes {
+  width: 100% !important;
 }
