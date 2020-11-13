@@ -158,14 +158,14 @@
           {% endfor %}
 
           <div class="cart__row">
-            <div class="grid">
+            <div class="grid cart__note-total-wrapper">
               {% if settings.cart_notes_enable %}
-                <div class="grid__item medium-up--one-half">
+                <div class="grid__item">
                   <label for="CartSpecialInstructions" class="cart__title">{{ 'cart.general.note' | t }}</label>
-                  <textarea name="note" class="input-full cart-notes" id="CartSpecialInstructions">{{ cart.note }}</textarea>
+                  <textarea name="note" class="input-full cart-notes cart__textarea" id="CartSpecialInstructions">{{ cart.note }}</textarea>
                 </div>
               {% endif %}
-              <div class="grid__item medium-up--one-half text-center medium-up--text-right{% unless settings.cart_notes_enable %} medium-up--push-one-half{% endunless %} js-donation-statement-ajaxcart__total">
+              <div class="grid__item medium-up--one-half text-center medium-up--text-right{% unless settings.cart_notes_enable %} medium-up--push-one-half{% endunless %} js-donation-statement-ajaxcart__total cart__total-wrapper">
                 {% if cart.cart_level_discount_applications != blank %}
                   <div class="grid grid--full cart__row--table">
                     <div class="grid__item one-half">

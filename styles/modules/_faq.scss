@@ -5,7 +5,7 @@
   font-weight: $font-weight-bold;
   text-transform: initial !important;
   color: $blue0;
-  margin-left: 100px;
+  margin: 73px 0 0 100px;
   @include mq($until: tablet){
     @include rem(font-size, 30px);
     @include rem(line-height, 50px);
