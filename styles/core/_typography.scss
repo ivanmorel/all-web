@@ -39,7 +39,7 @@ textarea {
   font-style: normal;
   letter-spacing: normal;
   line-height: normal;
-  text-transform: lowercase !important;
+  text-transform: none;
   @include mq(desktop) {
     @include rem("font-size", 70px);
   }

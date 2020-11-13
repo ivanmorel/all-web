@@ -1,3 +1,12 @@
+<div class="page-width">
+      <div class="grid">
+        <div class="grid__item medium-up--one-fifth grid__item--sidebar">
+        </div>
+        <div class="grid__item medium-up--four-fifths grid__item--content">
+          {% section 'collection-promotions' %}
+        </div>
+      </div>
+    </div>
 {% section 'collection-header' %}
 {% render 'submenu', links: linklists.products.links %}
 
@@ -9,7 +18,6 @@
           {% section 'collection-sidebar' %}
         </div>
         <div class="grid__item medium-up--four-fifths grid__item--content">
-          {% section 'collection-promotions' %}
           <div class="collection-grid__wrapper">
             {% section 'collection-template' %}
           </div>

@@ -1,5 +1,5 @@
 .promo-grid {
-  background-color: rgba(199, 214, 216, 0.2);
+  // background-color: rgba(199, 214, 216, 0.2);
   .type-advanced {
     .promo-grid__content {
       @include mq(desktop) {
@@ -60,6 +60,28 @@
           margin-top: 40px;
         }
       }
+    }
+  }
+  .type-banner {
+    .type-banner__text {
+      font-family: $font-ltc-goudy-oldstyle-pro;
+
+      p {
+        font-weight: $font-weight-bold;
+        text-align: center;
+      }
+      .h3 {
+        font-family: inherit;
+        @include rem("font-size", 20px);
+        text-transform: uppercase;
+        margin: 5px 0;
+      }
+      p:not(.h3):not(.btn) {
+        padding: 0 35px;
+      }
+    }
+    .btn.btn--secondary {
+      color: $blue0;
     }
   }
 }
