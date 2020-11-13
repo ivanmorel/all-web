@@ -1,0 +1,61 @@
+.faq__title {
+  @include rem("font-size", 70px);
+  @include rem("line-height", 115px);
+  font-family: $font-antro-vectra;
+  font-weight: $font-weight-bold;
+  text-transform: initial !important;
+  color: $blue0;
+  margin-left: 100px;
+  @include mq($until: tablet){
+    @include rem(font-size, 30px);
+    @include rem(line-height, 50px);
+    margin: 23px 0 0 0;
+  }
+}
+
+.faq__section-wrapper {
+  padding: 0 0 70px 102px;
+  & + & {
+    border-top: 1px solid $gray1;
+  }
+
+  @include mq($until: tablet){
+    padding: 0 0 41px 0;
+  }
+}
+
+.faq__section-title {
+  @include rem("font-size", 40px);
+  @include rem("line-height", 51px);
+  font-family: $font-ltc-goudy-oldstyle-pro;
+  font-weight: $font-weight-bold;
+  color: $brown1;
+  text-transform: initial !important;
+  letter-spacing: normal;
+  margin: 0;
+  padding: 60px 0 50px;
+  @include mq($until: tablet){
+    @include rem("font-size", 24px);
+    @include rem("line-height", 30px);
+    padding: 48px 0 19px;
+  }
+}
+
+.faq__section-description {
+  @include rem("font-size", 20px);
+  @include rem("line-height", 25px);
+  font-family: $font-ltc-goudy-oldstyle-pro;
+  font-weight: $font-weight-bold;
+  color: $blue0;
+  max-width: 1095px;
+
+  p {
+    letter-spacing: normal;
+  }
+
+  @include mq($until: tablet){
+    @include rem("font-size", 14px);
+    @include rem("line-height", 21px);
+    max-width: initial;
+  }
+}
