@@ -1,0 +1,15 @@
+.pagination {
+  .next,
+  .prev {
+    border-radius: 5px;
+    background-color: $blue2;
+  }
+  .page {
+    color: $blue2;
+    font-family: $font-helvetica;
+    font-weight: $font-weight-medium;
+    &.current {
+      color: $blue0;
+    }
+  }
+}

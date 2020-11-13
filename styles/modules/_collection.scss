@@ -5,9 +5,20 @@
   .page-content--top {
     padding-top: 24px;
   }
-  .flex-grid--collection-promotions {
-    margin-bottom: 0;
-    margin-top: 0;
+  .collection-promotions__mobile-wrapper {
+    @include mq(desktop) {
+      display: none;
+    }
+    .flex-grid--collection-promotions {
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+  }
+  .collection-promotions__desktop-wrapper {
+    display: none;
+    @include mq(desktop) {
+      display: block;
+    }
   }
 
   .section-header__title {
@@ -17,29 +28,45 @@
     font-weight: $font-weight-bold;
     text-align: center;
     text-transform: uppercase;
+    @include mq(desktop) {
+      @include rem("font-size", 35px);
+    }
   }
 }
 .collection-filter {
   justify-content: space-between;
   .collection-filter__item {
     margin-bottom: 26px;
+    @include mq(desktop) {
+      margin-bottom: 60px;
+    }
   }
   .collection-filter__item--drawer {
     max-width: 160px;
   }
   .collection-filter__sort-container {
+    @include mq(desktop) {
+      min-width: 330px;
+    }
     select {
       border-color: $pink2;
       background-image: url("https://cdn.shopify.com/s/files/1/0466/7041/3987/files/icon-sort-dropdown.png?v=1605297755");
       color: $blue0;
       font-family: $font-ltc-goudy-oldstyle-pro;
-      @include rem("font-size", 14px);
+      font-size: 0.875rem !important;
       font-weight: $font-weight-bold;
       font-style: normal;
       letter-spacing: normal;
       text-align: left;
       height: 37px;
       padding: 8px 11px;
+      @include mq(desktop) {
+        font-size: 1.375rem !important;
+        padding: 15px 20px;
+        height: 65px;
+        background-image: url("https://cdn.shopify.com/s/files/1/0466/7041/3987/files/icon-sort-dropdown--desktop.png?v=1605307796");
+        background-position: right 20px center;
+      }
     }
   }
   .btn--tertiary {
@@ -50,8 +77,25 @@
     font-weight: $font-weight-bold;
     height: 37px;
     @include rem("font-size", 14px);
+    @include mq(desktop) {
+      @include rem("font-size", 22px);
+      height: 65px;
+    }
     .icon-filter {
       color: $pink0;
     }
+  }
+}
+
+.collections__title--mobile {
+  @include mq(desktop) {
+    display: none;
+  }
+}
+.collections__title--desktop {
+  display: none;
+  margin-left: 40px;
+  @include mq(desktop) {
+    display: block;
   }
 }

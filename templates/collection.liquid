@@ -1,15 +1,13 @@
-<div class="page-width">
-      <div class="grid">
-        <div class="grid__item medium-up--one-fifth grid__item--sidebar">
-        </div>
-        <div class="grid__item medium-up--four-fifths grid__item--content">
-          {% section 'collection-promotions' %}
-        </div>
-      </div>
+<div class="page-width collection-promotions__mobile-wrapper">
+  <div class="grid">
+    <div class="grid__item medium-up--four-fifths grid__item--content">
+      {% section 'collection-promotions' %}
     </div>
-{% section 'collection-header' %}
-{% render 'submenu', links: linklists.products.links %}
+  </div>
+</div>
 
+{% render 'submenu', links: linklists.products.links %}
+{% section 'collection-header' %}
 <div id="CollectionAjaxResult" class="collection-content">
   <div id="CollectionAjaxContent">
     <div class="page-width">
@@ -18,6 +16,9 @@
           {% section 'collection-sidebar' %}
         </div>
         <div class="grid__item medium-up--four-fifths grid__item--content">
+          <div class="collection-promotions__desktop-wrapper">
+            {% section 'collection-promotions' %}
+          </div>
           <div class="collection-grid__wrapper">
             {% section 'collection-template' %}
           </div>
