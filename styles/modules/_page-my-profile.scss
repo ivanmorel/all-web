@@ -1,0 +1,14 @@
+.my-profile__profile-section {
+  & + & {
+    margin-top: 32px;
+    @include mq(desktop) {
+      margin-top: 92px;
+    }
+  }
+}
+.my-profile__input-birthday {
+  width: 100%;
+  @include mq(desktop) {
+    max-width: 50%;
+  }
+}

@@ -17,6 +17,8 @@
 
 @import "core/typography";
 @import "core/layout";
+@import "modules/forms";
+
 // @import "core/animations";
 
 /* Placeholders */
@@ -48,7 +50,6 @@
 @import "modules/site-nav";
 @import "modules/mobile-nav";
 @import "modules/predictive-results";
-@import "modules/forms";
 @import "modules/search-bar";
 @import "modules/customers-account";
 @import "modules/customers-addresses";
@@ -58,6 +59,12 @@
 @import "modules/comments";
 @import "modules/rte";
 @import "modules/page-search";
+@import "modules/page-my-profile";
+@import "modules/page-product-detail";
 @import "modules/ajax-cart";
+@import "modules/breadcrumbs";
+@import "modules/instafeed";
 @import "modules/cart";
+@import "modules/collection";
+@import "modules/pagination";
 @import "modules/faq";

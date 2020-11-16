@@ -24,8 +24,10 @@
       --buttonRadiusMobile: 4px;
     {% elsif settings.button_style == 'round' %}
       --buttonRadius: 50px;
+      --buttonRadiusMobile: 50px;
     {% else %}
       --buttonRadius: 0px;
+      --buttonRadiusMobile: 0px;
     {% endif %}
 
     --colorGridOverlayOpacity: {{ settings.collection_grid_opacity | divided_by: 100.0 }};

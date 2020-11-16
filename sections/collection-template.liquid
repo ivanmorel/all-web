@@ -35,7 +35,9 @@
         {%- endif -%}
       </button>
     </div>
-
+    <h1 class="collection-filter__item section-header__title collections__title--desktop">
+      {{ collection.title }}
+    </h1>
     <div class="collection-filter__item collection-filter__item--count small--hide">
       {%- if section.settings.enable_collection_count -%}
         {{ 'collections.general.items_with_count' | t: count: collection.products_count }}

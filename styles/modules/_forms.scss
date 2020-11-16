@@ -108,6 +108,11 @@ label:not(.variant__button-label) {
     letter-spacing: normal;
     text-align: left;
     text-transform: uppercase;
+    margin-bottom: 15px;
+    @include mq(desktop) {
+      @include rem("font-size", 35px);
+      margin-bottom: 56px;
+    }
   }
   p {
     color: $blue2;

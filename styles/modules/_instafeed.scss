@@ -1,0 +1,20 @@
+#insta-feed {
+  h2 {
+    text-align: left;
+    color: $blue1;
+    font-family: $font-antro-vectra;
+    @include rem("font-size", 30px);
+    font-weight: $font-weight-bold;
+    line-height: 1;
+    text-transform: none;
+    margin-left: 20px;
+    margin-bottom: 0 !important;
+    margin-top: 30px;
+    @include mq(desktop) {
+      margin-left: 50px;
+      @include rem("font-size", 70px);
+      margin-top: 75px;
+      line-height: 1.8;
+    }
+  }
+}
