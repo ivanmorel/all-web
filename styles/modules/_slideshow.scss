@@ -2,6 +2,11 @@
   background-color: transparent;
 }
 .slideshow__slide {
+  .hero__text-content {
+    .animation-cropper {
+      overflow: visible;
+    }
+  }
   .hero__title {
     font-family: $font-antro-vectra;
     text-transform: none !important;
