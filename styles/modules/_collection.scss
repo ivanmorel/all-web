@@ -18,6 +18,7 @@
     display: none;
     @include mq(desktop) {
       display: block;
+      margin-top: 50px;
     }
   }
 
