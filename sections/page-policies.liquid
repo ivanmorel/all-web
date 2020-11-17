@@ -1,0 +1,33 @@
+<div class="centered-page-wrapper policy__wrapper">
+  {% for block in section.blocks %}
+    {% case block.type %}
+      {% when 'policy-section' %}
+        {% include 'policy-section' block %}
+    {% endcase %}
+  {% endfor %}
+</div>
+
+{% schema %}
+  {
+    "name": "Policy Page",
+    "blocks": [
+      {
+        "type": "policy-section",
+        "name": "Policy Section",
+        "settings": [
+          {
+            "id": "title",
+            "type": "text",
+            "label": "Title",
+            "info": "Description Title"
+          },
+          {
+            "id": "description",
+            "type": "richtext",
+            "label": "Description"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,43 @@
+.policy__section-title {
+  @include rem("font-size", 70px);
+  @include rem("line-height", 115px);
+  font-family: $font-antro-vectra;
+  font-weight: $font-weight-bold;
+  color: $linen2;
+  text-transform: initial !important;
+  @include mq($until: tablet){
+    @include rem(font-size, 30px);
+    @include rem(line-height, 50px);
+  }
+}
+
+.policy__section-description {
+  @include rem("font-size", 22px);
+  @include rem("line-height", 35px);
+  font-family: $font-ltc-goudy-oldstyle-pro;
+  font-weight: $font-weight-normal;
+  color: $blue0;
+  margin-top: 17px;
+  @include mq($until: tablet){
+    @include rem(font-size, 30px);
+    @include rem(line-height, 50px);
+    margin-top: 3px;
+  }
+}
+
+.policy__section-wrapper {
+  margin-top: 71px;
+  @include mq($until: tablet){
+    margin-top: 23px;
+    & + & {
+      margin-top: 51px;
+    }
+  }
+}
+
+.policy__wrapper {
+  margin-bottom: 113px;
+  @include mq($until: tablet){
+    margin-bottom: 52px;
+  }
+}
