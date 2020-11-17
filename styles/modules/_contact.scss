@@ -1,0 +1,25 @@
+.contact__title {
+  @include rem("font-size", 70px);
+  @include rem("line-height", 115px);
+  font-family: $font-antro-vectra;
+  font-weight: $font-weight-bold;
+  color: $brown0;
+  text-transform: initial !important;
+  @include mq($until: tablet){
+    @include rem("font-size", 30px);
+    @include rem("line-height", 50px);
+    margin-top: 23px;
+  }
+}
+
+.contact__rte {
+  font-family: $font-ltc-goudy-oldstyle-pro;
+  font-weight: $font-weight-normal;
+  @include rem("font-size", 23px);
+  @include rem("line-height", 34px);
+  color: $blue0;
+  @include mq($until: tablet){
+    @include rem("font-size", 14px);
+    @include rem("line-height", 21px);
+  }
+}
