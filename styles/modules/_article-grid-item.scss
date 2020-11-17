@@ -9,7 +9,7 @@
     line-height: normal;
     margin-top: 5px;
     @include mq(desktop) {
-      @include rem("font-size", 20px);
+      @include rem("font-size", 18px);
     }
   }
 
@@ -22,7 +22,7 @@
     letter-spacing: 1.8px;
     line-height: normal;
     @include mq(desktop) {
-      @include rem("font-size", 25px);
+      @include rem("font-size", 20px);
     }
   }
 }

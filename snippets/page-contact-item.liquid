@@ -1,0 +1,10 @@
+<div class="contact__item-wrapper">
+  {% if block.settings.image != blank %}
+    <div class="contact__item-image" style="background-image: url({{ block.settings.image | img_url: 'Medium' }});">
+      <img class="visually-hidden" src="{{ block.settings.image }}" alt="{{ block.settings.image.alt }}"/>
+    </div>
+  {% endif %}
+  {% if block.settings.description != blank %}
+    <div class="contact__item-description">{{block.settings.description}}</div>
+  {% endif %}
+</div>
