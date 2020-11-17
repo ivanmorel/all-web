@@ -1,25 +1,46 @@
-<div class="page-width page-content{% if section.blocks.size > 0 %} page-content--with-blocks{% endif %}">
-  <div class="grid">
-    <div class="grid__item medium-up--three-quarters medium-up--push-one-eighth contact__content-wrapper">
-      {% for block in section.blocks %}
-        {% case block.type %}
-          {% when 'page-contact-title' %}
-            {% include 'page-contact-title' block %}
-          {% when 'page-contact-description' %}
-            {% include 'page-contact-description' block %}
-          {% when 'page-contact-item' %}
-            {% include 'page-contact-item' block %}
-        {% endcase %}
-      {% endfor %}
+{% if section.settings.page_title_enable or section.settings.page_content_enable %}
+  <div class="page-width page-content{% if section.blocks.size > 0 %} page-content--with-blocks{% endif %}">
+
+    <div class="grid">
+      <div class="grid__item medium-up--three-quarters medium-up--push-one-eighth">
+        {%- render 'breadcrumbs' -%}
+
+        {% if section.settings.page_title_enable %}
+          <header class="section-header">
+            <h1 class="section-header__title contact__title">{{ page.title }}</h1>
+          </header>
+        {% endif %}
+
+        {% if section.settings.page_content_enable %}
+          <div class="rte text-spacing contact__rte">
+            {{ page.content }}
+          </div>
+        {% endif %}
+
+      </div>
     </div>
   </div>
-</div>
+{% endif %}
 
 {% include 'page-template-blocks' %}
 
 {% schema %}
   {
     "name": "Page.contact page",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "page_title_enable",
+        "label": "Show page title",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "page_content_enable",
+        "label": "Show page content",
+        "default": true
+      }
+    ],
     "default": {
       "blocks": [
         {
@@ -28,44 +49,6 @@
       ]
     },
     "blocks": [
-      {
-        "type": "page-contact-title",
-        "name": "Contact Title",
-        "settings": [
-          {
-            "id": "title",
-            "type": "text",
-            "label": "Title"
-          }
-        ]
-      },
-      {
-        "type": "page-contact-description",
-        "name": "Contact Description",
-        "settings": [
-          {
-            "type": "richtext",
-            "id": "description",
-            "label": "Description Text"
-          }
-        ]
-      },
-      {
-        "type": "page-contact-item",
-        "name": "Contact Item",
-        "settings": [
-          {
-            "type": "image_picker",
-            "id": "image",
-            "label": "Image"
-          },
-          {
-            "type": "richtext",
-            "id": "description",
-            "label": "Item Description"
-          }
-        ]
-      },
       {
         "type": "contact-form",
         "name": "Contact form",
@@ -1141,3 +1124,4 @@
 
   }
 {% endschema %}
+

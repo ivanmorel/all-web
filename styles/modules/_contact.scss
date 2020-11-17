@@ -12,67 +12,14 @@
   }
 }
 
-.contact__description, .contact__item-description {
+.contact__rte {
   font-family: $font-ltc-goudy-oldstyle-pro;
   font-weight: $font-weight-normal;
   @include rem("font-size", 23px);
   @include rem("line-height", 34px);
+  color: $blue0;
   @include mq($until: tablet){
     @include rem("font-size", 14px);
     @include rem("line-height", 21px);
-  }
-}
-
-.contact__description {
-  margin-top: 25px;
-  p {
-    margin: 0;
-  }
-  @include mq($until: tablet){
-    margin-top: 9px;
-  }
-}
-
-.contact__item-description {
-  p {
-    margin: 0;
-  }
-}
-
-.contact__item-wrapper {
-  display: flex;
-  align-items: center;
-  margin-top: 80px;
-
-  & + & {
-    margin-top: 43px;
-    margin-bottom: 80px;
-    @include mq($until: tablet){
-      margin-top: 25px;
-      margin-bottom: 37px;
-    }
-  }
-
-  &:last-child {
-    margin-bottom: 70px;
-    @include mq($until: tablet){
-      margin-top: 46px;
-    }
-  }
-
-  @include mq($until: tablet){
-    margin-top: 25px;
-  }
-}
-
-.contact__item-image {
-  min-width: 35px;
-  height: 35px;
-  margin-right: 38px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  @include mq($until: tablet){
-    margin-right: 27px;
   }
 }
