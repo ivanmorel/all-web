@@ -2,6 +2,8 @@
   {% if block.type == 'logo' %}
 
     {%- assign has_logo = true -%}
+    {%- assign header_logo_width = block.settings.desktop_logo_width | append: 'px' -%}
+    {%- assign header_logo_width_mobile = block.settings.mobile_logo_width | append: 'px' -%}
     {%- assign header_logo_size = block.settings.desktop_logo_width | append: 'x' -%}
     {%- assign header_logo_size_mobile = block.settings.mobile_logo_width | append: 'x' -%}
 

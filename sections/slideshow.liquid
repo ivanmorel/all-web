@@ -174,14 +174,14 @@
                     <div class="hero__text-content {{ block.settings.text_align }}">
                       <div class="hero__text-shadow">
                         {% unless block.settings.top_subheading == blank %}
-                          <div class="hero__top-subtitle">
+                          <div class="hero__top-subtitle" style="color: {{ block.settings.top_subheading_color }}">
                             <div class="animation-cropper"><div class="animation-contents">
                               {{ block.settings.top_subheading | escape }}
                             </div></div>
                           </div>
                         {% endunless %}
                         {% unless block.settings.title == blank %}
-                          <h2 class="h1 hero__title">
+                          <h2 class="h1 hero__title" style="color: {{ block.settings.title_color }}">
                             <div class="animation-cropper"><div class="animation-contents">
                             {{ block.settings.title | newline_to_br }}
                             </div></div>
@@ -189,8 +189,8 @@
                         {% endunless %}
                         {% if block.settings.subheading or block.settings.link or block.settings.link_2 %}
                           {% unless block.settings.subheading == blank %}
-                            <div class="hero__subtitle">
-                              <div class="animation-cropper"><div class="animation-contents">
+                            <div class="hero__subtitle" style="color: {{ block.settings.subheading_color }}">
+                              <div class="animation-cropper"><div class="animation-contents" >
                                 {{ block.settings.subheading | escape }}
                               </div></div>
                             </div>
@@ -360,10 +360,24 @@
             "label": "Subheading"
           },
           {
+            "type": "color",
+            "id": "top_subheading_color",
+            "label": "Subheading color",
+            "default": "rgba(0,0,0,1)",
+            "info": "Top subheading color"
+          },
+          {
             "type": "textarea",
             "id": "title",
             "label": "Heading",
             "default": "Two line\ntitle slide."
+          },
+          {
+            "type": "color",
+            "id": "title_color",
+            "label": "Title color",
+            "default": "rgba(0,0,0,1)",
+            "info": "Title color"
           },
           {
             "type": "range",
@@ -379,6 +393,13 @@
             "id": "subheading",
             "label": "Text",
             "default": "And optional subtext"
+          },
+          {
+            "type": "color",
+            "id": "subheading_color",
+            "label": "Text color",
+            "default": "rgba(0,0,0,1)",
+            "info": "text color"
           },
           {
             "type": "url",
