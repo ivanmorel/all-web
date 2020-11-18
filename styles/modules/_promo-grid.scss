@@ -3,8 +3,7 @@
     .promo-grid__content {
       @include mq(desktop) {
         padding: 77px 52px;
-        margin-left: 60px;
-        margin-right: 60px;
+        margin: 106px 60px;
       }
     }
     .rte--block {
