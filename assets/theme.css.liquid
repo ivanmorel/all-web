@@ -4347,7 +4347,8 @@ form+.footer__social{
     right:100%;
     margin:0 15px;
     border-bottom:2px solid;
-    border-bottom-color: #C78168;
+    border-bottom-color:{{ settings.color_header_text | default: "#000" }};
+    border-bottom-color:var(--colorNavText);
     transition:right 0.5s;
   }
 

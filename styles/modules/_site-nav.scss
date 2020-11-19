@@ -28,3 +28,7 @@
     width: 100%;
   }
 }
+
+.site-nav__link--underline:after {
+  border-bottom-color: $brown1 !important;
+}
