@@ -23,7 +23,6 @@
 .mobile-nav__link {
   font-family: $font-ltc-goudy-oldstyle-pro;
   font-weight: $font-weight-bold;
-  @include rem("font-size", 16px);
   letter-spacing: 1.6px;
   .drawer &:not(.btn) {
     color: $blue0;
@@ -69,7 +68,6 @@
     .collapse__title,
     .collapse__link,
     .collapse__sub-link {
-      @include rem("font-size", 12px);
       color: $blue0;
       font-family: $font-ltc-goudy-oldstyle-pro;
       font-weight: $font-weight-bold;

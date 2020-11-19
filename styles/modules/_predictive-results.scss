@@ -8,7 +8,6 @@
 .predictive__label {
   color: $blue0;
   font-weight: $font-weight-bold;
-  @include rem("font-size", 24px);
 }
 
 .predictive-results__footer {

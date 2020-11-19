@@ -19,8 +19,6 @@
   .icon {
     color: $blue0;
     @include mq(desktop) {
-      width: 46px;
-      height: 46px;
     }
   }
 }

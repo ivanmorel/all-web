@@ -3,27 +3,21 @@
     .h4 {
       color: $blue0;
       font-family: $font-helvetica;
-      @include rem("font-size", 14px);
       font-weight: $font-weight-bold;
       font-style: normal;
       letter-spacing: 1.4px;
       text-align: center;
       text-transform: uppercase;
       @include mq(tablet) {
-        @include rem("font-size", 20px);
       }
     }
     p {
       color: $blue0;
       font-family: $font-helvetica;
-      @include rem("font-size", 14px);
       font-weight: $font-weight-normal;
       font-style: normal;
       letter-spacing: normal;
-      line-height: 1.43;
       @include mq(tablet) {
-        line-height: 1.8;
-        @include rem("font-size", 21px);
         font-weight: $font-weight-medium;
       }
     }

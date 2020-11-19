@@ -1,59 +1,47 @@
 .article__date-detail, .article__date-detail a {
-  @include rem(font-size, 22px);
-  @include rem(line-height, 29px);
   color: $blue0 !important;
   font-family: $font-ltc-goudy-oldstyle-pro;
   font-weight: $font-weight-normal;
   letter-spacing: 1.3px;
   @include mq($until: tablet){
-    @include rem(font-size, 15px);
-    @include rem(line-height, 11px);
     letter-spacing: 0.66px;
   }
 }
 
 .article__title-detail {
-  @include rem(font-size, 40px);
-  @include rem(line-height, 51px);
+  @include rem("font-size", 30px);
   color: $linen2;
   font-family: $font-ltc-goudy-oldstyle-pro;
   font-weight: $font-weight-bold;
   letter-spacing: 4px;
   margin-top: 21px;
   @include mq($until: tablet){
-    @include rem(font-size, 25px);
-    @include rem(line-height, 32px);
+    @include rem("font-size", 18px);
     letter-spacing: 2.5px;
     margin-top: 8px;
   }
 }
 
 .article__body {
-  @include rem(font-size, 22px);
-  @include rem(line-height, 35px);
   font-family: $font-ltc-goudy-oldstyle-pro;
   font-weight: $font-weight-normal;
   color: $blue0;
   margin-top: 63px;
   @include mq($until: tablet){
-    @include rem(font-size, 15px);
-    @include rem(line-height, 21px);
     margin: 21px 0 30px;
   }
 }
 
 .article__comment-title {
-  @include rem(font-size, 25px);
-  @include rem(line-height, 32px);
+  @include rem("font-size", 18px);
   font-family: $font-ltc-goudy-oldstyle-pro;
   font-weight: $font-weight-bold;
   letter-spacing: 2.5px;
   color: $linen2;
   text-transform: uppercase !important;
   @include mq($until: tablet){
-    @include rem(font-size, 20px);
-    @include rem(line-height, 26px);
     letter-spacing: 2px;
+    @include rem("font-size", 15px);
   }
 }
 
@@ -62,8 +50,6 @@
   font-weight: $font-weight-medium;
   color: $blue0;
   @include mq($until: tablet){
-    @include rem(font-size, 14px);
-    @include rem(line-height, 20px);
     letter-spacing: normal;
   }
 }

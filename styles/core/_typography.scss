@@ -30,7 +30,7 @@ textarea {
 }
 
 .section-header__title {
-  @include rem("font-size", 30px);
+  @include rem("font-size", 22px);
   color: $blue1;
   font-family: $font-antro-vectra;
   font-weight: $font-weight-bold;
@@ -39,15 +39,14 @@ textarea {
   font-style: normal;
   letter-spacing: normal;
   line-height: normal;
-  text-transform: none;
+  text-transform: none !important;
   @include mq(desktop) {
-    @include rem("font-size", 70px);
+    @include rem("font-size", 52px);
   }
 }
 
 .btn {
   font-family: $font-helvetica;
-  @include rem("font-size", 10px);
   font-weight: $font-weight-medium;
   font-style: normal;
   text-align: center;
@@ -57,7 +56,6 @@ textarea {
   border-radius: 4px !important;
   @include mq(desktop) {
     border-radius: 10px !important;
-    @include rem("font-size", 21px);
     letter-spacing: 2.1px;
     padding: 15px 25px;
   }
@@ -83,13 +81,11 @@ textarea {
 h5,
 h6 {
   font-family: $font-ltc-goudy-oldstyle-pro;
-  @include rem("font-size", 16px);
   font-weight: $font-weight-normal;
   letter-spacing: 1.6px;
   line-height: normal;
 
   @include mq(tablet) {
-    @include rem("font-size", 20px);
   }
 }
 
@@ -99,26 +95,21 @@ h6 {
 h1,
 h2,
 h3 {
+  
   font-family: $font-antro-vectra;
   font-weight: $font-weight-bold;
-  @include rem("font-size", 45px);
   letter-spacing: 2.8px;
   @include mq(tablet) {
-    @include rem("font-size", 60px);
   }
 }
 
 p {
   color: $blue0;
   font-family: $font-ltc-goudy-oldstyle-pro;
-  @include rem("font-size", 15px);
   font-weight: $font-weight-normal;
   font-style: normal;
   letter-spacing: normal;
-  line-height: 1.4;
   @include mq(tablet) {
-    @include rem("font-size", 22px);
-    line-height: 1.59;
   }
 }
 

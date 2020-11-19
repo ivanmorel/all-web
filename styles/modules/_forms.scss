@@ -12,7 +12,6 @@ textarea,
 .input-group-field {
   border: 1px solid $gray1;
   border-radius: 4px;
-  font-size: 0.75rem !important;
   color: $blue0;
   letter-spacing: 1.2px;
   line-height: normal;
@@ -21,7 +20,6 @@ textarea,
   padding: 16px 12px;
   @include mq(tablet) {
     border-radius: 10px;
-    font-size: 1.125rem !important;
   }
   &:focus,
   &:active {
@@ -42,7 +40,6 @@ input:active {
 label:not(.variant__button-label) {
   color: $blue0;
   font-family: $font-helvetica;
-  font-size: 14px;
   font-weight: $font-weight-normal;
   font-style: normal;
   letter-spacing: 1.4px;
@@ -50,7 +47,6 @@ label:not(.variant__button-label) {
   text-transform: uppercase;
   // line-height: normal;
   @include mq(tablet) {
-    @include rem("font-size", 21px);
     letter-spacing: 2px;
   }
 }
@@ -63,9 +59,7 @@ label:not(.variant__button-label) {
   letter-spacing: normal;
   a {
     color: $blue0;
-    @include rem("font-size", 14px);
     @include mq(tablet) {
-      @include rem("font-size", 21px);
     }
     &:hover {
       text-decoration: underline;
@@ -77,14 +71,12 @@ label:not(.variant__button-label) {
 #customer_register_link {
   color: $blue0;
   font-family: $font-helvetica;
-  @include rem("font-size", 14px);
   font-weight: $font-weight-normal;
   font-style: normal;
   letter-spacing: normal;
   text-align: left;
   text-transform: uppercase;
   @include mq(tablet) {
-    @include rem("font-size", 21px);
   }
   &:hover {
     text-decoration: underline;
@@ -102,7 +94,6 @@ label:not(.variant__button-label) {
   h2 {
     color: $blue2;
     font-family: $font-helvetica;
-    @include rem("font-size", 20px);
     font-weight: $font-weight-medium;
     font-style: normal;
     letter-spacing: normal;
@@ -110,7 +101,6 @@ label:not(.variant__button-label) {
     text-transform: uppercase;
     margin-bottom: 15px;
     @include mq(desktop) {
-      @include rem("font-size", 35px);
       margin-bottom: 56px;
     }
   }

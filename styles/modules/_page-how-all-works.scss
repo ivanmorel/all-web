@@ -1,6 +1,5 @@
 .how-all__title {
-  font-size: 70px;
-  line-height: 115px;
+  @include rem(font-size, 57px);
   text-align: center;
   margin: 85px 0 10px;
   font-family: $font-antro-vectra;
@@ -8,9 +7,7 @@
   text-transform: initial !important;
   color: $brown0;
   @include mq($until: tablet){
-    font-size: 30px;
     text-align: left;
-    line-height: 75px;
     margin: 23px 0 12px 0;
   }
 }
@@ -47,14 +44,10 @@
 }
 
 .how-all__description {
-  font-size: 23px;
-  line-height: 35px;
   font-family: $font-ltc-goudy-oldstyle-pro;
   width: 90%;
   color: $blue0;
   @include mq($until: tablet){
     width: 100%;
-    font-size: 14px;
-    line-height: 21px;
   }
 }

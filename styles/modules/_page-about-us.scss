@@ -41,26 +41,20 @@
 }
 
 .about-us__section-title {
-  @include rem(font-size, 70px);
-  line-height: 115px;
+  @include rem(font-size, 57px);
   text-transform: initial !important;
   font-family: $font-antro-vectra;
   color: $brown0;
   margin-bottom: 12px;
   font-weight: $font-weight-bold;
   @include mq($until: tablet){
-    @include rem(font-size, 30px);
-    line-height: 50px;
   }
 }
 
 .about-us__section-description {
-  @include rem(font-size, 22px);
   font-family: $font-ltc-goudy-oldstyle-pro;
   color: $blue0;
   @include mq($until: tablet){
-    @include rem(font-size, 14px);
-    line-height: 21px;
   }
 
   & > p > em {
@@ -75,16 +69,13 @@
 }
 
 .about-us__team-title {
-  @include rem(font-size, 70px);
-  line-height: 115px;
+  @include rem(font-size, 57px);
   margin: 100px 0;
   font-family: $font-antro-vectra;
   color: $brown0;
   text-transform: initial !important;
   font-weight: $font-weight-bold;
   @include mq($until: tablet){
-    @include rem(font-size, 30px);
-    line-height: 50px;
     margin: 49px 0;
   }
 }
@@ -121,28 +112,20 @@
 }
 
 .about-us__team-member-title {
-  @include rem(font-size, 35px);
-  line-height: 43px;
   margin-bottom: 67px;
   font-family: $font-ltc-goudy-oldstyle-pro;
   color: $blue0;
   font-weight: $font-weight-bold;
   text-transform: initial !important;
   @include mq($until: tablet){
-    @include rem(font-size, 17px);
-    line-height: 22px;
     margin-bottom: 22px;
   }
 }
 
 .about-us__team-member-description {
-  @include rem(font-size, 22px);
-  line-height: 35px;
   font-family: $font-ltc-goudy-oldstyle-pro;
   color: $blue0;
   @include mq($until: tablet){
-    @include rem(font-size, 14px);
-    line-height: 21px;
   }
 }
 
@@ -155,7 +138,6 @@
   display: block;
   margin: 0 auto;
   font-family: $font-helvetica;
-  @include rem(font-size, 21px);
   letter-spacing: 2.1px;
   color: $white;
   text-transform: uppercase;
@@ -169,7 +151,6 @@
     max-width: initial;
     width: 100%;
     padding: 17px 0;
-    @include rem(font-size, 14px);
     border-radius: 4px;
     margin-top: 44px;
   }

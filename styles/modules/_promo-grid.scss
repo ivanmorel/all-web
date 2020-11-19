@@ -10,34 +10,27 @@
     .rte--block {
       color: $blue0;
       font-family: $font-ltc-goudy-oldstyle-pro;
-      @include rem("font-size", 15px);
       font-weight: $font-weight-normal;
       font-style: normal;
       letter-spacing: normal;
-      line-height: 1.67;
       @include mq(desktop) {
-        @include rem("font-size", 20px);
-        line-height: 1.75;
       }
       &.rte--em {
+        @include rem(font-size, 15px);
         color: $blue1;
         font-family: $font-ltc-goudy-oldstyle-pro;
-        @include rem("font-size", 20px);
         font-weight: $font-weight-normal;
         font-style: normal;
         letter-spacing: normal;
-        line-height: 1.25;
         text-transform: none;
         @include mq(desktop) {
-          @include rem("font-size", 30px);
-          line-height: 1.33;
+          @include rem(font-size, 22px);
           margin-bottom: 20px;
         }
       }
       &.rte--strong {
         color: $linen2;
         font-family: $font-ltc-goudy-oldstyle-pro;
-        @include rem("font-size", 27px);
         font-weight: $font-weight-normal;
         font-style: normal;
         letter-spacing: normal;
@@ -45,7 +38,6 @@
         margin-bottom: 17px;
         text-transform: none;
         @include mq(desktop) {
-          @include rem("font-size", 47px);
           margin-bottom: 0;
         }
       }
@@ -71,7 +63,6 @@
       }
       .h3 {
         font-family: inherit;
-        @include rem("font-size", 20px);
         text-transform: uppercase;
         margin: 5px 0;
       }
