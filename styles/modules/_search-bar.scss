@@ -25,3 +25,8 @@
     }
   }
 }
+
+.search__title {
+  text-transform: initial !important;
+  @include rem(font-size, 52px);
+}

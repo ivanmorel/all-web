@@ -18,8 +18,6 @@
 .site-nav__link--icon {
   .icon {
     color: $blue0;
-    @include mq(desktop) {
-    }
   }
 }
 .site-header__logo {

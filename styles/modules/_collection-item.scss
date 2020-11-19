@@ -19,10 +19,4 @@
       min-width: 220px;
     }
   }
-  [data-type_product_capitalize="true"] & {
-    span {
-      @include mq(tablet) {
-      }
-    }
-  }
 }

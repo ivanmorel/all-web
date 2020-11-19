@@ -13,8 +13,6 @@
       font-weight: $font-weight-normal;
       font-style: normal;
       letter-spacing: normal;
-      @include mq(desktop) {
-      }
       &.rte--em {
         @include rem(font-size, 15px);
         color: $blue1;
