@@ -15,16 +15,16 @@
     }
   }
   .footer__title {
+    @include rem(font-size, 22px);
     color: $brown0;
     font-family: $font-antro-vectra;
-    @include rem("font-size", 25px);
     font-weight: $font-weight-bold;
     text-transform: lowercase;
     letter-spacing: normal;
     text-align: center;
     @include mq(desktop) {
       text-align: left;
-      @include rem("font-size", 50px);
+      @include rem(font-size, 30px);
     }
   }
   .footer__newsletter-input {
@@ -34,14 +34,11 @@
     & > p {
       color: $blue0;
       font-family: $font-ltc-goudy-oldstyle-pro;
-      @include rem("font-size", 15px);
       font-weight: $font-weight-bold;
       font-style: normal;
       letter-spacing: 1.5px;
-      line-height: 1.53;
       text-align: center;
       @include mq(desktop) {
-        @include rem("font-size", 20px);
         text-align: left;
         line-height: normal;
       }
@@ -51,8 +48,6 @@
     .icon {
       color: $brown0;
       @include mq(desktop) {
-        width: 34px;
-        height: 34px;
       }
     }
   }
@@ -67,20 +62,10 @@
     a {
       color: $blue0;
       font-family: $font-ltc-goudy-oldstyle-pro;
-      @include rem("font-size", 15px);
       font-weight: $font-weight-bold;
       font-style: normal;
       letter-spacing: normal;
       text-align: center;
-      @include mq(desktop) {
-        @include rem("font-size", 20px);
-      }
     }
-  }
-
-  input,
-  select,
-  textarea {
-    @include rem("font-size", 20px);
   }
 }

@@ -11,14 +11,10 @@
 
 .non-profit__description {
   text-align: center;
-  @include rem(font-size, 21px);
   color: $blue0;
-  line-height: 35px;
   font-family: $font-ltc-goudy-oldstyle-pro;
   margin-bottom: 65px;
   @include mq($until: tablet){
-    @include rem(font-size, 14px);
-    line-height: 21px;
     margin-bottom: 32px;
     text-align: left;
   }
@@ -56,16 +52,12 @@
 }
 
 .non-profit__contacts-info-link {
-  @include rem(font-size, 28px);
   color: $blue0;
   font-family: $font-ltc-goudy-oldstyle-pro;
   margin-bottom: 10px;
-  line-height: 37px;
   text-transform: none !important;
   display: block;
   @include mq($until: tablet){
-    @include rem(font-size, 20px);
-    line-height: 27px;
     margin-bottom: 9px;
     text-align: left;
   }
@@ -108,7 +100,6 @@
   color: $white;
   background-color: $blue2;
   text-transform: uppercase;
-  @include rem(font-size, 21px);
   font-family: $font-helvetica;
   letter-spacing: 2.1px;
   white-space: nowrap;
@@ -122,8 +113,6 @@
   @include mq($until: tablet){
     padding: 14px 0;
     width: 100%;
-    @include rem(font-size, 14px);
-    line-height: 16px;
     text-align: center;
   }
 }
@@ -136,7 +125,6 @@
 }
 
 .non-profit__title-mobile {
-  font-size: 26px;
   letter-spacing: 2px;
   margin-top: 52px;
 }
@@ -150,11 +138,9 @@
 
 .non-profit__previous-orgs {
   margin: 0 0 50px 0;
-  font-size: 28px;
   text-transform: uppercase;
   text-align: center;
   @include mq($until: tablet){
-    font-size: 23px;
     margin-bottom: 30px;
   }
 }
@@ -171,8 +157,6 @@
 }
 
 .non-profit__previous-org-title {
-  @include rem(font-size, 70px);
-  line-height: 115px;
   font-family: $font-antro-vectra;
   font-weight: $font-weight-bold;
   color: $blue0;
@@ -181,8 +165,6 @@
   text-transform: initial !important;
   @include mq($until: tablet){
     text-align: left;
-    @include rem(font-size, 30px);
-    line-height: 45px;
     margin-bottom: 36px;
   }
 }

@@ -11,8 +11,6 @@
   background-color: $linen3 !important;
 
   @include mq($until: tablet){
-    @include rem(font-size, 14px);
-    @include rem(line-height, 18px);
     padding: 17px 10px;
   }
 }

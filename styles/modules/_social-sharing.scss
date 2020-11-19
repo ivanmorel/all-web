@@ -1,13 +1,9 @@
 .social-sharing__title {
   font-family: $font-helvetica;
   font-weight: $font-weight-normal;
-  @include rem("font-size", 16px);
-  @include rem("line-height", 17px);
   color: $blue0;
   text-transform: uppercase;
   @include mq($until: tablet){
-    @include rem(font-size, 12px);
-    @include rem(line-height, 14px);
     letter-spacing: 1.2px;
   }
 }

@@ -1,20 +1,18 @@
 #insta-feed {
   h2 {
+    font-size: 1.375rem !important;
     text-align: left;
     color: $blue1;
     font-family: $font-antro-vectra !important;
-    font-size: 1.875rem !important;
     font-weight: $font-weight-bold;
-    line-height: 1 !important;
     text-transform: none;
     margin-left: 20px !important;
     margin-bottom: 0 !important;
     margin-top: 30px !important;
     @include mq(desktop) {
+      font-size: 3.25rem !important;
       margin-left: 50px !important;
-      font-size: 4.375rem !important;
       margin-top: 75px;
-      line-height: 1.8;
     }
   }
 }

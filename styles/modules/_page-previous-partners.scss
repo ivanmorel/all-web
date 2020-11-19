@@ -31,29 +31,21 @@
 
 .partner__title {
   color: $blue2;
-  @include rem(font-size, 45px);
-  line-height: 57px;
   font-family: $font-ltc-goudy-oldstyle-pro;
   font-weight: $font-weight-bold;
   margin-bottom: 29px;
   text-transform: uppercase !important;
   @include mq($until: tablet){
-    @include rem(font-size, 23px);
-    line-height: 32px;
     margin: 0 0 0 15px;
   }
 }
 
 .partner__contact {
-  @include rem(font-size, 28px);
-  line-height: 37px;
   font-family: $font-ltc-goudy-oldstyle-pro;
   color: $blue0;
   margin-bottom: 10px;
   display: block;
   @include mq($until: tablet){
-    @include rem(font-size, 14px);
-    line-height: 19px;
     margin-bottom: 9px;
   }
 }
@@ -73,22 +65,16 @@
 }
 
 .partner__description-title {
-  @include rem(font-size, 40px);
-  line-height: 52px;
   font-family: $font-ltc-goudy-oldstyle-pro;
   font-weight: $font-weight-normal;
   color: $blue0;
   text-transform: uppercase !important;
   @include mq($until: tablet){
-    @include rem(font-size, 22px);
-    line-height: 30px;
   }
 }
 
 .partner__description-section {
   padding: 15px 0;
-  @include rem(font-size, 21px);
-  line-height: 28px;
   color: $blue2;
   font-family: $font-ltc-goudy-oldstyle-pro;
   font-weight: $font-weight-normal;
@@ -96,20 +82,16 @@
   margin-bottom: 0;
   text-transform: none !important;
   @include mq($until: tablet){
-    @include rem(font-size, 12px);
-    line-height: 16px;
     padding: 8px 0;
     border-bottom: 1px solid $blue2;
   }
 }
 
 .partner__description-info {
-  @include rem(font-size, 21px);
   color: $blue0;
   font-family: $font-ltc-goudy-oldstyle-pro;
   margin-top: 41px;
   @include mq($until: tablet){
-    @include rem(font-size, 14px);
   }
 }
 

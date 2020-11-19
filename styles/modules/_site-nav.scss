@@ -18,10 +18,6 @@
 .site-nav__link--icon {
   .icon {
     color: $blue0;
-    @include mq(desktop) {
-      width: 46px;
-      height: 46px;
-    }
   }
 }
 .site-header__logo {
@@ -29,4 +25,8 @@
     flex: 0 0 auto;
     width: 100%;
   }
+}
+
+.site-nav__link--underline:after {
+  border-bottom-color: $brown1 !important;
 }

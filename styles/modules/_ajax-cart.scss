@@ -1,6 +1,4 @@
 .drawer__title {
-  @include rem("font-size", 30px);
-  @include rem(line-height, 38px);
   font-family: $font-ltc-goudy-oldstyle-pro;
   font-weight: $font-weight-bold;
   color: $blue0;
@@ -9,8 +7,6 @@
 }
 
 .ajaxcart__product-name, .ajaxcart__title {
-  font-size: 1.0625rem !important;
-  @include rem(line-height, 22px);
   font-family: $font-ltc-goudy-oldstyle-pro !important;
   font-weight: $font-weight-bold !important;
   color: $brown0 !important;
@@ -18,8 +14,6 @@
 }
 
 .ajaxcart__product-meta {
-  @include rem("font-size", 15px);
-  @include rem(line-height, 19px);
   font-family: $font-ltc-goudy-oldstyle-pro;
   font-weight: $font-weight-bold;
   color: $blue1;
@@ -28,16 +22,12 @@
 }
 
 .ajaxcart__price {
-  @include rem("font-size", 20px);
-  @include rem(line-height, 26px);
   font-family: $font-ltc-goudy-oldstyle-pro;
   font-weight: $font-weight-bold;
   color: $blue0;
 }
 
 .ajaxcart__info-text {
-  @include rem("font-size", 18px);
-  @include rem(line-height, 25px);
   font-family: $font-helvetica;
   font-weight: $font-weight-medium;
   color: $blue0;
