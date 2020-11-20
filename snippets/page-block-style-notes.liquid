@@ -1,0 +1,48 @@
+{% if product.metafields.style_notes.title != blank and product.metafields.style_notes.description != blank %}
+  <div class="index-section style-notes">
+  <div class="page-width">
+    {% capture image_layout %}
+      <div class="feature-row__item">
+        <div style="margin: 0 auto; max-width: 500px;">
+          {% if product.metafields.style_notes.image != blank %}
+          {%- assign sectionImg = product.metafields.style_notes.image | first -%}
+            {% if product.metafields.style_notes.link != blank %}
+              {%- assign sectionLink = articles[product.metafields.style_notes.link].url -%}
+            <a href="{{ sectionLink }}">{% endif %}
+            <div class="image-wrap" style="height: 0; padding-bottom: {{ 100 | divided_by: sectionImg.aspect_ratio }}%;">
+              {%- assign img_url = sectionImg | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+              <img class="feature-row__image lazyload"
+                  data-src="{{ sectionImg.src }}"
+                  data-widths="[180, 360, 540, 720, 900, 1080]"
+                  data-aspectratio="{{ sectionImg.aspect_ratio }}"
+                  data-sizes="auto"
+                  alt="{{ sectionImg.alt }}">
+            </div>
+            {% if  product.metafields.style_notes.link != blank %}</a>{% endif %}
+          {% else %}
+            <div class="image-wrap">
+              {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    {% endcapture %}
+
+    <div class="feature-row" data-aos>
+      <div class="feature-row__item feature-row__text feature-row__text--{{ product.metafields.style_notes.layout }}">
+        {% if product.metafields.style_notes.title != blank %}
+          <div class="h3 style-notes__title">{{ product.metafields.style_notes.title}}</div>
+        {% endif %}
+        {% if product.metafields.style_notes.description != blank %}
+          <div class="rte featured-row__subtext">{{ product.metafields.style_notes.description }}</div>
+        {% endif %}
+          <a href="{{sectionLink}}" class="btn">
+            Learn more
+          </a>
+      </div>
+        {{ image_layout }}
+    </div>
+  </div>
+</div>
+{% endif %}
+
