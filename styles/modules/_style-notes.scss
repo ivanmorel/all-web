@@ -1,0 +1,15 @@
+.style-notes {
+  .feature-row__item:not(.feature-row__text) {
+    & > div {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+  }
+}
+.style-notes__title {
+  font-family: $font-antro-vectra;
+  p,
+  span {
+    font-family: inherit;
+  }
+}
