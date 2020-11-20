@@ -126,13 +126,14 @@
 }
 
 .product-donation__partner {
-  @include rem("font-size", 30px);
+  @include rem("font-size", 21px);
   color: $blue2;
   font-family: $font-ltc-goudy-oldstyle-pro;
   font-weight: $font-weight-bold;
   text-transform: uppercase;
   margin: 0;
   @include mq(desktop) {
+    @include rem("font-size", 30px);
   }
 }
 
