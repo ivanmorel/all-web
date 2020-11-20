@@ -76,3 +76,14 @@
     }
   }
 }
+
+.customer__order-title {
+  margin-top: 18px;
+}
+
+.customer__donation-title {
+  margin-top: 126px;
+  @include mq($until: tablet){
+    margin-top: 31px;
+  }
+}
