@@ -1,9 +1,11 @@
 .policy__section-title {
+  @include rem(font-size, 52px);
   font-family: $font-antro-vectra;
   font-weight: $font-weight-bold;
   color: $linen2;
   text-transform: initial !important;
   @include mq($until: tablet){
+    @include rem(font-size, 23px);
   }
 }
 

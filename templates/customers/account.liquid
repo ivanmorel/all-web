@@ -7,7 +7,7 @@
 
   <div class="grid">
     <div class="grid__item medium-up--two-thirds">
-      <h2>{{ 'customer.orders.title' | t }}</h2>
+      <h2 class="customer__order-title">{{ 'customer.orders.title' | t }}</h2>
 
       {% if customer.orders.size != 0 %}
 
@@ -41,7 +41,7 @@
         <p>{{ 'customer.orders.none' | t }}</p>
 
       {% endif %}
-      <h2>Total donation</h2>
+      <h2 class="customer__donation-title">Total donation</h2>
       {% assign total_spent = 0 %}
        {% for order in customer.orders %}
           {%- assign total_spent = total_spent | plus: order.subtotal_price -%}
@@ -53,7 +53,7 @@
     </div>
 
     <div class="grid__item medium-up--one-third">
-      <h3>{{ 'customer.account.details' | t }}</h3>
+      <h2>{{ 'customer.account.details' | t }}</h2>
 
       <p class="h5">{{ customer.name }}</p>
 

@@ -126,6 +126,7 @@
 }
 
 .product-donation__partner {
+  @include rem("font-size", 30px);
   color: $blue2;
   font-family: $font-ltc-goudy-oldstyle-pro;
   font-weight: $font-weight-bold;
@@ -170,6 +171,7 @@
 }
 
 .product__inventory {
+  @include rem("font-size", 17px);
   color: $linen2;
   font-family: $font-ltc-goudy-oldstyle-pro;
   font-weight: $font-weight-bold;
@@ -178,6 +180,7 @@
   text-align: center;
   @include mq(desktop) {
     margin-bottom: 25px;
+    @include rem("font-size", 21px);
   }
 }
 
