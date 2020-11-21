@@ -5,6 +5,10 @@
       margin: 0 auto;
     }
   }
+  .feature-row__text--full-width {
+    flex: 0 1 100%;
+    min-width: 100%;
+  }
 }
 .style-notes__title {
   font-family: $font-antro-vectra;
