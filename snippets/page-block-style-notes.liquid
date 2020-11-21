@@ -29,7 +29,9 @@
     {% endcapture %}
 
     <div class="feature-row" data-aos>
-      <div class="feature-row__item feature-row__text feature-row__text--{{ product.metafields.style_notes.layout }}">
+      <div class="feature-row__item feature-row__text {% if product.metafields.style_notes.image == blank   %}
+        feature-row__text--full-width
+      {% endif %}">
         {% if product.metafields.style_notes.title != blank %}
           <div class="h3 style-notes__title">{{ product.metafields.style_notes.title}}</div>
         {% endif %}
@@ -40,7 +42,9 @@
             Learn more
           </a>
       </div>
+      {% if product.metafields.style_notes.image != blank %}
         {{ image_layout }}
+      {% endif %}
     </div>
   </div>
 </div>
