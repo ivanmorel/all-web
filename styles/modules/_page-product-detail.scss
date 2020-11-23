@@ -35,9 +35,11 @@
   flex-direction: column;
   margin-bottom: 24px;
   @include mq(desktop) {
-    flex-direction: row;
-    align-items: center;
     margin-bottom: 25px;
+  }
+  .product__price--compare {
+    color: $blue2;
+    font-weight: $font-weight-normal;
   }
 }
 

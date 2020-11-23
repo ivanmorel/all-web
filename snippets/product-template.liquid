@@ -120,8 +120,11 @@
               </p>
             {%- endif -%}
             <div class="product-detail__price-wrapper">
+            {% unless product.metafields.price_info.msrp == blank %}
+              <span class="product__price product__price--compare">{{ product.metafields.price_info.msrp | remove: '$' | remove: '.' | money }}</span>
+            {% endunless %}
             {%- assign hide_sale_price = true -%}
-            {%- if product.compare_at_price_max > product.price -%}
+            {% comment %} {%- if product.compare_at_price_max > product.price -%}
               {%- if current_variant.compare_at_price > current_variant.price -%}
                 {%- assign hide_sale_price = false -%}
               {%- endif -%}
@@ -141,7 +144,7 @@
               <span id="ComparePriceA11y-{{ section_id }}" class="visually-hidden">{{ 'products.general.sale_price' | t }}</span>
             {% else %}
               <span id="PriceA11y-{{ section_id }}" class="visually-hidden">{{ 'products.general.regular_price' | t }}</span>
-            {%- endif -%}
+            {%- endif -%} {% endcomment %}
 
             <span id="ProductPrice-{{ section_id }}"
               class="product__price{% if current_variant.compare_at_price > current_variant.price %} on-sale{% endif %}">

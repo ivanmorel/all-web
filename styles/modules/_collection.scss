@@ -6,6 +6,7 @@
     padding-top: 24px;
   }
   .collection-promotions__mobile-wrapper {
+    margin-bottom: 20px;
     @include mq(desktop) {
       display: none;
     }
