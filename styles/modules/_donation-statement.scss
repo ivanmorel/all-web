@@ -5,7 +5,10 @@
   letter-spacing: normal;
   margin-top: 15px;
   text-align: right;
+  @include rem("font-size", 9px);
+  @include mq(tablet) {
+    @include rem("font-size", 11px);
+  }
 }
-
 .donation-statement--ajax-cart__total-text {
 }
