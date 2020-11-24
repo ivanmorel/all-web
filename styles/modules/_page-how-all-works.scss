@@ -7,6 +7,7 @@
   text-transform: initial !important;
   color: $brown0;
   @include mq($until: tablet){
+    @include rem(font-size, 23px);
     text-align: left;
     margin: 23px 0 12px 0;
   }

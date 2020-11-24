@@ -7,6 +7,7 @@
   text-transform: initial !important;
   color: $brown0;
   @include mq($until: tablet){
+    @include rem(font-size, 23px);
     margin: 23px 0 22px;
     text-align: left;
   }
@@ -22,15 +23,15 @@
 }
 
 .brand-partners__partner-info {
-  margin-left: 147px;
+  margin-left: 110px;
   @include mq($until: tablet){
     margin: 0;
   }
 }
 
 .brand-partners__image {
-  min-width: 695px;
-  height: 392px;
+  min-width: 521px;
+  height: 294px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
