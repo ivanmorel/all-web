@@ -27,6 +27,9 @@
           {% if link.links != blank %}
             {%- assign has_dropdown = true -%}
           {% endif %}
+          {% if link.title == 'Shop' %}
+            {%- assign has_dropdown = true -%}
+          {% endif %}
           {% if link.title == 'Our Story' %}
             {%- assign has_dropdown = true -%}
           {% endif %}
@@ -75,7 +78,7 @@
                 aria-labelledby="Label-{{ child_list_handle }}"
                 {% if link.active or link.child_active %}style="height: auto;"{% endif %}>
                 <div class="collapsible-content__inner">
-                  <ul class="mobile-nav__sublist {% if link.title == 'Products' %}js-product-mobile-nav product-mobile-nav{% endif %} {% if link.title == 'Our Story' %}js-pages-mobile-nav product-mobile-nav{% endif %}">
+                  <ul class="mobile-nav__sublist {% if link.title == 'Shop' %}js-product-mobile-nav product-mobile-nav{% endif %} {% if link.title == 'Our Story' %}js-pages-mobile-nav product-mobile-nav{% endif %}">
                     {% for childlink in link.links %}
                       {%- assign has_sub_dropdown = false -%}
                       {%- assign grand_child_list_handle = childlink.url | handleize | append: forloop.index -%}
