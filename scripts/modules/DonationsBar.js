@@ -38,7 +38,6 @@ class DonationsBar {
         type: "GET",
         url: "https://all-api.dev.geno.me/api/v1/orders_amount",
       });
-      console.log(result);
       return result;
     } catch (error) {
       console.error("Error getting total donations", error);
