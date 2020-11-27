@@ -1,4 +1,4 @@
-{% if product.metafields.style_notes.title != blank and product.metafields.style_notes.description != blank %}
+{% if product.metafields.style_notes.description != blank %}
   <div class="index-section style-notes">
   <div class="page-width">
     {% capture image_layout %}
@@ -7,8 +7,7 @@
           {% if product.metafields.style_notes.image != blank %}
           {%- assign sectionImg = product.metafields.style_notes.image | first -%}
             {% if product.metafields.style_notes.link != blank %}
-              {%- assign sectionLink = articles[product.metafields.style_notes.link].url -%}
-            <a href="{{ sectionLink }}">{% endif %}
+            <a href="{{ product.metafields.style_notes.link }}">{% endif %}
             <div class="image-wrap" style="height: 0; padding-bottom: {{ 100 | divided_by: sectionImg.aspect_ratio }}%;">
               {%- assign img_url = sectionImg | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
               <img class="feature-row__image lazyload"
@@ -38,7 +37,7 @@
         {% if product.metafields.style_notes.description != blank %}
           <div class="rte featured-row__subtext">{{ product.metafields.style_notes.description }}</div>
         {% endif %}
-          <a href="{{sectionLink}}" class="btn">
+          <a href="{{product.metafields.style_notes.link}}" class="btn">
             Learn more
           </a>
       </div>
